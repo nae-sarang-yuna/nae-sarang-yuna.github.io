@@ -184,7 +184,7 @@ Trải nghiệm làm việc
 *Ví dụ 1* ([nguồn](https://writeivy.com/ms-finance-sop/))
 
 <div class="example">
-  Outside school, multiple software-development internships have [inspired me to learn more about financial technologies]{.h-green}. [**[1]**]{.h-red} At FinLight in 2022, I implemented the UI for Light Terminal’s macroeconomics indicators dashboard, [witnessing the solutions the terminal provides—from real-time quotes for quantitative trading to risk management and macro research.]{.h-teal} [**[2]**]{.h-red} At ByBit in the summer of 2023, I worked on an integration project for the Institutional Reports service, incorporating new features like real-time streaming updates and flexible time-range inputs. I was also responsible for a series of investigations into transaction discrepancies that [were particularly fruitful]{.h-teal}. By delving into upstream and downstream services to locate errored logic, and by collaborating with trading teams to resolve numeric precision issues, [I learned much about the adaptation of GRPC microservices within this distributed cryptocurrency exchange system]{.h-green}—[an understanding that will greatly aid my efforts at Gotham and beyond.]{.h-green}
+  Outside school, multiple software-development internships have [inspired me to learn more about financial technologies]{.h-green}. [**[1]**]{.h-red} At FinLight in 2022, I implemented the UI for Light Terminal’s macroeconomics indicators dashboard, [witnessing the solutions the terminal provides—from real-time quotes for quantitative trading to risk management and macro research.]{.h-grape} [**[2]**]{.h-red} At ByBit in the summer of 2023, I worked on an integration project for the Institutional Reports service, incorporating new features like real-time streaming updates and flexible time-range inputs. I was also responsible for a series of investigations into transaction discrepancies that [were particularly fruitful]{.h-grape}. By delving into upstream and downstream services to locate errored logic, and by collaborating with trading teams to resolve numeric precision issues, [I learned much about the adaptation of GRPC microservices within this distributed cryptocurrency exchange system]{.h-green}—[an understanding that will greatly aid my efforts at Gotham and beyond.]{.h-green}
 </div>
 
 ::: {.column-margin}
@@ -192,7 +192,7 @@ Trải nghiệm làm việc
   **Why it matters**: Ứng viên đã học được gì và điều đó giúp cho việc học cao học thế nào.
 </div>
 
-<div class="h-teal-box">
+<div class="h-grape-box">
   Kết quả của việc ứng viên đã làm (phần fruitful có thể viết cụ thể hơn).
 </div>
 
@@ -203,17 +203,17 @@ Trải nghiệm làm việc
 
 *Ví dụ 2* ([nguồn](https://www.uc.edu/news/articles/2024/11/personal-statement-examples-grad-school.html))
 
-Đây thực ra là 1 dạng "template" và chúng ta có thể thấy nó có đầy đủ các yếu tố cần trình bày.
+Đây thực ra trông giống một dạng "template" hơn và chúng ta có thể thấy nó có đầy đủ các yếu tố cần trình bày.
 
 <div class="example">
-  Over the past [X] years, I have gained hands-on experience at [company], where I have contributed to [[key projects, achievements or responsibilities]]{.h-red}. In my role as [your current position], I have developed expertise in [relevant skills: project management, financial analysis, data-driven decision-making] and have worked with cross-functional teams to [describe key outcomes or contributions]. For instance, I led a team that [specific accomplishment], resulting in [[impact: increased revenue, improved operational efficiency, cost savings]]{.h-teal}. [This experience has deepened my understanding of the complexities of business and sharpened my problem-solving abilities.]{.h-green}
+  Over the past [X] years, I have gained hands-on experience at [company], where I have contributed to [[key projects, achievements or responsibilities]]{.h-red}. In my role as [your current position], I have developed expertise in [relevant skills: project management, financial analysis, data-driven decision-making] and have worked with cross-functional teams to [describe key outcomes or contributions]. For instance, I led a team that [specific accomplishment], resulting in [[impact: increased revenue, improved operational efficiency, cost savings]]{.h-grape}. [This experience has deepened my understanding of the complexities of business and sharpened my problem-solving abilities.]{.h-green}
 </div>
 
 ::: {.column-margin}
 <div class="h-red-box">
   Ứng viên đã làm gì.
 </div>
-<div class="h-teal-box">
+<div class="h-grape-box">
   Kết quả của việc ứng viên đã làm.
 </div>
 <div class="h-green-box">
