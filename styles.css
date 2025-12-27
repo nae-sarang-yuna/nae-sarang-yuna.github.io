@@ -1,3 +1,39 @@
 p {
   text-align: justify
 }
+
+.example {
+  border-left: 4px solid #495057; /* Dark red border */
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.h-green {
+  background-color: #d1e7dd; /* Light green highlight */
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.h-green-box {
+  border-left: 4px solid #198754; /* Dark green border */
+  background-color: #f0fdf4;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.h-red {
+  background-color: #f8d7da; /* Light red highlight */
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.h-red-box {
+  border-left: 4px solid #dc3545; /* Dark red border */
+  background-color: #fef2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}

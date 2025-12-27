@@ -78,31 +78,38 @@ Câu chuyện này thường được phát triển theo các khía cạnh sau �
 Hoàn cảnh cá nhân
 : Thường thì đây sẽ là một câu chuyện mang tính cá nhân theo mô-típ: người viết ở trong một hoàn cảnh (khó khăn) nào đó/gặp một tình huống (chấn động) làm thay đổi cuộc đời, từ đó nhận ra tầm quan trọng của cái ABC và quyết định theo cái đó. Sau đó, người viết sẽ kể về hành trình theo đuổi cái ABC ở đại học.
 
-*Ví dụ 1* ([nguồn](https://iastate.pressbooks.pub/statementofpurpose/chapter/motivation-in-the-sop-an-example/))
+*Ví dụ 1* ([nguồn](https://www.uc.edu/news/articles/2024/11/personal-statement-examples-grad-school.html))
 
-> Since arriving in the US in 2015, I have lived in a refugee community where most elders do not speak English or know about their healthcare resources, specifically insurance policies. I have served as a translator for many individuals to overcome existing language barriers and express the importance of medical knowledge for my community. Through these experiences, I have recognized my passion for addressing the healthcare system and issues that impact immigrant communities.
+<div class="example">
+My passion for public health was sparked during a volunteer trip to [country], where I worked alongside local health officials to improve sanitation and nutrition in rural communities. Witnessing firsthand the challenges that underserved populations face in accessing basic healthcare motivated me to pursue a career in public health. With a background in biology and a deep commitment to improving health equity, I am eager to advance my education in public health at [university] and contribute to global efforts in disease prevention, health education and health policy reform.
+</div>
 
 *Ví dụ 2* ([nguồn](https://www.collegeessayguy.com/blog/statement-of-purpose-examples))
-
-> One of the most prominent instances that made me realize the deep-seated educational disparities for minority and lower-income students occurred when I tested a 5th grade Philadelphia public school student named Jenna. Her results revealed that Jenna was barely capable of reading on a 1st grade level. Despite the fact that my interaction with Jenna left me upset and frustrated, it catalyzed my desire to work towards narrowing the achievement and opportunity gaps that students and school systems encounter in our country. 
-> 
-> Pursuing a Master’s degree in Sociology and Education at Teachers College will empower me to better support underserved students by gaining a comprehensive understanding of the U.S. education system, engaging with professors who are leaders in the field of urban education, and acquiring research skills that will enable me to critically analyze school systems from a sociological perspective.
+<div class="example">
+One of the most prominent instances that made me realize the deep-seated educational disparities for minority and lower-income students occurred when I tested a 5th grade Philadelphia public school student named Jenna. Her results revealed that Jenna was barely capable of reading on a 1st grade level. Despite the fact that my interaction with Jenna left me upset and frustrated, it catalyzed my desire to work towards narrowing the achievement and opportunity gaps that students and school systems encounter in our country. 
+ 
+Pursuing a Master’s degree in Sociology and Education at Teachers College will empower me to better support underserved students by gaining a comprehensive understanding of the U.S. education system, engaging with professors who are leaders in the field of urban education, and acquiring research skills that will enable me to critically analyze school systems from a sociological perspective.
+</div>
 
 Hướng nghiên cứu
 : Đây là một câu chuyện thường dùng nếu người viết theo học các chương trình cao học định hướng nghiên cứu. Mô-típ thường thấy là ở đại học theo đuổi hướng ABC, bây giờ muốn phát triển thêm, hoặc phát triển hướng XYZ liên quan.
 
 *Ví dụ* ([nguồn](https://mitcommlab.mit.edu/meche/wp-content/uploads/sites/8/2021/11/Annotated-Personal-statement-1.pdf))
 
-> From my previous research experiences I have learned that working on a research project has been the best motivation and also the best learning platform for me. During my undergraduate years at MIT, I have had the opportunity to work in the XXXX Laboratory and intern at the XXXX Center. These opportunities inspired me to apply to XXXX graduate program in Mechanical Engineering in order to pursue a PhD with a focus on robotics, combined with bio-inspired design.
+<div class="example">
+From my previous research experiences I have learned that working on a research project has been the best motivation and also the best learning platform for me. During my undergraduate years at MIT, I have had the opportunity to work in the XXXX Laboratory and intern at the XXXX Center. These opportunities inspired me to apply to XXXX graduate program in Mechanical Engineering in order to pursue a PhD with a focus on robotics, combined with bio-inspired design.
+</div>
 
 Nhu cầu
 : Đây thường là một câu chuyện mang tính thuần chuyên môn theo mô-típ: người viết làm nghiên cứu/đi làm gặp một "vấn đề" trong công việc, do đó cần học thêm cái ABC để có thể phát triển thêm. Hoặc mục tiêu nghề nghiệp là cái XYZ nên cần học cái ABC để đạt được do nền tảng kiến thức chưa đủ, dẫn đến nộp hồ sơ vào chương trình này.
 
 *Vi dụ* ([nguồn](https://writeivy.com/ms-finance-sop/))
 
-> During the summer of 2022, I worked as a front-end development intern at FinLight, Canada’s largest financial data service. There, my responsibilities included building the user interface for their financial terminal. However, I soon found myself most fascinated by Light API, a backend data service that enables quantitative-model construction and strategy backtesting for client researchers. This high-performing, real-time software was so impressive that, when I returned to Metropolis University, I quickly enrolled in Mathematics and Finance coursework alongside my Computer Science major. My goal was to acquire the theoretical knowledge necessary to build tools and frameworks for financial-data analytics myself. Since then, I have completed courses in ML, NLP, and Predictive Analytics, in conjunction with extensive coursework in Statistics, Probability Theory, and Financial Mathematics, and furthered my understanding of these subjects through independent research and real-world projects.
-> 
-> Today, I hope to expand upon these experiences by studying and conducting research at the intersection of finance and machine learning, with a focus on generative adversarial networks and ML models to synthesize alternative financial data. Specifically, I hope to understand how the ML models traditionally used for institutional high-frequency trading (e.g. Markov Decision Models within Reinforcement Learning) can be adopted into accessible personal-finance tools for retail investors. The Master of Science in Computational Finance at Gotham will make that possible.
+<div class="example">
+During the summer of 2022, I worked as a front-end development intern at FinLight, Canada’s largest financial data service. There, my responsibilities included building the user interface for their financial terminal. However, I soon found myself most fascinated by Light API, a backend data service that enables quantitative-model construction and strategy backtesting for client researchers. This high-performing, real-time software was so impressive that, when I returned to Metropolis University, I quickly enrolled in Mathematics and Finance coursework alongside my Computer Science major. My goal was to acquire the theoretical knowledge necessary to build tools and frameworks for financial-data analytics myself. Since then, I have completed courses in ML, NLP, and Predictive Analytics, in conjunction with extensive coursework in Statistics, Probability Theory, and Financial Mathematics, and furthered my understanding of these subjects through independent research and real-world projects.
+
+Today, I hope to expand upon these experiences by studying and conducting research at the intersection of finance and machine learning, with a focus on generative adversarial networks and ML models to synthesize alternative financial data. Specifically, I hope to understand how the ML models traditionally used for institutional high-frequency trading (e.g. Markov Decision Models within Reinforcement Learning) can be adopted into accessible personal-finance tools for retail investors. The Master of Science in Computational Finance at Gotham will make that possible.
+</div>
 
 Việc viết theo hướng nào sẽ phụ thuộc vào ngành và những trải nghiệm, câu chuyện cá nhân của người viết. Mục tiêu là đưa ra một câu chuyện hợp lý để giải thích cho động lực nộp hồ sơ vào chương trình của người viết.
 
@@ -134,7 +141,15 @@ Trải nghiệm học tập
 
 *Ví dụ* ([nguồn](https://writeivy.com/how-to-write-the-human-computer-interaction-sop-sample-guide/))
 
-> Studying architecture at Metropolis University proved valuable in learning problem-solving through design-thinking. I studied how physical space can shape opportunities for user interactions, and through intensive studios, learned to design at different scales. In one particular course of note, Design Operations and Tactics with Professor Barbara Gordon, I explored how embedded technologies provide a framework for improvisation between people and the urban environment. Utilizing architecture as a technological interface, and analyzing concepts such as ubiquitous computing and calm technology, I obtained my first introduction to the world of HCI.
+<div class="example">
+Studying architecture at Metropolis University proved valuable in learning problem-solving through design-thinking. I studied how physical space can shape opportunities for user interactions, and through intensive studios, learned to design at different scales. In one particular course of note, Design Operations and Tactics with Professor Barbara Gordon, I explored how embedded technologies provide a framework for improvisation between people and the urban environment. Utilizing architecture as a technological interface, and analyzing concepts such as ubiquitous computing and calm technology, [I obtained my first introduction to the world of HCI.]{.h-green} 
+</div>
+
+::: {.column-margin}
+<div class="h-green-box">
+  Ý nghĩa của tất cả các việc học bên trên
+</div>
+:::
 
 Trải nghiệm nghiên cứu
 : 
@@ -143,14 +158,18 @@ Trải nghiệm nghiên cứu
 
 *Ví dụ* ([nguồn](https://iastate.pressbooks.pub/statementofpurpose/chapter/research-experience/))
 
-> My participation with Dr. Wade’s lab inspired my current independent research project further exploring resilience factors in the Black community. Specifically, this project examines the intersectionality of religion and the Black experience revolving around discrimination and racial identity. As this project is ongoing, I am in the process of examining the role of religious commitment and racial identity as protective measures against the psychological distress that often results from the discrimination and racism that Black individuals endure. This project is important in my transition from undergrad to graduate school because it provides an opportunity for me to conduct my own research based on my specific research interests.
+<div class="example">
+My participation with Dr. Wade’s lab inspired my current independent research project further exploring resilience factors in the Black community. Specifically, this project examines the intersectionality of religion and the Black experience revolving around discrimination and racial identity. As this project is ongoing, I am in the process of examining the role of religious commitment and racial identity as protective measures against the psychological distress that often results from the discrimination and racism that Black individuals endure. This project is important in my transition from undergrad to graduate school because it provides an opportunity for me to conduct my own research based on my specific research interests.
+</div>
 
 Trải nghiệm làm việc
 : Tương tự như trải nghiệm nghiên cứu. Cũng là nói về mình đã làm gì, học được gì, kết quả ra sao, ...
 
 *Ví dụ* ([nguồn](https://writeivy.com/ms-finance-sop/))
 
-> Outside school, multiple software-development internships have inspired me to learn more about financial technologies. At FinLight in 2022, I implemented the UI for Light Terminal’s macroeconomics indicators dashboard, witnessing the solutions the terminal provides—from real-time quotes for quantitative trading to risk management and macro research. At ByBit in the summer of 2023, I worked on an integration project for the Institutional Reports service, incorporating new features like real-time streaming updates and flexible time-range inputs. I was also responsible for a series of investigations into transaction discrepancies that were particularly fruitful. By delving into upstream and downstream services to locate errored logic, and by collaborating with trading teams to resolve numeric precision issues, I learned much about the adaptation of GRPC microservices within this distributed cryptocurrency exchange system—an understanding that will greatly aid my efforts at Gotham and beyond.
+<div class="example">
+Outside school, multiple software-development internships have inspired me to learn more about financial technologies. At FinLight in 2022, I implemented the UI for Light Terminal’s macroeconomics indicators dashboard, witnessing the solutions the terminal provides—from real-time quotes for quantitative trading to risk management and macro research. At ByBit in the summer of 2023, I worked on an integration project for the Institutional Reports service, incorporating new features like real-time streaming updates and flexible time-range inputs. I was also responsible for a series of investigations into transaction discrepancies that were particularly fruitful. By delving into upstream and downstream services to locate errored logic, and by collaborating with trading teams to resolve numeric precision issues, I learned much about the adaptation of GRPC microservices within this distributed cryptocurrency exchange system—an understanding that will greatly aid my efforts at Gotham and beyond.
+</div>
 
 Hoạt động ngoại khóa
 : 
@@ -171,13 +190,17 @@ Quan trọng nhất là cần giải thích các thứ trên giúp mình **đạ
 
 *Ví dụ 1* ([nguồn](https://caw.ceu.edu/some-samples-statements-purpose)):
 
-> I am aware of the high reputation of your school and the excellent Master's program that you offer at the Norman Paterson School of International Affairs. I believe it will certainly help me with my research and career objectives either through work in diplomatic service or at an international organization where I will be able to apply my knowledge and skills obtained through studies at your University.
-> 
-> Courses such as Conflict Analysis, International Mediation and Conflict Resolution and International Organizations in International Affairs will be very helpful for my analyzing of the problems in the South Asian subcontinent and beyond it and will allow me to deeper understand the reasons for numerous interstate and intrastate conflicts that persist in the region. Moreover these courses will be of particular relevance to my career plans which are to find employment with UN or a similar institution in the field of conflict resolution and peacekeeping. The possibility to combine theoretical studies with practical skills in conflict analysis and resolution at the Carleton University will enable me to become a good specialist who will be able to contribute to the common cause of peace in the world. I am eager to become a professional orientalist, as I believe this field of study will always be important in the changing world where Asian countries such as India and China play significant roles in the international arena. MA at the Carleton University would be a precious experience both in terms of my academic and professional career. I hope you will give me the opportunity to realize my ambition.
+<div class="example">
+I am aware of the high reputation of your school and the excellent Master's program that you offer at the Norman Paterson School of International Affairs. I believe it will certainly help me with my research and career objectives either through work in diplomatic service or at an international organization where I will be able to apply my knowledge and skills obtained through studies at your University.
+
+Courses such as Conflict Analysis, International Mediation and Conflict Resolution and International Organizations in International Affairs will be very helpful for my analyzing of the problems in the South Asian subcontinent and beyond it and will allow me to deeper understand the reasons for numerous interstate and intrastate conflicts that persist in the region. Moreover these courses will be of particular relevance to my career plans which are to find employment with UN or a similar institution in the field of conflict resolution and peacekeeping. The possibility to combine theoretical studies with practical skills in conflict analysis and resolution at the Carleton University will enable me to become a good specialist who will be able to contribute to the common cause of peace in the world. I am eager to become a professional orientalist, as I believe this field of study will always be important in the changing world where Asian countries such as India and China play significant roles in the international arena. MA at the Carleton University would be a precious experience both in terms of my academic and professional career. I hope you will give me the opportunity to realize my ambition.
+</div>
 
 *Ví dụ 2* ([nguồn](https://spacegrant.carthage.edu/live/files/5570-next-step-workshop-example-statements-of-purpose))
 
-> To advance as a mathematician, I want to immerse myself in the culture in the Mathematics Department at Waukesha University. I am already excited for a chance to take complex variables and the other advances classes in the major. Having worked as an ABO optician and lab technician, and also as an artist, I know the gratification of spending time to learn, improve, and get results. This is why I am especially interested in learning topology and hope to study with Professor Abe Froman, who is an expert in this area. I read about Waukesha’s summer research program on the website, and I am excited to apply. Being a transfer student in mathematics at Waukesha University is the right step for me. 
+<div class="example">
+To advance as a mathematician, I want to immerse myself in the culture in the Mathematics Department at Waukesha University. I am already excited for a chance to take complex variables and the other advances classes in the major. Having worked as an ABO optician and lab technician, and also as an artist, I know the gratification of spending time to learn, improve, and get results. This is why I am especially interested in learning topology and hope to study with Professor Abe Froman, who is an expert in this area. I read about Waukesha’s summer research program on the website, and I am excited to apply. Being a transfer student in mathematics at Waukesha University is the right step for me. 
+</div>
 
 ### Kế hoạch tương lai
 ::: {.callout-note title="Tóm lại là ..."}
@@ -186,11 +209,15 @@ Sau khi tốt nghiệp mình sẽ làm gì, có thể chia ra ngắn hạn và d
 
 *Ví dụ 1* ([nguồn](https://writeivy.com/course-based-masters-sop/))
 
-> After graduation, my short-term goal is to contribute to projects that help close the gap in AI technology between rural and urban hospitals, hopefully in companies like Arterys and Enlitic, both of which design image-classification tools for medical diagnosis. Long-term, I hope to contribute towards creating an AI-powered medical-imaging platform that can integrate rural communities (like those of South Africa’s Eastern Cape Province) into our modern healthcare infrastructure, via collaborative non-profit work. I believe Gotham’s Master of Artificial Intelligence program will provide me with the knowledge and experience I need to achieve these goals, and work toward innovating the future of healthcare systems in developing nations who could most benefit from these efforts.
+<div class="example">
+After graduation, my short-term goal is to contribute to projects that help close the gap in AI technology between rural and urban hospitals, hopefully in companies like Arterys and Enlitic, both of which design image-classification tools for medical diagnosis. Long-term, I hope to contribute towards creating an AI-powered medical-imaging platform that can integrate rural communities (like those of South Africa’s Eastern Cape Province) into our modern healthcare infrastructure, via collaborative non-profit work. I believe Gotham’s Master of Artificial Intelligence program will provide me with the knowledge and experience I need to achieve these goals, and work toward innovating the future of healthcare systems in developing nations who could most benefit from these efforts.
+</div>
 
 *Ví dụ 2* ([nguồn](https://iastate.pressbooks.pub/statementofpurpose/chapter/section-6-annotated-sop-examples/))
 
-> Upon completing a doctoral degree in Counseling Psychology, I intend to work as a professor exploring the intersectionality between the Black experience, religion, and spirituality while also applying my findings through clinical supervision. Iowa State University’s Counseling Psychology Program will best maximize my development in the field of psychology and prepare me to achieve my goals. Ultimately, I want to be in a program where my identity is valued, and Iowa State University seems to fit just that.
+<div class="example">
+Upon completing a doctoral degree in Counseling Psychology, I intend to work as a professor exploring the intersectionality between the Black experience, religion, and spirituality while also applying my findings through clinical supervision. Iowa State University’s Counseling Psychology Program will best maximize my development in the field of psychology and prepare me to achieve my goals. Ultimately, I want to be in a program where my identity is valued, and Iowa State University seems to fit just that.
+</div>
 
 ## Những nội dung có thể đưa vào tùy trường hợp
 ## Một số nội dung đặc thù cho học bổng
@@ -205,9 +232,9 @@ Có thể xem chi tiết ở [đây](https://www.csulb.edu/sites/default/files/2
 ::: {.callout-note title="Cấu trúc cơ bản"}
 1. Giới thiệu: Hook + đưa ra động lực nộp hồ sơ vào trường (thường gắn với mục tiêu luôn)
 2. Trải nghiệm
-  i) Trải nghiệm 1
-  ii) Trải nghiệm 2
-  iii) ...
+    - Trải nghiệm 1
+    - Trải nghiệm 2
+    - ...
 3. Sự phù hợp với chương trình
 4. Kế hoạch tương lai
 5. Kết bài 
@@ -215,24 +242,26 @@ Có thể xem chi tiết ở [đây](https://www.csulb.edu/sites/default/files/2
 
 Sau đây, chúng ta cùng xem một ví dụ về một bài viết theo cấu trúc này ([nguồn](https://spacegrant.carthage.edu/live/files/5570-next-step-workshop-example-statements-of-purpose)).
 
-> [Giới thiệu]{.aside} A career in experimental science is not for the lighthearted. The requisites of hard work, creativity, certain failure, and long hours can only be successfully sustained by one attribute: passion. Passion fuels the desire for experimental excellence, communication of the phenomena, and a certain penchant to always ask the question “why?” or “how?”. Over the course of my undergraduate studies, my passion for scientific knowledge and the ability to share that knowledge with others has led to my decision to pursue a doctoral degree in chemistry with the ultimate career goal of becoming a professor. 
-> 
-> [Trải nghiệm 1]{.aside} My experience in the scientific community at La Crosse University significantly opened my eyes to the beauty of chemistry all around us. My professors loved sharing their passion for science with us students, and their guidance over the years fostered the development of my interests in science. I was fortunate enough to experience research in organic chemistry in the lab of Dr. Francis Erlenmeyer at La Crosse University. Prior to research, I was not aware of how gratifying, social, and exciting a career in research could be. I became enamored with idea of answering questions that have not yet been answered. In this aspect, I found research to be both intellectually stimulating and humbling, which quickly became the cornerstone of my passion for science. In that summer, I learned the basic fundamentals of organic chemistry: how to set up a reaction, how to run a column, and how to make fancy PowerPoint slides. Above all, my ability to think analytically, ask good questions about the literature, and how to plan future research greatly improved. During the remainder of my time at La Crosse, I spent time on two projects and both have led to manuscripts to be submitted for publication. 
-> 
->  [Trải nghiệm 2]{.aside} My involvement in the science was expanded during the last years of undergraduate studies. I was awarded a fellowship to assist in the teaching of laboratories, and I was required to hold regular office hours for supplemental course instruction. This proved to be one of the most influential blessings; I learned that I loved sharing and teaching science. I cannot envision myself, in the future, as a professional, without having a role in education. This has motivated my drive for scientific excellence, and I have learned so much about chemistry from teaching it.  
-> 
-> [Sự phù hợp với chương trình? cũng cũng đi]{.aside} I made my decision to pursue a doctoral degree under the guidance of Dr. Julia Stone. I have found a balance between being a teaching assistant, student, researcher, and community member. I have become a national member of Engineers Without Borders, and I am working on a project that is dedicated to providing clean water and health education to a small community in Panama. This is something that I am really excited about because I am able to use my scientific background to help with problems and reach out to many people in need. This is important to me because I have seen the need for help firsthand. I was a volunteer and missionary at an orphanage and youth group as in Quito, Ecuador, and it is amazing to see how much impact you can have on the lives of others. I firmly believe in change, and I believe that it starts with passion, commitment, and service.  
->
-> [Kế hoạch tương lai]{.aside} I am excited for the challenges that are ahead of me in graduate school and career. I accept them with alacrity. After graduate school, I want to pursue a career in academic research. The doctoral degree will enable me to work at a research institution in addition to being an educator. I want to have a direct impact on the science of organic chemistry during and after graduate school. I can see myself leading a lab after completion of graduate school and postdoctoral research. Also, a career in academic research will allow me the opportunity to mentor undergraduate and graduate students and attempt to foster the rich academic community that I was fortunate to receive an education in.
+<div class="example">
+[Giới thiệu]{.aside} A career in experimental science is not for the lighthearted. The requisites of hard work, creativity, certain failure, and long hours can only be successfully sustained by one attribute: passion. Passion fuels the desire for experimental excellence, communication of the phenomena, and a certain penchant to always ask the question “why?” or “how?”. Over the course of my undergraduate studies, my passion for scientific knowledge and the ability to share that knowledge with others has led to my decision to pursue a doctoral degree in chemistry with the ultimate career goal of becoming a professor. 
+
+[Trải nghiệm 1]{.aside} My experience in the scientific community at La Crosse University significantly opened my eyes to the beauty of chemistry all around us. My professors loved sharing their passion for science with us students, and their guidance over the years fostered the development of my interests in science. I was fortunate enough to experience research in organic chemistry in the lab of Dr. Francis Erlenmeyer at La Crosse University. Prior to research, I was not aware of how gratifying, social, and exciting a career in research could be. I became enamored with idea of answering questions that have not yet been answered. In this aspect, I found research to be both intellectually stimulating and humbling, which quickly became the cornerstone of my passion for science. In that summer, I learned the basic fundamentals of organic chemistry: how to set up a reaction, how to run a column, and how to make fancy PowerPoint slides. Above all, my ability to think analytically, ask good questions about the literature, and how to plan future research greatly improved. During the remainder of my time at La Crosse, I spent time on two projects and both have led to manuscripts to be submitted for publication. 
+ 
+[Trải nghiệm 2]{.aside} My involvement in the science was expanded during the last years of undergraduate studies. I was awarded a fellowship to assist in the teaching of laboratories, and I was required to hold regular office hours for supplemental course instruction. This proved to be one of the most influential blessings; I learned that I loved sharing and teaching science. I cannot envision myself, in the future, as a professional, without having a role in education. This has motivated my drive for scientific excellence, and I have learned so much about chemistry from teaching it.
+
+[Sự phù hợp với chương trình? cũng cũng đi]{.aside} I made my decision to pursue a doctoral degree under the guidance of Dr. Julia Stone. I have found a balance between being a teaching assistant, student, researcher, and community member. I have become a national member of Engineers Without Borders, and I am working on a project that is dedicated to providing clean water and health education to a small community in Panama. This is something that I am really excited about because I am able to use my scientific background to help with problems and reach out to many people in need. This is important to me because I have seen the need for help firsthand. I was a volunteer and missionary at an orphanage and youth group as in Quito, Ecuador, and it is amazing to see how much impact you can have on the lives of others. I firmly believe in change, and I believe that it starts with passion, commitment, and service.  
+
+[Kế hoạch tương lai]{.aside} I am excited for the challenges that are ahead of me in graduate school and career. I accept them with alacrity. After graduate school, I want to pursue a career in academic research. The doctoral degree will enable me to work at a research institution in addition to being an educator. I want to have a direct impact on the science of organic chemistry during and after graduate school. I can see myself leading a lab after completion of graduate school and postdoctoral research. Also, a career in academic research will allow me the opportunity to mentor undergraduate and graduate students and attempt to foster the rich academic community that I was fortunate to receive an education in.
+</div>
 
 ## Cấu trúc thiên hướng kể chuyện
 Đây có vẻ là cấu trúc phổ biến nhất. Trong cấu trúc này, chúng ta sẽ tập trung kể các trải nghiệm của mình thường là theo trình tự thời gian, sau đó kể đến thời điểm hiện tại mới đưa ra động lực và sự phù hợp với chương trình. Qua việc kể chuyện, chúng ta cũng kể ra sự phát triển trong nhận thức về mục tiêu của mình, từ đó dẫn đến động lực.
 
 ::: {.callout-note title="Cấu trúc thiên hướng kể chuyện"}
 1. Trải nghiệm (thường là theo trình tự thời gian)
-  i) Trải nghiệm 1
-  ii) Trải nghiệm 2
-  iii) ...
+    - Trải nghiệm 1
+    - Trải nghiệm 2
+    - ...
 2. Động lực nộp hồ sơ vào chương trình (thường gắn với mục tiêu luôn)
 3. Sự phù hợp với chương trình
 4. Kế hoạch tương lai
@@ -241,13 +270,15 @@ Sau đây, chúng ta cùng xem một ví dụ về một bài viết theo cấu 
 
 Ví dụ:
 
-> At twenty-one years old, I have finally discovered the answer to a question that I have been asked many times, “What do you want to be when you grow up?”. My first answer was written on a small piece of construction paper in elementary school with purple crayon: “I want to be the first veterinarian on the moon”. Although this goal was unrealistic, my determination and desire to be a veterinarian encouraged my academic and extracurricular interests. This motivated me to work at a veterinary clinic and influenced me to further my education and study animal science at Iowa State University.
-> 
-> The diverse experiences I have had at Iowa State have led me to apply to your Animal Nutrition Program. During my first year of college, my career goals and interests shifted when I took an anatomy and physiology laboratory course where we studied the organ systems in mammalian species. I am now a teaching assistant for this course due to my success in the course. Helping the students has also aided in my own learning and understanding of the subjects while allowing me to observe the role of a graduate student and the positive impact they can potentially have on student learning. In my sophomore year, an animal nutrition course led me to meeting Dr. Lance Baumgard, who is my faculty mentor for the Ronald E. McNair Postbaccalaureate Achievement Program, which prepares students for entry to graduate school and the attainment of the Ph.D. My involvement in a research project with Dr. Baumgard focusing on hind-gut acidosis caused by corn starch infusions in lactating dairy cattle sparked my current interests in animal nutrition and immunology. As a McNair Scholar, I worked with four of my peers on a social science research project that focused on mentoring in underrepresented students to grasp a better understanding on how a lack of cultural empathy affects a mentor/mentee relationship. The results of this research will allow us to assess the need for cultural empathy at predominantly white institutions. I have also traveled abroad to the American Farm School in Thessaloniki, Greece where I conducted research under Dr. Kiki Zinoviadou, studying edible and antimicrobial coating applications as a mean to extend the shelf life of fruits, vegetables and muscle foods. I was exposed to methodologies typically used in the field of food science and microbiology and gained experience in data and microbial analysis. This experience allowed me to conduct research independently, which I look forward to continuing as a graduate student.
-> 
-> Ultimately, as a RA, I have developed critical thinking, and analytical and data analysis skills and as a TA, I have gained a new perspective on classroom instruction and the importance of actively listening and conveying material effectively. As a McNair Scholar, I have learned research methods while conducting research with my faculty mentor and my McNair peers. I believe that these experiences make me a strong applicant for your master’s program in Animal Nutrition. My research interests closely match Dr. Elizabeth Bobeck on nutrition and immunological response in poultry.
-> 
-> Thank you for considering my application.
+<div class="example">
+At twenty-one years old, I have finally discovered the answer to a question that I have been asked many times, “What do you want to be when you grow up?”. My first answer was written on a small piece of construction paper in elementary school with purple crayon: “I want to be the first veterinarian on the moon”. Although this goal was unrealistic, my determination and desire to be a veterinarian encouraged my academic and extracurricular interests. This motivated me to work at a veterinary clinic and influenced me to further my education and study animal science at Iowa State University.
+
+The diverse experiences I have had at Iowa State have led me to apply to your Animal Nutrition Program. During my first year of college, my career goals and interests shifted when I took an anatomy and physiology laboratory course where we studied the organ systems in mammalian species. I am now a teaching assistant for this course due to my success in the course. Helping the students has also aided in my own learning and understanding of the subjects while allowing me to observe the role of a graduate student and the positive impact they can potentially have on student learning. In my sophomore year, an animal nutrition course led me to meeting Dr. Lance Baumgard, who is my faculty mentor for the Ronald E. McNair Postbaccalaureate Achievement Program, which prepares students for entry to graduate school and the attainment of the Ph.D. My involvement in a research project with Dr. Baumgard focusing on hind-gut acidosis caused by corn starch infusions in lactating dairy cattle sparked my current interests in animal nutrition and immunology. As a McNair Scholar, I worked with four of my peers on a social science research project that focused on mentoring in underrepresented students to grasp a better understanding on how a lack of cultural empathy affects a mentor/mentee relationship. The results of this research will allow us to assess the need for cultural empathy at predominantly white institutions. I have also traveled abroad to the American Farm School in Thessaloniki, Greece where I conducted research under Dr. Kiki Zinoviadou, studying edible and antimicrobial coating applications as a mean to extend the shelf life of fruits, vegetables and muscle foods. I was exposed to methodologies typically used in the field of food science and microbiology and gained experience in data and microbial analysis. This experience allowed me to conduct research independently, which I look forward to continuing as a graduate student.
+ 
+Ultimately, as a RA, I have developed critical thinking, and analytical and data analysis skills and as a TA, I have gained a new perspective on classroom instruction and the importance of actively listening and conveying material effectively. As a McNair Scholar, I have learned research methods while conducting research with my faculty mentor and my McNair peers. I believe that these experiences make me a strong applicant for your master’s program in Animal Nutrition. My research interests closely match Dr. Elizabeth Bobeck on nutrition and immunological response in poultry.
+ 
+Thank you for considering my application.
+</div>
 
 ## Cấu trúc "Structure is magic"
 Vì cấu trúc này đã được tác giả trình vô cùng chi tiết ở [đây](https://writeivy.com/structure-is-magic-a-guide-to-the-graduate-sop/) nên là mình cũng không biết nói gì thêm ... 
