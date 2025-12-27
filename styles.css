@@ -37,3 +37,79 @@ p {
   margin-bottom: 10px;
   font-size: 0.9em;
 }
+
+
+.h-blue {
+  background-color: #9FF1FF;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.h-blue-box {
+  border-left: 4px solid #0866B7; 
+  background-color: #CFFBFF;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+
+.h-teal {
+  background-color: #96f2d7;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.h-teal-box {
+  border-left: 4px solid #099268; 
+  background-color: #e6fcf5;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.h-yellow {
+  background-color: #fff3bf;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.h-yellow-box {
+  border-left: 4px solid #f59f00; 
+  background-color: #fff9db;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.h-grape {
+  background-color: #f3d9fa;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.h-grape-box {
+  border-left: 4px solid #ae3ec9; 
+  background-color: #f8f0fc;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.essay-row {
+  display: grid;
+  grid-template-columns: 65% 30%; /* 65% for Essay, 30% for Comment */
+  gap: 5%;                        /* 5% Space in between */
+  align-items: start;             /* Aligns both to the TOP */
+  margin-bottom: 2rem;            /* Space between paragraphs */
+}
+
+/* 2. Mobile Response: Stack them on small screens */
+@media (max-width: 768px) {
+  .essay-row {
+    display: block;
+  }
+  .essay-row > div:last-child {
+    margin-top: 15px; /* Add space between text and comment on mobile */
+  }
+}
