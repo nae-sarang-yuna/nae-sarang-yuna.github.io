@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Analytical Engine — Brainstorming Worksheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F6F2;
+    --paper-line:#DAD5C8;
+    --ink:#1B2340;
+    --blueprint:#2E5090;
+    --blueprint-dim:#8CA3C9;
+    --amber:#C77D02;
+    --readout-bg:#0F1B2D;
+    --readout-fg:#8FE0C0;
+    --readout-dim:#4C6B6A;
+    --grey:#7C8394;
+    /* dynamics colour code */
+    --dyn-cause:#3E8F5E;
+    --dyn-trade:#C77D02;
+    --dyn-symb:#2E7D8C;
+    --dyn-power:#4B3E8F;
+    --dyn-equity:#8C3E7D;
+    --dyn-access:#6B6B6B;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    padding: 32px 16px 64px;
+  }
+  .sheet{
+    max-width: 880px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.55);
+    border: 1.5px solid var(--ink);
+    box-shadow: 6px 6px 0 rgba(27,35,64,0.12);
+  }
+  .titleblock{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    padding: 22px 28px 16px;
+    border-bottom: 2px solid var(--ink);
+    gap: 16px;
+    flex-wrap:wrap;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blueprint);
+    margin-bottom: 6px;
+  }
+  h1{
+    margin:0;
+    font-size: 26px;
+    letter-spacing: -0.01em;
+  }
+  .meta{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--grey);
+    text-align:right;
+    line-height:1.6;
+  }
+  section{
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--paper-line);
+  }
+  .stepnum{
+    font-family:'JetBrains Mono', monospace;
+    font-weight:700;
+    color:var(--blueprint);
+    font-size:13px;
+    letter-spacing:0.06em;
+  }
+  h2{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 2px 0 4px;
+  }
+  .hint{
+    font-size: 12.5px;
+    color: var(--grey);
+    margin: 0 0 12px;
+    max-width: 70ch;
+  }
+  input[type=text], textarea, select{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size: 13.5px;
+    border: none;
+    border-bottom: 1.5px dashed var(--blueprint-dim);
+    background: transparent;
+    padding: 4px 2px;
+    width: 100%;
+    color: var(--ink);
+  }
+  input[type=text]:focus, textarea:focus, select:focus{
+    outline:none;
+    border-bottom-color: var(--blueprint);
+  }
+  textarea{ resize: vertical; }
+
+  /* Essay type selector */
+  .types{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  .type-btn{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 7px 10px;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .type-btn.active{ background: var(--ink); color: var(--paper); }
+  .type-hint{
+    font-size:12.5px;
+    padding: 8px 10px;
+    background: rgba(46,80,144,0.07);
+    border-left: 3px solid var(--blueprint);
+    min-height: 18px;
+  }
+
+  /* Entity gauge */
+  .gauge{
+    display:flex;
+    height: 10px;
+    border: 1px solid var(--ink);
+    margin-bottom: 14px;
+  }
+  .gauge div{ flex:1; }
+  .gauge-labels{
+    display:flex;
+    justify-content:space-between;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    color: var(--grey);
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+  .entity-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .entity-card{
+    border: 1px solid var(--paper-line);
+    border-left: 4px solid var(--lvl-color, var(--blueprint));
+    padding: 8px 10px;
+    background: rgba(255,255,255,0.5);
+  }
+  .entity-card label{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  /* Dynamics mapper */
+  .dyn-legend{
+    display:flex; flex-wrap:wrap; gap: 10px 14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    margin-bottom: 14px;
+  }
+  .dyn-legend span{ display:inline-flex; align-items:center; gap:5px; }
+  .swatch{ width:9px; height:9px; display:inline-block; border-radius:50%; }
+  .dyn-row{
+    display:grid;
+    grid-template-columns: 1fr 130px 1fr 1.2fr;
+    gap: 10px;
+    align-items:end;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  .dyn-row .field-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    color: var(--grey);
+    display:block;
+    margin-bottom:2px;
+  }
+
+  /* Zoom nudges */
+  .zoom-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .zoom-card{
+    border: 1px dashed var(--blueprint-dim);
+    padding: 10px;
+  }
+  .zoom-card .q{
+    font-size: 12px;
+    font-weight:600;
+    margin-bottom: 6px;
+  }
+
+  /* So What engine — readout style */
+  .readout{
+    background: var(--readout-bg);
+    color: var(--readout-fg);
+    padding: 18px 20px;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .readout .stepnum, .readout h2{ color: var(--readout-fg); }
+  .readout .hint{ color: var(--readout-dim); }
+  .idea-row{
+    display:grid;
+    grid-template-columns: 1fr auto 1fr auto 1.3fr;
+    gap: 8px;
+    align-items:center;
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+  .idea-row .op{ color: var(--readout-dim); text-align:center; font-size:14px; }
+  .readout input[type=text]{
+    color: var(--readout-fg);
+    border-bottom: 1px dashed var(--readout-dim);
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px;
+  }
+  .readout input[type=text]::placeholder{ color: var(--readout-dim); }
+  .thesis-box{
+    margin-top: 10px;
+    border-top: 1px solid var(--readout-dim);
+    padding-top: 12px;
+  }
+  .thesis-box label{
+    display:block;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--readout-dim);
+    margin-bottom: 6px;
+  }
+
+  .controls{
+    display:flex;
+    justify-content:flex-end;
+    gap: 10px;
+    padding: 16px 28px;
+  }
+  .btn{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    padding: 9px 16px;
+    border: 1.5px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    cursor:pointer;
+    letter-spacing:0.04em;
+  }
+  .btn.secondary{ background: transparent; color: var(--ink); }
+
+  @media (max-width: 700px){
+    .entity-grid{ grid-template-columns: 1fr 1fr; }
+    .zoom-grid{ grid-template-columns: 1fr; }
+    .dyn-row{ grid-template-columns: 1fr; }
+    .idea-row{ grid-template-columns: 1fr; }
+    .idea-row .op{ display:none; }
+    .meta{ text-align:left; }
+  }
+
+  @media print{
+    body{ background: white; padding:0; }
+    .sheet{ box-shadow:none; border: none; max-width:100%; }
+    .controls{ display:none; }
+    section{ padding: 12px 18px; }
+    .readout{ background: white !important; color: var(--ink) !important; border: 1.5px solid var(--ink); }
+    .readout .stepnum, .readout h2, .readout .hint{ color: var(--ink) !important; }
+    .readout input[type=text]{ color: var(--ink) !important; border-bottom-color: var(--grey) !important; }
+    .readout input[type=text]::placeholder{ color: #999 !important; }
+    .readout .op{ color: var(--grey) !important; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="titleblock">
+    <div>
+      <div class="eyebrow">Idea-generation schematic · v1.0</div>
+      <h1>The Analytical Engine</h1>
+    </div>
+    <div class="meta">
+      NAME: ____________________<br>
+      DATE: ____________________
+    </div>
+  </div>
+
+  <!-- STEP 0: Prompt + type -->
+  <section>
+    <div class="stepnum">00 / INPUT</div>
+    <h2>The Prompt</h2>
+    <textarea id="prompt" rows="2" placeholder="Paste or write the essay prompt here…"></textarea>
+    <div style="height:12px"></div>
+    <div class="types" id="typeButtons"></div>
+    <div class="type-hint" id="typeHint">Select an essay type above for a one-line strategy reminder.</div>
+  </section>
+
+  <!-- STEP 1: Entities -->
+  <section>
+    <div class="stepnum">01 / ENTITIES</div>
+    <h2>Scan the levels — who or what is involved?</h2>
+    <p class="hint">Don't overthink which box something belongs in — the goal is coverage, not precision. Jot 1–3 words per box, only where something comes to mind.</p>
+    <div class="gauge" id="gaugeBar"></div>
+    <div class="gauge-labels"><span>MICRO</span><span>MESO</span><span>MACRO →</span></div>
+    <div class="entity-grid" id="entityGrid"></div>
+  </section>
+
+  <!-- STEP 2: Dynamics -->
+  <section>
+    <div class="stepnum">02 / DYNAMICS</div>
+    <h2>Map the relationships</h2>
+    <p class="hint">Pick two entities from above and connect them. Multiple dynamics can apply to the same pair — don't hunt for the "correct" one.</p>
+    <div class="dyn-legend" id="dynLegend"></div>
+    <div id="dynRows"></div>
+  </section>
+
+  <!-- STEP 3: Zoom -->
+  <section>
+    <div class="stepnum">03 / ZOOM (optional — use if stuck)</div>
+    <h2>Push a connection further</h2>
+    <div class="zoom-grid">
+      <div class="zoom-card">
+        <div class="q">🔍 Extremes</div>
+        <textarea rows="2" placeholder="What if this went to 100%? Or 0%?"></textarea>
+      </div>
+      <div class="zoom-card">
+        <div class="q">⏳ Time shift</div>
+        <textarea rows="2" placeholder="Bad now, good in 20 years? Or reverse?"></textarea>
+      </div>
+      <div class="zoom-card">
+        <div class="q">👥 Perspective shift</div>
+        <textarea rows="2" placeholder="Different for rich/poor, young/old, nations?"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 4: So What engine -->
+  <section class="readout">
+    <div class="stepnum">04 / OUTPUT — THE "SO WHAT" ENGINE</div>
+    <h2>Convert connections into band-7 ideas</h2>
+    <p class="hint">FORMULA: [Entity] + [Dynamic/verb] → [Resulting impact]. An observation alone is Band 6. An observation + consequence is Band 7+.</p>
+
+    <div class="idea-row">
+      <input type="text" placeholder="Entity + dynamic (e.g. 'longer work hours')">
+      <div class="op">→</div>
+      <input type="text" placeholder="which means / leading to">
+      <div class="op">→</div>
+      <input type="text" placeholder="resulting impact (Idea 1)">
+    </div>
+    <div class="idea-row">
+      <input type="text" placeholder="Entity + dynamic">
+      <div class="op">→</div>
+      <input type="text" placeholder="which means / leading to">
+      <div class="op">→</div>
+      <input type="text" placeholder="resulting impact (Idea 2)">
+    </div>
+
+    <div class="thesis-box">
+      <label>Thesis / position (one sentence)</label>
+      <input type="text" placeholder="e.g. I partially agree — while X helps A, it damages B, so...">
+    </div>
+  </section>
+
+  <div class="controls">
+    <button class="btn secondary" onclick="clearAll()">Clear sheet</button>
+    <button class="btn" onclick="window.print()">Print</button>
+  </div>
+
+</div>
+
+<script>
+// ---- Entity levels (micro -> macro) ----
+const levels = [
+  { name:"Individual", color:"#2E5090", hint:"health, time, money, skills" },
+  { name:"Interpersonal", color:"#3E6E90", hint:"family, friends, workplace" },
+  { name:"Society", color:"#4E8C8C", hint:"classes, govt, culture" },
+  { name:"Economy", color:"#7A8C4E", hint:"jobs, business, GDP" },
+  { name:"Environment", color:"#9C7A3E", hint:"nature, cities, resources" },
+  { name:"Technology", color:"#C77D02", hint:"AI, media, internet" },
+];
+
+const gaugeBar = document.getElementById('gaugeBar');
+const entityGrid = document.getElementById('entityGrid');
+levels.forEach(lvl=>{
+  const seg = document.createElement('div');
+  seg.style.background = lvl.color;
+  gaugeBar.appendChild(seg);
+
+  const card = document.createElement('div');
+  card.className = 'entity-card';
+  card.style.setProperty('--lvl-color', lvl.color);
+  card.innerHTML = `<label>${lvl.name}</label><input type="text" placeholder="${lvl.hint}">`;
+  entityGrid.appendChild(card);
+});
+
+// ---- Essay types ----
+const types = [
+  { name:"Opinion", hint:"Use Zoom to find a nuanced position — partial agreement is easier to defend than an extreme one." },
+  { name:"Discussion", hint:"Use Dynamics to see that each view usually prioritises a different entity or timeframe." },
+  { name:"Problem/Solution", hint:"Use Entities to find structural causes, then aim each solution at the specific entity that's failing." },
+  { name:"Adv/Disadv", hint:"Use Zoom to weigh which side's impact on the entities is more fundamental, not just longer." },
+  { name:"Two-part", hint:"Keep Dynamics (causes) and entity-impact (evaluation) in separate paragraphs — don't mix the two questions." },
+];
+const typeButtons = document.getElementById('typeButtons');
+const typeHint = document.getElementById('typeHint');
+types.forEach((t,i)=>{
+  const b = document.createElement('button');
+  b.className = 'type-btn';
+  b.textContent = t.name;
+  b.onclick = ()=>{
+    document.querySelectorAll('.type-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    typeHint.textContent = t.hint;
+  };
+  typeButtons.appendChild(b);
+});
+
+// ---- Dynamics ----
+const dynamics = [
+  { name:"Cause & Effect", color:"#3E8F5E" },
+  { name:"Trade-off", color:"#C77D02" },
+  { name:"Symbiosis", color:"#2E7D8C" },
+  { name:"Power & Control", color:"#4B3E8F" },
+  { name:"Equity", color:"#8C3E7D" },
+  { name:"Access/Exclusion", color:"#6B6B6B" },
+];
+const dynLegend = document.getElementById('dynLegend');
+dynamics.forEach(d=>{
+  const s = document.createElement('span');
+  s.innerHTML = `<span class="swatch" style="background:${d.color}"></span>${d.name}`;
+  dynLegend.appendChild(s);
+});
+
+const dynRows = document.getElementById('dynRows');
+for(let i=0;i<3;i++){
+  const row = document.createElement('div');
+  row.className = 'dyn-row';
+  const select = document.createElement('select');
+  select.innerHTML = `<option value="">— dynamic —</option>` + dynamics.map(d=>`<option>${d.name}</option>`).join('');
+  row.innerHTML = `
+    <div><span class="field-label">Entity A</span><input type="text" placeholder="e.g. Government"></div>
+    <div><span class="field-label">Dynamic</span></div>
+    <div><span class="field-label">Entity B</span><input type="text" placeholder="e.g. Citizens"></div>
+    <div><span class="field-label">Impact / note</span><input type="text" placeholder="what happens as a result?"></div>
+  `;
+  row.children[1].appendChild(select);
+  dynRows.appendChild(row);
+}
+
+function clearAll(){
+  document.querySelectorAll('input[type=text], textarea').forEach(el=>el.value='');
+  document.querySelectorAll('select').forEach(el=>el.selectedIndex=0);
+  document.querySelectorAll('.type-btn').forEach(x=>x.classList.remove('active'));
+  typeHint.textContent = 'Select an essay type above for a one-line strategy reminder.';
+}
+</script>
+</body>
+</html>
