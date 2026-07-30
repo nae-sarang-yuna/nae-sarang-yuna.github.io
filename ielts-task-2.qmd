@@ -13,14 +13,19 @@ format:
     css: styles.css
 ---
 
-### *Stop Memorizing. Start Analyzing.*
+> *"I stared at the prompt for ten minutes, my mind completely blank. I ended up writing the same generic ideas I always use, and my score hasn't moved past 6.0."*
 
-Many students struggle to generate ideas for Task 2 because they try to memorize "model answers." This framework teaches you how to **analyze** any prompt by breaking it down into its core parts, connecting them, and testing them from different angles. 
+If this sounds like you, you are not alone. The biggest trap in IELTS Writing Task 2 is trying to **memorize** ideas. When you rely on memorized templates and pre-packaged arguments, you will inevitably fail when the examiner gives you an unfamiliar prompt. 
 
-Use this 4-step process every time you see a new prompt.
+To score a Band 7 or higher in Task Response, you must stop *memorizing* and start *analyzing*. 
+
+This article introduces **The Analytical Engine**, a universal brainstorming framework based on objects, concepts, and their relationships. By the end of this article, you will never stare at a blank page again. You will have a systematic way to dissect *any* prompt and generate unique, high-level ideas in under five minutes.
 
 ## STEP 1: Identify the ENTITIES (The "Who" and "What")
-*When you read the prompt, ask yourself: "Which of these 6 categories are involved?"*
+
+When you read an IELTS prompt, your first task is to identify the core "Entities" involved. Think of entities as the nouns in the prompt—the people, systems, and physical things that will be affected by the topic. 
+
+To ensure you never miss an angle, we categorize entities into six distinct levels. When brainstorming, scan this list and ask yourself: *"Which of these are involved?"*
 
 ### 1. The Individual (Micro Level)
 *   **Physical/Biological:** Health (physical/mental), lifespan, energy, safety.
@@ -57,7 +62,9 @@ Use this 4-step process every time you see a new prompt.
 *   **Connectivity:** Internet access, social media, global communication networks.
 
 ## STEP 2: Map the DYNAMICS (The "Relationships")
-*Once you have your Entities, how do they interact? This generates your main arguments.*
+Identifying the entities is only half the battle. An essay is not a list of facts; it is an argument about how things interact. Once you have your entities, you must map the **Dynamics** (the verbs and relationships) between them. 
+
+Here are the six core dynamics to look for:
 
 *   🟢 **Cause & Effect:** Entity A directly causes a change in Entity B. 
     * *(e.g., Social media [Tech] causes a decline in youth mental health [Individual].)*
