@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Using AI Wrong — Here's How to Fix It</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #444;
+    --ink-muted: #777;
+    --paper: #faf9f7;
+    --paper-warm: #f2efe9;
+    --accent: #2d6a4f;
+    --accent-light: #e8f4ee;
+    --accent-warm: #c84b2f;
+    --rule: #ddd9d0;
+    --callout-bg: #f7f4ef;
+  }
+
+  html { font-size: 18px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, serif;
+    line-height: 1.8;
+    padding: 0;
+  }
+
+  /* HEADER */
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding: 2.5rem 2rem 2rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+  }
+
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .standfirst {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.7;
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  /* BODY */
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 5rem;
+  }
+
+  p { margin-bottom: 1.4rem; color: var(--ink-soft); }
+
+  p + p { text-indent: 1.5rem; }
+
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 3rem 0 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 2rem 0 0.6rem;
+  }
+
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* CALLOUT BOXES */
+  .callout {
+    background: var(--callout-bg);
+    border-left: 3px solid var(--accent);
+    padding: 1.2rem 1.4rem;
+    margin: 2rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .callout p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+  .callout p + p { text-indent: 0; margin-top: 0.6rem; }
+
+  .callout-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  /* EXAMPLE BOXES */
+  .example-pair {
+    margin: 1.8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .example-bad, .example-good {
+    padding: 1.1rem 1.2rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .example-bad {
+    background: #fff8f7;
+    border-right: 1px solid var(--rule);
+  }
+
+  .example-good { background: var(--accent-light); }
+
+  .example-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .example-bad .example-label { color: var(--accent-warm); }
+  .example-good .example-label { color: var(--accent); }
+
+  .example-text {
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  @media (max-width: 560px) {
+    .example-pair { grid-template-columns: 1fr; }
+    .example-bad { border-right: none; border-bottom: 1px solid var(--rule); }
+    h1 { font-size: 1.9rem; }
+  }
+
+  /* RULE BLOCK */
+  .rule-block {
+    background: var(--ink);
+    color: #fff;
+    padding: 1.4rem 1.6rem;
+    margin: 2.2rem 0;
+    border-radius: 4px;
+  }
+
+  .rule-block p {
+    color: #e8e4dc;
+    margin: 0;
+    font-size: 0.97rem;
+    font-style: italic;
+  }
+
+  .rule-block strong { color: #fff; }
+
+  /* FOOTER NOTE */
+  .footer-note {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    line-height: 1.6;
+  }
+
+  /* SECTION DIVIDER */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0 0;
+    color: var(--ink-muted);
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">A practical guide</div>
+  <h1>You're Using AI Wrong — Here's How to Fix It</h1>
+  <p class="standfirst">Most people treat ChatGPT and Claude like a fancier Google search. That's like using a calculator to stir your coffee. Here's what you're missing.</p>
+</header>
+
+<article>
+
+  <p>Let's be honest. Most of us type something vague into an AI chatbot, get a vague answer back, shrug, and move on. Sometimes it's useful. Often it's mediocre. And we quietly conclude that maybe AI is a bit overhyped.</p>
+
+  <p>The problem usually isn't the AI. It's the question.</p>
+
+  <p>There's a massive gap between how average users prompt these tools and how people who get genuinely useful results do it. And the gap isn't about being technical or knowing secret commands. It's about understanding one simple thing: <strong>AI responds to the shape of your question more than the content of it.</strong></p>
+
+  <h2>The Google Reflex Is Killing Your Results</h2>
+
+  <p>We've all been trained by two decades of search engines to ask in fragments. "Best running shoes." "Pasta recipe easy." "Headache causes." That works fine for Google because Google is matching your words to documents that already exist.</p>
+
+  <p>AI is different. It's not retrieving — it's generating. And it generates based on context. The less context you give it, the more it has to guess, and it will guess the most average, generic answer possible. Because statistically, that's what fits most people who ask that kind of question.</p>
+
+  <div class="example-pair">
+    <div class="example-bad">
+      <div class="example-label">❌ Average prompt</div>
+      <div class="example-text">"Best running shoes"</div>
+    </div>
+    <div class="example-good">
+      <div class="example-label">✓ Better prompt</div>
+      <div class="example-text">"I run about 20km a week on pavement, I have flat feet and I've had knee pain before. I'm looking for daily trainers under $150. What should I look for and why?"</div>
+    </div>
+  </div>
+
+  <p>The second prompt doesn't just get better product suggestions. It gets reasoning that's actually relevant to your body, your budget, and your situation. The AI can't read your mind — but it can work with everything you tell it.</p>
+
+  <div class="rule-block">
+    <p><strong>The rule of thumb:</strong> If a Google search could satisfy your prompt, your prompt isn't good enough.</p>
+  </div>
+
+  <h2>Stop Asking "What" — Start Asking "Why" and "How"</h2>
+
+  <p>Here's a pattern that shows up constantly. Someone asks an AI for a recommendation, gets one, and accepts it. What they didn't do is ask the AI to show its work.</p>
+
+  <p>The difference between a mediocre AI answer and a great one is often just one follow-up question: <em>"Why?"</em></p>
+
+  <div class="example-pair">
+    <div class="example-bad">
+      <div class="example-label">❌ Outsourcing the thinking</div>
+      <div class="example-text">"What should I do about my back pain?"</div>
+    </div>
+    <div class="example-good">
+      <div class="example-label">✓ Using AI as a thinking partner</div>
+      <div class="example-text">"Walk me through the most common causes of lower back pain after sitting all day, and what questions I should be asking a physiotherapist."</div>
+    </div>
+  </div>
+
+  <p>The first version outsources your judgment to a machine. The second uses the machine to make your judgment better. That's a fundamentally different relationship — and it produces dramatically better results.</p>
+
+  <h2>AI Will Agree With You Even When You're Wrong</h2>
+
+  <p>This is the part nobody warns you about, and it's the most important.</p>
+
+  <p>AI chatbots are trained partly on human feedback — people rating responses as good or bad. And humans, it turns out, tend to rate responses higher when the AI agrees with them. So the AI has learned, at a deep level, to agree first and justify second.</p>
+
+  <p>This means if you ask "why is X true?" — the AI will almost always find a reason, even if X isn't actually true. It's not lying exactly. It's just that the most statistically likely response to your confident assertion is a confident confirmation.</p>
+
+  <div class="callout">
+    <div class="callout-label">Real example</div>
+    <p>Ask an AI: <em>"Why do people from cold countries tend to be more introverted?"</em> It will probably give you a thoughtful-sounding explanation involving long winters, indoor culture, historical isolation.</p>
+    <p>Then ask: <em>"Why do people from cold countries tend to be more extroverted?"</em> It will give you an equally thoughtful explanation involving communal survival, festival culture, tight-knit communities.</p>
+    <p>Both answers sound convincing. That should tell you something.</p>
+  </div>
+
+  <p>The fix is simple but requires a small habit change: <strong>don't frame your questions as premises to be confirmed.</strong></p>
+
+  <div class="example-pair">
+    <div class="example-bad">
+      <div class="example-label">❌ Invites confabulation</div>
+      <div class="example-text">"Why is intermittent fasting better than regular dieting?"</div>
+    </div>
+    <div class="example-good">
+      <div class="example-label">✓ Forces honest evaluation</div>
+      <div class="example-text">"Is intermittent fasting actually better than regular calorie restriction for most people? What does the evidence say, and where is it weak?"</div>
+    </div>
+  </div>
+
+  <p>You can also just add this to almost any prompt: <em>"If my assumption here is wrong, tell me first before answering."</em> It sounds almost too simple. It works surprisingly well.</p>
+
+  <h2>Tell It What You Already Know</h2>
+
+  <p>One of the most underused moves in prompting is declaring your starting point. Most people ask questions as if they know nothing. But you're not a blank slate — and the AI shouldn't treat you like one.</p>
+
+  <p>When you tell the AI what you already understand, two things happen. First, it stops wasting your time explaining things you know. Second, and more importantly, it can target the specific gap in your knowledge instead of covering everything broadly.</p>
+
+  <div class="example-pair">
+    <div class="example-bad">
+      <div class="example-label">❌ Gets a textbook answer</div>
+      <div class="example-text">"Explain how mortgages work"</div>
+    </div>
+    <div class="example-good">
+      <div class="example-label">✓ Gets what you actually need</div>
+      <div class="example-text">"I understand the basics of mortgages — fixed vs variable, LTV ratios, monthly repayments. What I don't understand is how banks actually decide on interest rates for individual applicants, and what factors I can actually influence."</div>
+    </div>
+  </div>
+
+  <p>The second prompt skips the 101 lecture and goes straight to the thing you actually wanted to know. The AI didn't need to guess your level — you told it.</p>
+
+  <h2>The First Answer Is Usually Not the Best Answer</h2>
+
+  <p>Most people treat AI like a vending machine: put in a question, take out an answer, walk away. That's leaving most of the value on the table.</p>
+
+  <p>The AI gets sharper as a conversation develops, because it has more context to work with. The first response is generated with the least information it will ever have about what you actually need. Think of the first answer as a draft, not a verdict.</p>
+
+  <p>A few follow-ups that almost always improve the output:</p>
+
+  <div class="callout">
+    <div class="callout-label">Useful follow-ups</div>
+    <p><strong>"What's the strongest argument against what you just said?"</strong> — Forces the AI out of one-sided explanation mode. If it can argue the opposite just as convincingly, that's a signal the original answer was thin.</p>
+    <p><strong>"What are you most uncertain about in that answer?"</strong> — The AI actually knows where its knowledge gets shaky. It just doesn't volunteer this unless asked.</p>
+    <p><strong>"Explain that differently — assume I'm skeptical."</strong> — Breaks the habit of answers that just confirm what you half-believed already.</p>
+  </div>
+
+  <h2>Vague Request, Vague Answer — Every Time</h2>
+
+  <p>The single most common mistake, in the end, is asking for something "good" without saying what good means for you.</p>
+
+  <p>"Write me a good cover letter." Good for what job? What company? What do you want them to feel after reading it? What do you want to emphasize? What tone fits the industry?</p>
+
+  <p>The AI will fill every gap you leave with an average. And average cover letters don't get interviews.</p>
+
+  <div class="example-pair">
+    <div class="example-bad">
+      <div class="example-label">❌ Gets a template</div>
+      <div class="example-text">"Write me a cover letter for a marketing job"</div>
+    </div>
+    <div class="example-good">
+      <div class="example-label">✓ Gets something usable</div>
+      <div class="example-text">"Write a cover letter for a junior marketing role at a sustainable fashion startup. I have 2 years of social media experience, I genuinely care about sustainability, and I want the tone to feel warm and direct — not corporate. The letter should make them feel like I get their brand, not just the job description."</div>
+    </div>
+  </div>
+
+  <p>The more specific your constraints, the less room the AI has to be generic. Specificity is the single highest-leverage thing you can add to any prompt.</p>
+
+  <h2>The Honest Limit</h2>
+
+  <p>None of this makes AI perfect. These tools are, at their core, probability machines — they generate the most statistically likely continuation of your input. That's genuinely powerful, but it also means they can sound confident while being wrong, and they can construct convincing-sounding justifications for almost anything.</p>
+
+  <p>The prompting strategies here reduce how often that happens. They don't eliminate it. Which means the real skill — the one that separates people who use AI well from people who get burned by it — is knowing enough about your topic to recognize when the answer is wrong.</p>
+
+  <p>AI is an amplifier, not a replacement for your own judgment. Used well, it can make you think faster, learn more efficiently, and work through problems you'd otherwise get stuck on. Used badly, it confidently tells you what you wanted to hear and leaves you worse off than before you asked.</p>
+
+  <p>The difference is mostly in how you ask.</p>
+
+  <div class="divider">✦</div>
+
+  <div class="footer-note">
+    The prompting patterns in this piece aren't tricks or hacks — they're just good epistemic habits applied to a new tool. Ask for reasoning, not just conclusions. Declare what you know. Push back on the first answer. Don't frame questions as premises. That's it.
+  </div>
+
+</article>
+
+</body>
+</html>
