@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINHO ARCHIVE — Fanblog Choi Minho (SHINee) | シャイニ의 빛</title>
+<meta name="description" content="Fanblog không chính thức lưu trữ mọi khoảnh khắc của Choi Minho — rapper, diễn viên, ngọn lửa của SHINee. Bởi Shawol, vì Shawol.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Song+Myung&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink:#0e131a; --ink2:#131a23; --ink3:#0a0e13;
+  --paper:#f1ece1; --paper2:#e7dfcd;
+  --aqua:#8be9d3; --aqua-deep:#37c9ab;
+  --flame:#ff6a4c; --flame-deep:#d2482c;
+  --txt-d:#e9eef0; --mut-d:#9aa8ad;
+  --txt-l:#171c21; --mut-l:#5f6a6e;
+  --line-d:rgba(139,233,211,.16); --line-l:rgba(23,28,33,.18);
+  --disp:'Anton',Impact,sans-serif;
+  --body:'Be Vietnam Pro',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --kr:'Song Myung',serif;
+  --wrap:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt-d);font-family:var(--body);line-height:1.65;overflow-x:hidden}
+::selection{background:var(--aqua);color:var(--ink)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+section{scroll-margin-top:76px}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--ink3)}
+::-webkit-scrollbar-thumb{background:#2a3a42;border:2px solid var(--ink3)}
+::-webkit-scrollbar-thumb:hover{background:var(--aqua-deep)}
+:focus-visible{outline:2px solid var(--aqua);outline-offset:3px}
+
+.mono{font-family:var(--mono)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--aqua);display:flex;align-items:center;gap:.8em}
+.kicker::before{content:'';width:34px;height:1px;background:var(--aqua)}
+.dark .kicker{color:var(--aqua)}
+.light{background:var(--paper);color:var(--txt-l)}
+.light .kicker{color:var(--flame-deep)}
+.light .kicker::before{background:var(--flame-deep)}
+
+/* noise overlay */
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ============ TICKER ============ */
+.ticker{background:var(--ink3);border-bottom:1px solid var(--line-d);overflow:hidden;font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut-d)}
+.mq-track{display:flex;width:max-content;animation:mq 34s linear infinite}
+.mq-track>span{display:flex;align-items:center;white-space:nowrap;padding:.55em 0}
+.mq-track b{color:var(--aqua);font-weight:500}
+.mq-track em{font-style:normal;color:var(--flame)}
+.mq-track i{font-style:normal;padding:0 1.4em;color:#3a4a52}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============ HEADER ============ */
+header.site{position:sticky;top:0;z-index:50;background:rgba(14,19,26,.88);backdrop-filter:blur(9px);border-bottom:1px solid var(--line-d)}
+.site-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:62px}
+.brand{font-family:var(--disp);font-size:1.25rem;letter-spacing:.06em;display:flex;align-items:center;gap:.55rem}
+.brand .dot{width:10px;height:10px;background:var(--flame);border-radius:50%;box-shadow:0 0 12px var(--flame);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(.7);opacity:.6}}
+.brand small{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;color:var(--aqua);align-self:flex-end;margin-bottom:.15em}
+nav.main{display:flex;gap:1.6rem}
+nav.main a{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut-d);padding:.4em 0;border-bottom:1px solid transparent;transition:.25s}
+nav.main a:hover{color:var(--txt-d)}
+nav.main a.active{color:var(--aqua);border-color:var(--aqua)}
+.nav-meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:var(--mut-d);border:1px solid var(--line-d);padding:.45em .9em}
+.burger{display:none;background:none;border:1px solid var(--line-d);color:var(--aqua);font-size:1.1rem;padding:.35em .7em}
+@media(max-width:920px){
+  nav.main{display:none;position:absolute;top:62px;left:0;right:0;background:var(--ink3);flex-direction:column;gap:0;border-bottom:1px solid var(--line-d);padding:.5rem 0}
+  nav.main a{padding:.9em clamp(18px,4vw,40px);border-bottom:1px solid rgba(139,233,211,.07)}
+  body.menu-open nav.main{display:flex}
+  .burger{display:block}
+  .nav-meta{display:none}
+}
+
+/* ============ HERO ============ */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line-d)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;min-height:calc(100vh - 96px);padding:4rem 0 3rem}
+.hero h1{font-family:var(--disp);text-transform:uppercase;line-height:.9;font-size:clamp(4.2rem,11.5vw,9.2rem);margin:1.4rem 0 .4rem}
+.hero h1 .l2{color:var(--aqua)}
+.hero h1 .kr{font-family:var(--kr);font-size:.42em;color:transparent;-webkit-text-stroke:1.5px var(--flame);letter-spacing:.08em;display:inline-block;margin-top:.1em}
+.hero-sub{max-width:34rem;color:var(--mut-d);margin-top:1.4rem;font-size:1.02rem}
+.hero-sub b{color:var(--txt-d)}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.chips li{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;border:1px solid var(--line-d);padding:.5em .9em;color:var(--mut-d)}
+.chips li:nth-child(odd){border-color:rgba(255,106,76,.35);color:#ffb3a2}
+.hero-cta{display:flex;gap:.9rem;margin-top:2.2rem;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:.95em 1.7em;border:1px solid var(--aqua);color:var(--ink);background:var(--aqua);transition:.25s;border-radius:2px}
+.btn:hover{background:transparent;color:var(--aqua);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--flame);border-color:var(--flame)}
+.btn.ghost:hover{background:var(--flame);color:var(--ink)}
+.hero-side-rail{position:absolute;right:8px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-family:var(--mono);font-size:.6rem;letter-spacing:.4em;color:#3a4a52}
+
+/* polaroids */
+.polaroids{position:relative;height:clamp(430px,52vw,580px)}
+.pola{position:absolute;background:#f6f2e8;padding:10px 10px 40px;box-shadow:0 22px 50px rgba(0,0,0,.5);transform:rotate(var(--r));transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;animation:floaty 7s ease-in-out infinite}
+.pola:hover{transform:rotate(0deg) scale(1.04);z-index:9;box-shadow:0 30px 70px rgba(0,0,0,.65)}
+.pola figcaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:#4a4436;text-align:center;padding-top:10px;text-transform:uppercase}
+.pola::before{content:'';position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-2deg);width:84px;height:24px;background:rgba(139,233,211,.5);border:1px solid rgba(139,233,211,.6)}
+.pola.p1{width:52%;right:4%;top:0;--r:4deg;z-index:3}
+.pola.p2{width:44%;left:0;top:26%;--r:-6deg;z-index:2;animation-delay:1.2s}
+.pola.p3{width:40%;right:10%;bottom:2%;--r:2.5deg;z-index:1;animation-delay:2.4s}
+@keyframes floaty{50%{translate:0 -9px}}
+.spin-badge{position:absolute;left:-6px;bottom:6%;width:118px;height:118px;z-index:5;animation:spin 18s linear infinite}
+.spin-badge text{font-family:var(--mono);font-size:10.5px;letter-spacing:3px;fill:var(--aqua)}
+.spin-badge .c{fill:var(--flame)}
+@keyframes spin{to{rotate:360deg}}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;min-height:0;padding-top:3rem}.polaroids{height:420px;margin-top:1rem}.hero-side-rail{display:none}}
+
+/* duotone images */
+.duo{position:relative;overflow:hidden;background:var(--ink2)}
+.duo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1) brightness(.92)}
+.duo::after{content:'';position:absolute;inset:0;background:var(--aqua);mix-blend-mode:color;opacity:.85;pointer-events:none}
+.duo.flame::after{background:var(--flame)}
+.kb img{animation:kb 15s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.09) translate(-1.6%,-1.2%)}}
+
+/* big stripe marquee */
+.stripe{background:var(--aqua);color:var(--ink);overflow:hidden;border-block:1px solid var(--ink3)}
+.stripe .mq-track{animation-duration:26s}
+.stripe span{font-family:var(--disp);text-transform:uppercase;font-size:clamp(1.4rem,3vw,2.2rem);padding:.5em 0;letter-spacing:.03em}
+.stripe i{font-style:normal;padding:0 .8em;color:var(--flame-deep)}
+.stripe.hot{background:var(--flame);color:#2a0d05}
+.stripe.hot i{color:var(--ink)}
+
+/* ============ SECTION HEADER ============ */
+.shead{margin-bottom:clamp(2.4rem,5vw,4rem)}
+.shead h2{font-family:var(--disp);text-transform:uppercase;font-size:clamp(2.3rem,5.4vw,4.4rem);line-height:1.02;margin-top:.9rem}
+.shead .note{max-width:30rem;color:var(--mut-d);margin-top:1rem;font-size:.95rem}
+.light .shead .note{color:var(--mut-l)}
+.lm{overflow:hidden}
+.lm>span{display:block;transform:translateY(112%);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.in .lm>span{transform:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.lm>span{transform:none}}
+
+/* ============ PROFILE ============ */
+#hoso{padding:clamp(4rem,8vw,7rem) 0}
+.profile-grid{display:grid;grid-template-columns:350px 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.idcard{position:sticky;top:96px;border:1px solid var(--line-l);background:#faf7ef;box-shadow:0 24px 60px rgba(23,28,33,.18);transform:rotate(-1.2deg)}
+.idcard .ph{height:380px}
+.idcard-body{padding:1.2rem 1.3rem 1.5rem}
+.idcard-body .fno{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;color:var(--mut-l)}
+.idcard-body h3{font-family:var(--disp);font-size:2rem;text-transform:uppercase;margin:.4rem 0 0}
+.idcard-body .kr{font-family:var(--kr);color:var(--flame-deep);font-size:1.15rem}
+.idcard-body dl{margin-top:1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:#3c4347}
+.idcard-body dl div{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line-l);padding:.45em 0}
+.idcard-body dt{color:var(--mut-l)}
+.barcode{margin-top:1.1rem;height:34px;background:repeating-linear-gradient(90deg,var(--txt-l) 0 2px,transparent 2px 5px,var(--txt-l) 5px 6px,transparent 6px 11px)}
+.stamp{position:absolute;right:14px;top:352px;width:88px;height:88px;border:2.5px solid var(--flame-deep);border-radius:50%;display:grid;place-items:center;text-align:center;font-family:var(--mono);font-size:.55rem;letter-spacing:.14em;color:var(--flame-deep);transform:rotate(12deg);background:rgba(241,236,225,.85);text-transform:uppercase;line-height:1.5}
+.fact{display:grid;grid-template-columns:70px 1fr;gap:1.2rem;padding:1.7rem 0;border-top:1px solid var(--line-l)}
+.fact-no{font-family:var(--disp);font-size:1.9rem;color:var(--flame-deep);line-height:1}
+.fact h4{font-family:var(--disp);text-transform:uppercase;font-size:1.25rem;letter-spacing:.03em;margin-bottom:.35rem}
+.fact p{color:var(--mut-l);font-size:.95rem;max-width:44rem}
+.tri{margin-top:3.4rem;border-top:2px solid var(--txt-l);padding-top:2rem}
+.tri h3{font-family:var(--disp);text-transform:uppercase;font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:1.6rem}
+.tri-row{display:grid;grid-template-columns:110px 220px 1fr;gap:1.4rem;padding:1.4rem 0;border-top:1px solid var(--line-l);align-items:baseline}
+.tri-row .n{font-family:var(--disp);font-size:2.6rem;color:transparent;-webkit-text-stroke:1.3px var(--txt-l)}
+.tri-row h5{font-family:var(--disp);text-transform:uppercase;font-size:1.3rem;color:var(--flame-deep)}
+.tri-row p{color:var(--mut-l);font-size:.94rem}
+@media(max-width:920px){.profile-grid{grid-template-columns:1fr}.idcard{position:static;max-width:380px}.tri-row{grid-template-columns:60px 1fr;grid-template-rows:auto auto}.tri-row p{grid-column:1/-1}}
+
+/* ============ TIMELINE ============ */
+#timeline{background:var(--ink2);border-block:1px solid var(--line-d);padding:clamp(4rem,8vw,7rem) 0}
+.tl{list-style:none;position:relative;margin-top:1rem}
+.tl::before{content:'';position:absolute;left:112px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--line-d),rgba(255,106,76,.35))}
+.tl-item{position:relative;padding:1.5rem 0 1.5rem 160px}
+.tl-year{position:absolute;left:0;top:1.7rem;width:92px;text-align:right;font-family:var(--disp);font-size:1.55rem;color:var(--aqua);line-height:1}
+.tl-year small{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--mut-d);margin-top:.3em}
+.tl-item::before{content:'';position:absolute;left:108px;top:2.1rem;width:9px;height:9px;background:var(--ink2);border:2px solid var(--aqua);border-radius:50%}
+.tl-item:nth-child(4n)::before{border-color:var(--flame)}
+.tl-card{border:1px solid var(--line-d);background:var(--ink);padding:1.2rem 1.4rem;transition:.3s;border-radius:2px}
+.tl-card:hover{border-color:rgba(139,233,211,.4);transform:translateX(6px)}
+.tl-card h4{font-family:var(--disp);text-transform:uppercase;font-size:1.1rem;letter-spacing:.04em}
+.tl-card p{color:var(--mut-d);font-size:.92rem;margin-top:.3rem;max-width:46rem}
+.tl-card .tag{display:inline-block;margin-top:.7rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--flame);border:1px solid rgba(255,106,76,.4);padding:.35em .8em;text-transform:uppercase}
+@media(max-width:700px){.tl::before{left:8px}.tl-item{padding:0 0 2.2rem 30px}.tl-year{position:static;width:auto;text-align:left;margin-bottom:.5rem}.tl-item::before{left:4px;top:.55rem}}
+
+/* ============ MUSIC ============ */
+#music{padding:clamp(4rem,8vw,7rem) 0}
+.music-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.album-feat{border:1px solid var(--line-d);background:var(--ink2)}
+.album-feat .cover{aspect-ratio:1.35/1;position:relative}
+.album-badge{position:absolute;top:14px;left:14px;z-index:2;font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;background:var(--flame);color:var(--ink);padding:.5em .9em;text-transform:uppercase}
+.album-info{padding:1.6rem 1.7rem 1.9rem}
+.album-info h3{font-family:var(--disp);font-size:2.4rem;text-transform:uppercase;color:var(--aqua);line-height:1}
+.album-info .meta{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--mut-d);margin:.6rem 0 1rem}
+.album-info>p{color:var(--mut-d);font-size:.94rem;max-width:38rem}
+.tracks{list-style:none;margin-top:1.4rem;border-top:1px solid var(--line-d)}
+.track{display:flex;width:100%;background:none;border:none;border-bottom:1px solid var(--line-d);color:var(--txt-d);font-family:var(--mono);font-size:.8rem;padding:.85em .4em;align-items:center;gap:1em;text-align:left;transition:.2s}
+.track:hover{background:rgba(139,233,211,.06);padding-left:.9em}
+.track .no{color:var(--mut-d);width:2em}
+.track .t{flex:1;letter-spacing:.06em}
+.track .dur{color:var(--mut-d);font-size:.7rem}
+.track.active{color:var(--aqua)}
+.track.active .t::before{content:'▶ ';color:var(--flame)}
+.album-mini{display:flex;gap:1.1rem;border:1px solid var(--line-d);background:var(--ink2);padding:1rem;margin-bottom:1rem;align-items:center;transition:.3s;border-radius:2px}
+.album-mini:hover{border-color:rgba(255,106,76,.5);transform:translateX(5px)}
+.album-mini .cover{width:92px;height:92px;flex:none}
+.album-mini h4{font-family:var(--disp);text-transform:uppercase;font-size:1.15rem;letter-spacing:.04em}
+.album-mini .meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--mut-d);margin:.25rem 0 .6rem}
+.mini-play{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;background:none;border:1px solid var(--aqua);color:var(--aqua);padding:.45em 1em;transition:.2s;text-transform:uppercase}
+.mini-play:hover{background:var(--aqua);color:var(--ink)}
+.player{border:1px solid var(--flame);padding:1.3rem 1.4rem;background:var(--ink3);margin-top:.4rem}
+.player-top{display:flex;gap:1.1rem;align-items:center}
+.eq{display:flex;gap:3px;align-items:flex-end;height:30px;width:34px;flex:none}
+.eq span{width:4px;height:100%;background:var(--flame);transform:scaleY(.22);transform-origin:bottom;animation:eq 1s ease-in-out infinite alternate;animation-play-state:paused}
+.eq span:nth-child(2){animation-delay:.15s;height:80%}
+.eq span:nth-child(3){animation-delay:.3s}
+.eq span:nth-child(4){animation-delay:.45s;height:70%}
+.eq span:nth-child(5){animation-delay:.6s;height:88%}
+.player.playing .eq span{animation-play-state:running}
+@keyframes eq{from{transform:scaleY(.22)}to{transform:scaleY(1)}}
+.np-title{font-family:var(--disp);text-transform:uppercase;font-size:1.25rem;letter-spacing:.04em;line-height:1.1}
+.np-album{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--mut-d);margin-top:.3rem}
+.progress{height:3px;background:#243039;margin:1.1rem 0 .6rem;position:relative}
+.progress i{position:absolute;inset:0 auto 0 0;width:0;background:var(--flame);transition:width 1s linear}
+.player-row{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.68rem;color:var(--mut-d)}
+.p-btns{display:flex;gap:.6rem}
+.p-btns button{background:none;border:1px solid var(--line-d);color:var(--txt-d);width:34px;height:34px;font-size:.72rem;transition:.2s;border-radius:2px}
+.p-btns button:hover{border-color:var(--flame);color:var(--flame)}
+#p-play{border-color:var(--flame);color:var(--flame);width:44px}
+#p-play:hover{background:var(--flame);color:var(--ink)}
+@media(max-width:920px){.music-grid{grid-template-columns:1fr}}
+
+/* ============ FILM ============ */
+#film{background:var(--ink2);border-block:1px solid var(--line-d);padding:clamp(4rem,8vw,7rem) 0}
+.strip-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.strip-nav{display:flex;gap:.6rem}
+.strip-nav button{width:46px;height:46px;background:none;border:1px solid var(--line-d);color:var(--aqua);font-size:1rem;transition:.2s;border-radius:2px}
+.strip-nav button:hover{background:var(--aqua);color:var(--ink)}
+.strip{display:flex;gap:1.3rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.4rem 4px .8rem;scrollbar-width:none}
+.strip::-webkit-scrollbar{height:0}
+.poster{flex:0 0 236px;scroll-snap-align:start;cursor:default}
+.poster .poster-img{aspect-ratio:3/4;transition:.35s}
+.poster:hover .poster-img{transform:translateY(-8px)}
+.poster:hover .poster-img img{transform:scale(1.07)}
+.poster img{transition:transform .6s ease}
+.poster figcaption{padding-top:.8rem}
+.poster strong{font-family:var(--disp);text-transform:uppercase;font-size:1rem;letter-spacing:.04em;display:block;line-height:1.2}
+.poster .mono{font-size:.62rem;letter-spacing:.16em;color:var(--flame);display:block;margin-top:.35rem}
+
+/* ============ GALLERY ============ */
+#gallery{padding:clamp(4rem,8vw,7rem) 0}
+.g-cols{columns:3;column-gap:1.6rem}
+.gitem{break-inside:avoid;margin-bottom:1.6rem;background:#f8f4ea;padding:9px 9px 34px;box-shadow:0 14px 34px rgba(23,28,33,.16);transform:rotate(var(--r,0deg));transition:.35s;cursor:zoom-in;position:relative}
+.gitem:hover{transform:rotate(0) scale(1.03);z-index:4;box-shadow:0 24px 50px rgba(23,28,33,.28)}
+.gitem img{filter:saturate(1.02) contrast(1.02)}
+.gitem figcaption{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:#5a5342;padding-top:.7rem;line-height:1.7}
+.gitem::after{content:'⤢';position:absolute;top:14px;right:14px;background:rgba(14,19,26,.75);color:var(--aqua);width:26px;height:26px;display:grid;place-items:center;font-size:.7rem;opacity:0;transition:.25s}
+.gitem:hover::after{opacity:1}
+.g-hint{text-align:center;font-family:var(--mono);font-size:.66rem;letter-spacing:.24em;color:var(--mut-l);margin-top:1.6rem;text-transform:uppercase}
+@media(max-width:920px){.g-cols{columns:2}}
+@media(max-width:560px){.g-cols{columns:1}}
+
+/* ============ BLOG ============ */
+#blog{background:var(--ink);padding:clamp(4rem,8vw,7rem) 0;border-top:1px solid var(--line-d)}
+.blog-feat{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid var(--line-d);background:var(--ink2);margin-bottom:2.6rem;overflow:hidden}
+.blog-feat .ph{min-height:340px}
+.blog-feat-txt{padding:clamp(1.6rem,3.5vw,2.8rem);display:flex;flex-direction:column;justify-content:center}
+.post-meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;color:var(--mut-d);display:flex;gap:1.2rem;flex-wrap:wrap;text-transform:uppercase}
+.post-meta .tag{color:var(--flame)}
+.blog-feat-txt h3{font-family:var(--disp);text-transform:uppercase;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.08;margin:.9rem 0}
+.blog-feat-txt p{color:var(--mut-d);font-size:.96rem;max-width:34rem}
+.read-more{margin-top:1.5rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--aqua);text-transform:uppercase;transition:.25s}
+.read-more:hover{letter-spacing:.34em;color:var(--flame)}
+.blog-cols{display:grid;grid-template-columns:1fr 300px;gap:2.6rem;align-items:start}
+.post-row{display:grid;grid-template-columns:170px 1fr auto;gap:1.4rem;align-items:center;padding:1.3rem 0;border-top:1px solid var(--line-d);transition:.25s}
+.post-row:hover{background:rgba(139,233,211,.04);padding-left:.8rem}
+.post-row .thumb{height:112px}
+.post-row h4{font-family:var(--disp);text-transform:uppercase;font-size:1.15rem;letter-spacing:.03em;line-height:1.15;margin:.5rem 0 .3rem;transition:.2s}
+.post-row:hover h4{color:var(--aqua)}
+.post-row p{color:var(--mut-d);font-size:.88rem}
+.post-row .arr{font-size:1.3rem;color:var(--flame);transition:.25s}
+.post-row:hover .arr{transform:translateX(8px)}
+.blog-aside{border:1px solid var(--line-d);padding:1.6rem;position:sticky;top:96px;background:var(--ink2)}
+.blog-aside h5{font-family:var(--mono);font-size:.64rem;letter-spacing:.28em;color:var(--mut-d);text-transform:uppercase;margin-bottom:1.1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.tags a{font-family:var(--mono);font-size:.66rem;border:1px solid var(--line-d);padding:.45em .9em;color:var(--mut-d);transition:.2s}
+.tags a:hover{border-color:var(--aqua);color:var(--aqua);transform:translateY(-2px)}
+.arch{list-style:none}
+.arch li{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.72rem;color:var(--mut-d);padding:.55em 0;border-bottom:1px dashed rgba(139,233,211,.14)}
+.arch li b{color:var(--aqua);font-weight:500}
+@media(max-width:920px){.blog-feat{grid-template-columns:1fr}.blog-cols{grid-template-columns:1fr}.blog-aside{position:static}.post-row{grid-template-columns:110px 1fr}.post-row .arr{display:none}}
+
+/* ============ SHAWOL ============ */
+#shawol{background:var(--ink2);border-top:1px solid var(--line-d);padding:clamp(4rem,8vw,7rem) 0}
+.sh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.sh-card{border:1px solid var(--line-d);background:var(--ink);padding:1.8rem;position:relative;overflow:hidden;border-radius:2px}
+.sh-card .lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.26em;color:var(--aqua);text-transform:uppercase}
+.cd-num{font-family:var(--disp);font-size:clamp(4rem,7vw,6rem);color:var(--flame);line-height:1;margin:.8rem 0 .4rem}
+.cd-num small{font-size:.32em;color:var(--mut-d);font-family:var(--mono);letter-spacing:.2em}
+.sh-card p{color:var(--mut-d);font-size:.9rem}
+.sh-card .mini-link{display:inline-block;margin-top:1.2rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;color:var(--aqua);border-bottom:1px solid var(--aqua);padding-bottom:.25em;transition:.2s;text-transform:uppercase}
+.sh-card .mini-link:hover{color:var(--flame);border-color:var(--flame)}
+.light-zone{text-align:center}
+#light-btn{position:relative;width:110px;height:110px;margin:1.3rem auto .8rem;border-radius:50%;border:2px solid var(--aqua);background:radial-gradient(circle at 50% 38%,rgba(139,233,211,.28),rgba(14,19,26,0) 65%);color:var(--aqua);font-size:2.3rem;display:grid;place-items:center;transition:.25s}
+#light-btn:hover{box-shadow:0 0 34px rgba(139,233,211,.45);transform:scale(1.05)}
+#light-btn:active{transform:scale(.94)}
+.count{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;color:var(--mut-d)}
+.count b{color:var(--aqua);font-size:1.15rem;font-weight:600}
+.spark{position:absolute;left:50%;top:50%;width:9px;height:9px;pointer-events:none;animation:spark .85s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes spark{to{transform:translate(var(--dx),var(--dy)) rotate(200deg) scale(.15);opacity:0}}
+.letter-form label{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.26em;color:var(--aqua);text-transform:uppercase;margin-bottom:1rem}
+.letter-form input,.letter-form textarea{width:100%;background:var(--ink3);border:1px solid var(--line-d);color:var(--txt-d);font-family:var(--body);font-size:.9rem;padding:.8em 1em;margin-bottom:.9rem;resize:vertical;border-radius:2px}
+.letter-form input:focus,.letter-form textarea:focus{border-color:var(--aqua);outline:none}
+.letter-form textarea{min-height:110px}
+.letter-form button{width:100%}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.4rem}
+.quotes blockquote{border-left:3px solid var(--flame);background:var(--ink);padding:1.5rem 1.6rem;font-size:.95rem;color:var(--txt-d)}
+.quotes blockquote:nth-child(2){transform:translateY(20px);border-left-color:var(--aqua)}
+.quotes cite{display:block;margin-top:1rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;color:var(--mut-d);font-style:normal;text-transform:uppercase}
+@media(max-width:920px){.sh-grid,.quotes{grid-template-columns:1fr}.quotes blockquote:nth-child(2){transform:none}}
+
+/* ============ FOOTER ============ */
+footer{background:var(--ink3);border-top:1px solid var(--line-d);padding:clamp(3.5rem,7vw,6rem) 0 2rem;text-align:left}
+.foot-big{font-family:var(--disp);text-transform:uppercase;font-size:clamp(2.6rem,8vw,6.5rem);line-height:.95;color:transparent;-webkit-text-stroke:1.5px var(--aqua)}
+.foot-big em{font-style:normal;color:var(--flame);-webkit-text-stroke:0}
+.foot-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--mut-d)}
+.foot-grid a:hover{color:var(--aqua)}
+.foot-note{margin-top:1.6rem;font-size:.85rem;color:#54636a;max-width:46rem}
+.top-link{color:var(--aqua)}
+
+/* ============ LIGHTBOX & TOAST ============ */
+#lightbox{position:fixed;inset:0;z-index:80;background:rgba(8,11,15,.92);display:none;place-items:center;padding:4vh 4vw;cursor:zoom-out}
+#lightbox.open{display:grid}
+#lightbox img{max-height:80vh;max-width:100%;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#lightbox .cap{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--aqua);margin-top:1rem;text-align:center}
+#lb-close{position:absolute;top:18px;right:22px;background:none;border:1px solid var(--line-d);color:var(--txt-d);width:44px;height:44px;font-size:1.2rem}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--aqua);color:var(--ink);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;padding:.9em 1.6em;opacity:0;pointer-events:none;transition:.35s;z-index:90;border-radius:2px}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .mq-track{transform:none}
+  .pola,.kb img{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- TICKER -->
+<div class="ticker" aria-label="Thông tin nhanh">
+  <div class="mq-track">
+    <span><i>💎</i> DIAMOND! XIN CHÀO, CHÚNG TÔI LÀ SHINee <i>✦</i> OFFICIAL COLOR — <b>PEARL AQUAMARINE</b> <i>✦</i> DEBUT <em>25.05.2008</em> <i>✦</i> 최민호 <b>1991.12.09</b> INCHEON <i>✦</i> SEOUL <b class="kst">--:--:--</b> KST <i>✦</i> CÒN <b class="bday">--</b> NGÀY → SINH NHẬT 09.12 <i>✦</i> 해병대 <b>2019–2020</b> <i>✦</i> SHAWOL ∞ <i>✦</i></span>
+    <span aria-hidden="true"><i>💎</i> DIAMOND! XIN CHÀO, CHÚNG TÔI LÀ SHINee <i>✦</i> OFFICIAL COLOR — <b>PEARL AQUAMARINE</b> <i>✦</i> DEBUT <em>25.05.2008</em> <i>✦</i> 최민호 <b>1991.12.09</b> INCHEON <i>✦</i> SEOUL <b class="kst">--:--:--</b> KST <i>✦</i> CÒN <b class="bday">--</b> NGÀY → SINH NHẬT 09.12 <i>✦</i> 해병대 <b>2019–2020</b> <i>✦</i> SHAWOL ∞ <i>✦</i></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap site-in">
+    <a class="brand" href="#top"><span class="dot"></span>MINHO<small>ARCHIVE</small></a>
+    <nav class="main" id="nav">
+      <a href="#hoso">Hồ sơ</a>
+      <a href="#timeline">Dòng thời gian</a>
+      <a href="#music">Âm nhạc</a>
+      <a href="#film">Phim ảnh</a>
+      <a href="#gallery">Khoảnh khắc</a>
+      <a href="#blog">Blog</a>
+      <a href="#shawol">Shawol</a>
+    </nav>
+    <span class="nav-meta">SHAWOL · SINCE 2008</span>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <p class="hero-side-rail mono">EST. 25.05.2008 — INCHEON → SEOUL → WORLDWIDE</p>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow kicker rv">Fanblog không chính thức ✦ SHINee's light</p>
+      <h1>
+        <span class="lm rv in"><span class="scr" data-text="CHOI">CHOI</span></span>
+        <span class="lm rv in l2"><span class="scr l2" data-text="MINHO" style="color:var(--aqua)">MINHO</span></span>
+        <span class="kr">최민호</span>
+      </h1>
+      <p class="hero-sub rv">Rapper — ca sĩ — diễn viên, và là <b>ngọn lửa không bao giờ tắt</b> của SHINee. Đây là kho lưu trữ mọi khoảnh khắc của Choi Minho: sân khấu, phim ảnh, những trận futsal huyền thoại và tất cả những điều Shawol không thể quên.</p>
+      <ul class="chips rv">
+        <li>09.12.1991 · INCHEON</li>
+        <li>DEBUT 25.05.2008</li>
+        <li>RAPPER · VOCAL · VISUAL</li>
+        <li>R.O.K. MARINE CORPS ’19–’20</li>
+      </ul>
+      <div class="hero-cta rv">
+        <a class="btn" href="#blog">Đọc bài mới nhất</a>
+        <a class="btn ghost" href="#shawol">Gửi thư cho Minho</a>
+      </div>
+    </div>
+    <div class="polaroids rv" aria-label="Ảnh nổi bật">
+      <figure class="pola p1">
+        <div class="duo kb"><img src="https://picsum.photos/seed/minho-stage-flame/640/700" alt="Minho trên sân khấu ngập ánh sáng aquamarine"></div>
+        <figcaption>Sân khấu — nơi ngọn lửa bắt đầu</figcaption>
+      </figure>
+      <figure class="pola p2">
+        <img src="https://picsum.photos/seed/minho-futsal-field/560/420" alt="Minho trên sân futsal">
+        <figcaption>“Vua futsal” mùa ISAC</figcaption>
+      </figure>
+      <figure class="pola p3">
+        <div class="duo flame"><img src="https://picsum.photos/seed/minho-casual-smile/520/560" alt="Nụ cười đời thường của Minho"></div>
+        <figcaption>Nụ cười của người lính trở về</figcaption>
+      </figure>
+      <svg class="spin-badge" viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+        <text><textPath href="#circ">SHINee’s LIGHT ✦ MINHO’s FLAME ✦ SHAWOL ✦</textPath></text>
+        <circle class="c" cx="60" cy="60" r="5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- STRIPE -->
+<div class="stripe" aria-hidden="true">
+  <div class="mq-track">
+    <span>최민호 <i>✦</i> CHOI MINHO <i>✦</i> NGƯỜI LỬA CỦA SHINee <i>✦</i> 2008 → ∞ <i>✦</i> SHAWOL FOREVER <i>✦</i> </span>
+    <span>최민호 <i>✦</i> CHOI MINHO <i>✦</i> NGƯỜI LỬA CỦA SHINee <i>✦</i> 2008 → ∞ <i>✦</i> SHAWOL FOREVER <i>✦</i> </span>
+  </div>
+</div>
+
+<!-- ============ HỒ SƠ ============ -->
+<section id="hoso" class="light">
+  <div class="wrap">
+    <div class="shead rv">
+      <p class="kicker">01 / Hồ sơ</p>
+      <h2 class="lm"><span>Một ngọn lửa,<br>rất nhiều cái tên</span></h2>
+      <p class="note">Rapper chính của SHINee, diễn viên Choi Minho, người lính thủy quân lục chiến — và với Shawol, đơn giản là “nhà”.</p>
+    </div>
+    <div class="profile-grid">
+      <aside class="idcard rv" aria-label="Thẻ hồ sơ Minho">
+        <div class="ph duo"><img src="https://picsum.photos/seed/minho-portrait-bw/620/760" alt="Chân dung Minho"></div>
+        <div class="idcard-body">
+          <p class="fno">FILE NO. SH-1991-1209</p>
+          <h3>Choi Minho</h3>
+          <p class="kr">최민호 — 빛나는 사람</p>
+          <dl>
+            <div><dt>Sinh</dt><dd>09.12.1991 · Incheon</dd></div>
+            <div><dt>Chiều cao</dt><dd>181 cm</dd></div>
+            <div><dt>Nhóm máu</dt><dd>A</dd></div>
+            <div><dt>Ra mắt</dt><dd>25.05.2008 · SHINee</dd></div>
+            <div><dt>Fandom</dt><dd>Shawol 💎</dd></div>
+          </dl>
+          <div class="barcode" aria-hidden="true"></div>
+        </div>
+        <span class="stamp">Marine<br>Corps ★<br>2019</span>
+      </aside>
+      <div>
+        <article class="fact rv"><span class="fact-no">01</span><div><h4>Con nhà nòi thể thao</h4><p>Sinh ra ở Incheon, là con trai của HLV Choi Yun-gyeom — cựu thuyền trưởng Incheon United. Bóng đá, futsal, bóng rổ, golf… cứ môn nào có bóng là Minho chơi được, và thường là chơi rất giỏi.</p></div></article>
+        <article class="fact rv"><span class="fact-no">02</span><div><h4>Trụ cột của SHINee</h4><p>Rapper chính, vocal và visual. Chất giọng trầm, lực của anh là “xương sống” giữ nhịp cho những sân khấu vũ đạo cường độ cao bậc nhất K-pop — từ <em>Lucifer</em> đến <em>HARD</em>.</p></div></article>
+        <article class="fact rv"><span class="fact-no">03</span><div><h4>Sinh viên nghệ thuật điện ảnh</h4><p>Tốt nghiệp ngành Nghệ thuật Điện ảnh tại Đại học Konkuk — nền tảng bài bản cho con đường diễn xuất nghiêm túc kéo dài hơn một thập kỷ sau này.</p></div></article>
+        <article class="fact rv"><span class="fact-no">04</span><div><h4>“Cỗ máy chiến thắng” tại ISAC</h4><p>Nhà vô địch thường trực của Đại hội Thể thao Idol, đặc biệt ở bộ môn futsal — nơi người ta gọi anh bằng một cái tên duy nhất: “vua”.</p></div></article>
+        <article class="fact rv"><span class="fact-no">05</span><div><h4>Người lính Thủy quân lục chiến</h4><p>Xung phong nhập ngũ Hải quân đánh bộ (해병대) tháng 04.2019, xuất ngũ loại ưu tháng 11.2020. Một trong những idol “chiến” nhất thế hệ thứ hai.</p></div></article>
+        <article class="fact rv"><span class="fact-no">06</span><div><h4>Ngọn lửa của Shawol</h4><p>Fanchant, những lá thư tay, các ca khúc tự viết lời — Minho luôn đáp lại tình yêu của Shawol theo cách chân thành nhất, năm này qua năm khác.</p></div></article>
+
+        <div class="tri rv">
+          <h3>Ba điều làm nên Choi Minho</h3>
+          <div class="tri-row"><span class="n">01</span><h5>Đam mê</h5><p>Không có khái niệm “nửa vời” trong từ điển của Minho — dù là sân khấu 3 phút hay một trận futsal giao hữu. Anh cháy như thể đó là lần cuối cùng.</p></div>
+          <div class="tri-row"><span class="n">02</span><h5>Kỷ luật</h5><p>18 năm hoạt động không ngừng nghỉ, hai năm quân ngũ, luyện tập thể lực đều đặn như vận động viên. Kỷ luật chính là tên gọi thứ hai của anh.</p></div>
+          <div class="tri-row"><span class="n">03</span><h5>Chân thành</h5><p>“I’m Home (그래)” viết trước ngày nhập ngũ, những lá thư gửi Shawol mỗi dịp sinh nhật — người luôn nhớ ai đã ở lại bên mình.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="shead rv">
+      <p class="kicker">02 / Dòng thời gian</p>
+      <h2 class="lm"><span>18 năm cháy hết mình</span></h2>
+      <p class="note">Từ cậu trai 16 tuổi ra mắt trên sân khấu Inkigayo đến ngọn lửa vẫn đang rực cháy hôm nay.</p>
+    </div>
+    <ol class="tl">
+      <li class="tl-item rv"><div class="tl-year">2008<small>25.05</small></div><div class="tl-card"><h4>Ra mắt cùng SHINee</h4><p>“Replay (누난 너무 예뻐)” trên SBS Inkigayo. Choi Minho 16 tuổi, đứng giữa bốn thành viên khác, và cả năm người cùng thắp lên một màu ngọc trai aquamarine.</p><span class="tag">Debut</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2010<small>KBS</small></div><div class="tl-card"><h4>Lần đầu chạm ngõ diễn xuất</h4><p>Drama Special “Pianist” — vai diễn đầu tiên, hạt mầm cho con đường diễn viên nghiêm túc về sau.</p><span class="tag">Acting</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2012<small>SBS</small></div><div class="tl-card"><h4>Vai chính đầu tiên</h4><p>Kang Tae-joon trong “To the Beautiful You” — cùng năm SHINee trở lại với “Sherlock” và càn quét các sân khấu.</p><span class="tag">Lead role</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2013–15<small>ISAC</small></div><div class="tl-card"><h4>“Vua futsal” của Đại hội Idol</h4><p>Liên tục thống trị sân futsal ISAC. Giới idol truyền tai nhau: muốn thắng, trước hết phải tránh đội của Minho.</p><span class="tag">Sports</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2016<small>KBS2</small></div><div class="tl-card"><h4>“Hwarang” — Kim Su-ho</h4><p>Chàng kiếm sĩ trẻ trong bộ sử kịch đình đám, sát cánh cùng dàn diễn viên thế hệ mới của màn ảnh Hàn.</p><span class="tag">Drama</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2019<small>03–04</small></div><div class="tl-card"><h4>“I’m Home” rồi lên đường nhập ngũ</h4><p>Ngày 28.03 phát hành single tự viết lời “I’m Home (그래)” như lời tạm biệt; ngày 15.04 chính thức gia nhập Thủy quân lục chiến. Cùng năm, góp mặt trong điện ảnh “Jangsari: The Forgotten Heroes”.</p><span class="tag">Military</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2020<small>15.11</small></div><div class="tl-card"><h4>Xuất ngũ loại ưu</h4><p>Trở về sau hai năm quân ngũ với quân hàm và nụ cười rạng rỡ — Shawol chờ sẵn với biển đèn ngọc trai.</p><span class="tag">Return</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2021<small>TVING</small></div><div class="tl-card"><h4>“Yumi’s Cells” — Chae Woo-gi</h4><p>Chàng đồng nghiệp ấm áp khiến trái tim Yumi (và khán giả) rung động; vai diễn được giới phê bình ghi nhận.</p><span class="tag">Series</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2022<small>12.12</small></div><div class="tl-card"><h4>Solo debut: Mini album “CHASE”</h4><p>Album solo đầu tay sau 14 năm hoạt động, cùng series Netflix “The Fabulous” lên sóng — một năm kép trọn vẹn.</p><span class="tag">Solo · Netflix</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2023<small>SHINee</small></div><div class="tl-card"><h4>“HARD” và cột mốc 15 năm</h4><p>SHINee trở lại đầy đủ với album phòng thu thứ tám, concert kỷ niệm 15 năm — và màu aquamarine lại phủ kín các nhà thi đấu.</p><span class="tag">Group</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2024<small>04.11</small></div><div class="tl-card"><h4>Mini album thứ hai “CALL BACK”</h4><p>Ca khúc chủ đề cùng tên — lời nhắn gửi thẳng thắn, mạnh mẽ và rất “Minho”: hãy gọi cho anh ấy.</p><span class="tag">Solo</span></div></li>
+      <li class="tl-item rv"><div class="tl-year">2026<small>Now</small></div><div class="tl-card"><h4>Ngọn lửa vẫn cháy</h4><p>Âm nhạc, phim ảnh, và một kho lưu trữ Shawol ngày một dày thêm. Chương tiếp theo đang được viết — có cả bạn trong đó.</p><span class="tag">To be continued</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MUSIC ============ -->
+<section id="music">
+  <div class="wrap">
+    <div class="shead rv">
+      <p class="kicker">03 / Âm nhạc</p>
+      <h2 class="lm"><span>Discography —<br>phần của riêng anh</span></h2>
+      <p class="note">Bên cạnh di sản đồ sộ cùng SHINee, đây là những chương âm nhạc mang chữ ký Choi Minho.</p>
+    </div>
+    <div class="music-grid">
+      <article class="album-feat rv">
+        <div class="cover duo kb">
+          <img src="https://picsum.photos/seed/minho-chase-album/900/680" alt="Bìa album CHASE của Minho">
+          <span class="album-badge">The 1st Mini Album</span>
+        </div>
+        <div class="album-info">
+          <h3>Chase</h3>
+          <p class="meta">12.12.2022 · SM ENTERTAINMENT · 6 TRACKS</p>
+          <p>Album solo đầu tay — một cuộc rượt đuổi cảm xúc nơi Minho lần đầu kể câu chuyện của chính mình bằng giọng thật, không cần ai hỗ trợ.</p>
+          <ol class="tracks">
+            <li><button class="track" data-i="0"><span class="no">01</span><span class="t">CHASE</span><span class="dur">3:11</span></button></li>
+            <li><button class="track" data-i="1"><span class="no">02</span><span class="t">Runaway</span><span class="dur">3:04</span></button></li>
+            <li><button class="track" data-i="2"><span class="no">03</span><span class="t">Waterfall</span><span class="dur">3:21</span></button></li>
+            <li><button class="track" data-i="3"><span class="no">04</span><span class="t">Who Said</span><span class="dur">2:58</span></button></li>
+            <li><button class="track" data-i="4"><span class="no">05</span><span class="t">Prove It</span><span class="dur">2:52</span></button></li>
+            <li><button class="track" data-i="5"><span class="no">06</span><span class="t">Choice</span><span class="dur">3:28</span></button></li>
+          </ol>
+        </div>
+      </article>
+      <div>
+        <article class="album-mini rv">
+          <div class="cover duo flame"><img src="https://picsum.photos/seed/minho-callback-album/300/300" alt="Bìa album CALL BACK"></div>
+          <div style="flex:1">
+            <h4>CALL BACK</h4>
+            <p class="meta">THE 2ND MINI · 04.11.2024 · 6 TRACKS</p>
+            <button class="mini-play" data-i="7">▶ Nghe chủ đề</button>
+          </div>
+        </article>
+        <article class="album-mini rv">
+          <div class="cover duo"><img src="https://picsum.photos/seed/minho-imhome-single/300/300" alt="Bìa single I'm Home"></div>
+          <div style="flex:1">
+            <h4>I’M HOME (그래)</h4>
+            <p class="meta">SM STATION SINGLE · 28.03.2019</p>
+            <button class="mini-play" data-i="6">▶ Nghe single</button>
+          </div>
+        </article>
+        <div class="player rv" id="player">
+          <div class="player-top">
+            <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <div>
+              <p class="np-title" id="np-title">Chọn một bài để phát</p>
+              <p class="np-album" id="np-album">MINHO RADIO · DEMO MODE</p>
+            </div>
+          </div>
+          <div class="progress"><i id="p-bar"></i></div>
+          <div class="player-row">
+            <span id="p-cur">0:00</span>
+            <div class="p-btns">
+              <button id="p-prev" aria-label="Bài trước">⏮</button>
+              <button id="p-play" aria-label="Phát / Dừng">▶</button>
+              <button id="p-next" aria-label="Bài sau">⏭</button>
+            </div>
+            <span id="p-dur">0:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILM ============ -->
+<section id="film">
+  <div class="wrap">
+    <div class="strip-head">
+      <div class="shead rv" style="margin-bottom:0">
+        <p class="kicker">04 / Phim ảnh</p>
+        <h2 class="lm"><span>Diễn viên Choi Minho</span></h2>
+      </div>
+      <div class="strip-nav rv">
+        <button id="f-prev" aria-label="Cuộn trái">←</button>
+        <button id="f-next" aria-label="Cuộn phải">→</button>
+      </div>
+    </div>
+    <div class="strip" id="strip">
+      <figure class="poster rv"><div class="poster-img duo kb"><img src="https://picsum.photos/seed/film-to-beautiful-you/480/640" alt="Phim To the Beautiful You"></div><figcaption><strong>To the Beautiful You</strong><span class="mono">2012 · KANG TAE-JOON</span></figcaption></figure>
+      <figure class="poster rv"><div class="poster-img duo flame"><img src="https://picsum.photos/seed/film-hwarang-sword/480/640" alt="Phim Hwarang"></div><figcaption><strong>Hwarang</strong><span class="mono">2016 · KIM SU-HO</span></figcaption></figure>
+      <figure class="poster rv"><div class="poster-img duo"><img src="https://picsum.photos/seed/film-jangsari-war/480/640" alt="Phim Jangsari"></div><figcaption><strong>Jangsari: The Forgotten Heroes</strong><span class="mono">2019 · CHOI SEONG-PIL</span></figcaption></figure>
+      <figure class="poster rv"><div class="poster-img duo flame"><img src="https://picsum.photos/seed/film-divine-fury/480/640" alt="Phim The Divine Fury"></div><figcaption><strong>The Divine Fury</strong><span class="mono">2019 · PRIEST CHOI</span></figcaption></figure>
+      <figure class="poster rv"><div class="poster-img duo"><img src="https://picsum.photos/seed/film-yumi-cells/480/640" alt="Phim Yumi's Cells"></div><figcaption><strong>Yumi’s Cells</strong><span class="mono">2021–22 · CHAE WOO-GI</span></figcaption></figure>
+      <figure class="poster rv"><div class="poster-img duo flame"><img src="https://picsum.photos/seed/film-the-fabulous/480/640" alt="Phim The Fabulous"></div><figcaption><strong>The Fabulous</strong><span class="mono">2022 · JI WOO-MIN</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="light">
+  <div class="wrap">
+    <div class="shead rv">
+      <p class="kicker">05 / Khoảnh khắc</p>
+      <h2 class="lm"><span>Album ảnh của Shawol</span></h2>
+      <p class="note">Những bức ảnh được Shawol Việt gửi về blog — mỗi tấm là một ký ức aquamarine.</p>
+    </div>
+    <div class="g-cols">
+      <figure class="gitem rv" style="--r:-2deg" data-cap="Biển aquamarine tại concert — nơi Minho luôn nhìn về phía Shawol."><img src="https://picsum.photos/seed/minho-concert-sea/600/750" alt="Biển đèn concert"><figcaption>Biển aquamarine tại concert</figcaption></figure>
+      <figure class="gitem rv" style="--r:1.5deg" data-cap="Cú sút phạt đi vào huyền thoại của mùa ISAC."><img src="https://picsum.photos/seed/minho-isac-kick/600/430" alt="Minho tại ISAC"><figcaption>Cú sút phạt huyền thoại mùa ISAC</figcaption></figure>
+      <figure class="gitem rv" style="--r:2.5deg" data-cap="Ngày xuất ngũ 15.11.2020 — nụ cười của người lính trở về."><img src="https://picsum.photos/seed/minho-discharge-day/600/790" alt="Ngày xuất ngũ"><figcaption>15.11.2020 — ngày trở về</figcaption></figure>
+      <figure class="gitem rv" style="--r:-1deg" data-cap="Photocard CHASE săn được sau 7 lần đổi album."><img src="https://picsum.photos/seed/minho-photocard-hunt/600/600" alt="Photocard"><figcaption>Photocard “CHASE” quý giá</figcaption></figure>
+      <figure class="gitem rv" style="--r:2deg" data-cap="Cafe sinh nhật 09.12 do Shawol Việt tổ chức hằng năm."><img src="https://picsum.photos/seed/minho-birthday-cafe/600/450" alt="Cafe sinh nhật"><figcaption>Cafe sinh nhật 09.12</figcaption></figure>
+      <figure class="gitem rv" style="--r:-2.5deg" data-cap="Fanchant CHASE vang khắp cả hội trường."><img src="https://picsum.photos/seed/minho-fanchant-hall/600/760" alt="Fanchant"><figcaption>Fanchant “CHASE” vang cả hall</figcaption></figure>
+      <figure class="gitem rv" style="--r:1deg" data-cap="Thời trang sân bay: đơn giản nhưng luôn đúng."><img src="https://picsum.photos/seed/minho-airport-fit/600/520" alt="Thời trang sân bay"><figcaption>Airport fit — đơn giản, chuẩn xác</figcaption></figure>
+      <figure class="gitem rv" style="--r:-1.5deg" data-cap="Bức ảnh bên sông Hàn được yêu thích nhất blog."><img src="https://picsum.photos/seed/minho-han-river/600/700" alt="Bên sông Hàn"><figcaption>Bên sông Hàn — ảnh được yêu thích nhất</figcaption></figure>
+    </div>
+    <p class="g-hint">✦ Nhấn vào ảnh để phóng to ✦</p>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section id="blog">
+  <div class="wrap">
+    <div class="shead rv">
+      <p class="kicker">06 / Blog</p>
+      <h2 class="lm"><span>Bài viết mới nhất</span></h2>
+    </div>
+    <article class="blog-feat rv">
+      <div class="ph duo kb"><img src="https://picsum.photos/seed/project-0912-aquamarine/1000/680" alt="Dự án sinh nhật 09.12"></div>
+      <div class="blog-feat-txt">
+        <p class="post-meta"><span>15.08.2026</span><span class="tag">#DựÁn</span><span>Đọc 8 phút</span></p>
+        <h3>Dự án 09.12: Shawol Việt lên kế hoạch phủ aquamarine phố đi bộ</h3>
+        <p>Chỉ còn chưa đầy bốn tháng nữa là sinh nhật lần thứ 35 của Minho. Năm nay, cộng đồng Shawol Việt dự kiến biến phố đi bộ thành một biển ngọc trai — với booth ảnh, cup sleeve và một lá thư chung khổng lồ. Đây là toàn bộ kế hoạch và cách bạn có thể tham gia.</p>
+        <a class="read-more" href="#">Đọc tiếp →</a>
+      </div>
+    </article>
+    <div class="blog-cols">
+      <div>
+        <article class="post-row rv">
+          <div class="thumb duo"><img src="https://picsum.photos/seed/blog-callback-unbox/340/230" alt="Đập hộp album CALL BACK"></div>
+          <div><p class="post-meta"><span>10.08.2026</span><span class="tag">#Unbox</span></p><h4>Đập hộp “CALL BACK”: 6 photocard và cú twist phiên bản ẩn</h4><p>Mở liền ba phiên bản, và tấm card hidden chỉ xuất hiện ở lô in thứ hai — cùng xem mình ra được gì.</p></div>
+          <span class="arr">→</span>
+        </article>
+        <article class="post-row rv">
+          <div class="thumb duo flame"><img src="https://picsum.photos/seed/blog-isac-top10/340/230" alt="Khoảnh khắc ISAC"></div>
+          <div><p class="post-meta"><span>26.07.2026</span><span class="tag">#ISAC</span></p><h4>10 khoảnh khắc ISAC đi vào lịch sử của “vua futsal”</h4><p>Từ cú sút phạt phút cuối đến pha kiến tạo không tưởng — tuyển tập khiến bạn phải đứng dậy vỗ tay.</p></div>
+          <span class="arr">→</span>
+        </article>
+        <article class="post-row rv">
+          <div class="thumb duo"><img src="https://picsum.photos/seed/blog-acting-map/340/230" alt="Hành trình diễn xuất"></div>
+          <div><p class="post-meta"><span>14.07.2026</span><span class="tag">#DiễnXuất</span></p><h4>Từ Tae-joon đến Woo-gi: bản đồ hành trình diễn viên Choi Minho</h4><p>Một thập kỷ đi từ idol bị nghi ngờ đến diễn viên được ghi nhận — từng vai diễn, từng cột mốc.</p></div>
+          <span class="arr">→</span>
+        </article>
+        <article class="post-row rv">
+          <div class="thumb duo flame"><img src="https://picsum.photos/seed/blog-fanchant-guide/340/230" alt="Hướng dẫn fanchant"></div>
+          <div><p class="post-meta"><span>02.07.2026</span><span class="tag">#HướngDẫn</span></p><h4>Cẩm nang Shawol mới: fanchant “CHASE”, lightstick và quy tắc concert</h4><p>Mọi thứ bạn cần biết trước khi đến concert đầu tiên — viết cho những Shawol vừa “nhập môn”.</p></div>
+          <span class="arr">→</span>
+        </article>
+      </div>
+      <aside class="blog-aside rv">
+        <h5>Chuyên mục</h5>
+        <div class="tags">
+          <a href="#">#Review</a><a href="#">#Unbox</a><a href="#">#ISAC</a><a href="#">#DiễnXuất</a><a href="#">#HướngDẫn</a><a href="#">#DựÁn</a><a href="#">#Playlist</a><a href="#">#Concert</a>
+        </div>
+        <h5>Lưu trữ</h5>
+        <ul class="arch">
+          <li><span>2026</span><b>24 bài</b></li>
+          <li><span>2025</span><b>61 bài</b></li>
+          <li><span>2024</span><b>58 bài</b></li>
+          <li><span>2023</span><b>47 bài</b></li>
+          <li><span>Trước đó</span><b>132 bài</b></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- STRIPE 2 -->
+<div class="stripe hot" aria-hidden="true">
+  <div class="mq-track">
+    <span>NGỌN LỬA <i>✦</i> KỶ LUẬT <i>✦</i> ĐAM MÊ <i>✦</i> CHÂN THÀNH <i>✦</i> 수고했어, 오늘도 <i>✦</i> </span>
+    <span>NGỌN LỬA <i>✦</i> KỶ LUẬT <i>✦</i> ĐAM MÊ <i>✦</i> CHÂN THÀNH <i>✦</i> 수고했어, 오늘도 <i>✦</i> </span>
+  </div>
+</div>
+
+<!-- ============ SHAWOL ============ -->
+<section id="shawol">
+  <div class="wrap">
+    <div class="shead rv">
+      <p class="kicker">07 / Góc Shawol</p>
+      <h2 class="lm"><span>Nơi trái tim<br>aquamarine lên tiếng</span></h2>
+    </div>
+    <div class="sh-grid">
+      <div class="sh-card rv">
+        <p class="lbl">Dự án 09.12</p>
+        <div class="cd-num"><span id="cd-days">--</span><small> NGÀY</small></div>
+        <p>Đếm ngược đến sinh nhật Minho (09.12). Shawol Việt đang gom ý tưởng cho sự kiện phủ aquamarine năm nay.</p>
+        <a class="mini-link" href="#blog">Gửi ý tưởng dự án →</a>
+      </div>
+      <div class="sh-card light-zone rv">
+        <p class="lbl">Thắp đèn ngọc trai</p>
+        <button id="light-btn" aria-label="Thắp một ngọn đèn ngọc trai">💎</button>
+        <p class="count"><b id="light-count">0</b> ngọn đèn đã được Shawol thắp sáng</p>
+        <p style="margin-top:.6rem;font-size:.78rem">Mỗi cú chạm là một lời nhắn: “Chúng mình luôn ở đây.”</p>
+      </div>
+      <div class="sh-card rv">
+        <form class="letter-form" id="letter-form">
+          <label for="lf-name">Hòm thư Shawol ✉</label>
+          <input id="lf-name" type="text" placeholder="Tên của bạn (hoặc để trống)" autocomplete="name">
+          <textarea id="lf-msg" placeholder="Viết vài lời gửi đến Minho… bằng tiếng Việt, Hàn hay emoji đều được 💌" required></textarea>
+          <button class="btn" type="submit">Gửi vào hòm thư</button>
+        </form>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote class="rv">“SHINee là thanh xuân, còn Minho là lý do thanh xuân ấy rực rỡ đến vậy.”<cite>— Shawol Hà Nội</cite></blockquote>
+      <blockquote class="rv">“Anh ấy chạy trên sân như thể cả đời chỉ còn đúng 90 phút. Và truyền cho mình cảm giác đó mỗi ngày.”<cite>— @pearlaqua_91</cite></blockquote>
+      <blockquote class="rv">“Một idol, một diễn viên, một người lính — trọn vẹn và hết mình ở mọi vai diễn của cuộc đời.”<cite>— Shawol Sài Gòn</cite></blockquote>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <p class="foot-big rv">Ngọn lửa <em>vẫn cháy.</em><br>Hẹn gặp lại, Minho.</p>
+    <div class="foot-grid">
+      <span>© 2026 MINHO ARCHIVE — MADE WITH 💎 BY SHAWOL VIỆT NAM</span>
+      <span><a href="#hoso">HỒ SƠ</a> · <a href="#music">ÂM NHẠC</a> · <a href="#blog">BLOG</a> · <a class="top-link" href="#top">VỀ ĐẦU TRANG ↑</a></span>
+    </div>
+    <p class="foot-note">Fanblog không chính thức do người hâm mộ vận hành, không thuộc hay đại diện cho SM Entertainment. Hình ảnh trên trang chỉ là ảnh giữ chỗ (placeholder). SHINee — Onew · Jonghyun · Key · Minho · Taemin — năm mảnh ghép mãi mãi. 💎</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX / TOAST -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
+  <button id="lb-close" aria-label="Đóng">✕</button>
+  <div><img id="lb-img" src="" alt=""><p class="cap" id="lb-cap"></p></div>
+</div>
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+"use strict";
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+/* ---------- Scramble decode ---------- */
+function scramble(el, delay){
+  const final = el.dataset.text || el.textContent;
+  if(reduced){ el.textContent = final; return; }
+  const chars = 'CHOIMN✦★#/최민호01912';
+  setTimeout(()=>{
+    const t0 = performance.now(), dur = 950;
+    (function tick(now){
+      const p = Math.min(1,(now-t0)/dur), reveal = Math.floor(p*final.length);
+      let out = '';
+      for(let i=0;i<final.length;i++) out += i<reveal ? final[i] : chars[Math.random()*chars.length|0];
+      el.textContent = out;
+      if(p<1) requestAnimationFrame(tick); else el.textContent = final;
+    })(t0);
+  }, delay);
+}
+$$('.scr').forEach((el,i)=>scramble(el, 200+i*260));
+
+/* ---------- Reveal on scroll ---------- */
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.14});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* ---------- Nav ---------- */
+const burger = $('#burger');
+burger.addEventListener('click',()=>{
+  const open = document.body.classList.toggle('menu-open');
+  burger.setAttribute('aria-expanded', open);
+});
+$$('#nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+const secIO = new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      $$('#nav a').forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id));
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+['hoso','timeline','music','film','gallery','blog','shawol'].forEach(id=>{const el=document.getElementById(id); if(el) secIO.observe(el);});
+
+/* ---------- Clock KST + countdown ---------- */
+const fmtKST = new Intl.DateTimeFormat('vi-VN',{timeZone:'Asia/Seoul',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+function tickClock(){ const t = fmtKST.format(new Date()); $$('.kst').forEach(el=>el.textContent=t); }
+tickClock(); setInterval(tickClock,1000);
+function daysToBday(){
+  const now = new Date(); let y = now.getFullYear();
+  let target = new Date(y,11,9,23,59,59);
+  if(now > target) target = new Date(y+1,11,9,23,59,59);
+  return Math.max(0, Math.ceil((target-now)/864e5));
+}
+const bd = daysToBday();
+$$('.bday').forEach(el=>el.textContent=bd);
+$('#cd-days').textContent = bd;
+
+/* ---------- Fake player ---------- */
+const tracks = [
+ {t:'CHASE', a:'CHASE — The 1st Mini (2022)', d:191},
+ {t:'Runaway', a:'CHASE — The 1st Mini (2022)', d:184},
+ {t:'Waterfall', a:'CHASE — The 1st Mini (2022)', d:201},
+ {t:'Who Said', a:'CHASE — The 1st Mini (2022)', d:178},
+ {t:'Prove It', a:'CHASE — The 1st Mini (2022)', d:172},
+ {t:'Choice', a:'CHASE — The 1st Mini (2022)', d:208},
+ {t:'I\u2019m Home (그래)', a:'SM STATION (2019)', d:214},
+ {t:'CALL BACK', a:'CALL BACK — The 2nd Mini (2024)', d:176}
+];
+const player = $('#player'), playBtn = $('#p-play'), bar = $('#p-bar');
+const npT = $('#np-title'), npA = $('#np-album'), pCur = $('#p-cur'), pDur = $('#p-dur');
+let idx = -1, cur = 0, timer = null;
+const mmss = s => Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+function paint(){
+  if(idx<0) return;
+  const tr = tracks[idx];
+  npT.textContent = tr.t; npA.textContent = tr.a + ' · DEMO MODE';
+  pDur.textContent = mmss(tr.d); pCur.textContent = mmss(cur);
+  bar.style.width = (cur/tr.d*100)+'%';
+  $$('.track').forEach(b=>b.classList.toggle('active', +b.dataset.i===idx));
+}
+function play(){ if(idx<0){ select(0); return; } if(timer) return;
+  timer = setInterval(()=>{ cur++; if(cur>=tracks[idx].d){ next(); return; } paint(); },1000);
+  player.classList.add('playing'); playBtn.textContent='❚❚';
+}
+function pause(){ clearInterval(timer); timer=null; player.classList.remove('playing'); playBtn.textContent='▶'; }
+function select(i){ idx=i; cur=0; paint(); pause(); play(); }
+function next(){ idx=(idx+1)%tracks.length; cur=0; paint(); }
+function prev(){ idx=(idx-1+tracks.length)%tracks.length; cur=0; paint(); }
+playBtn.addEventListener('click',()=>{ if(timer) pause(); else { if(idx<0) select(0); else play(); } });
+$('#p-next').addEventListener('click',()=>{ next(); if(!timer) paint(); });
+$('#p-prev').addEventListener('click',()=>{ prev(); if(!timer) paint(); });
+$$('.track, .mini-play').forEach(b=>b.addEventListener('click',()=>select(+b.dataset.i)));
+
+/* ---------- Film strip ---------- */
+const strip = $('#strip');
+$('#f-next').addEventListener('click',()=>strip.scrollBy({left:270,behavior:reduced?'auto':'smooth'}));
+$('#f-prev').addEventListener('click',()=>strip.scrollBy({left:-270,behavior:reduced?'auto':'smooth'}));
+
+/* ---------- Lightbox ---------- */
+const lb = $('#lightbox'), lbImg = $('#lb-img'), lbCap = $('#lb-cap');
+$$('.gitem').forEach(f=>f.addEventListener('click',()=>{
+  const img = f.querySelector('img');
+  lbImg.src = img.src.replace('/600/','/900/'); lbImg.alt = img.alt;
+  lbCap.textContent = f.dataset.cap || '';
+  lb.classList.add('open');
+}));
+function closeLB(){ lb.classList.remove('open'); }
+lb.addEventListener('click', closeLB);
+$('#lb-close').addEventListener('click', e=>{ e.stopPropagation(); closeLB(); });
+addEventListener('keydown', e=>{ if(e.key==='Escape') closeLB(); });
+
+/* ---------- Toast ---------- */
+let toastT;
+function toast(msg){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(()=>t.classList.remove('show'), 3200);
+}
+
+/* ---------- Lightstick ---------- */
+const BASE = 1209;
+let clicks = +(localStorage.getItem('mh-lights')||0);
+const lc = $('#light-count');
+lc.textContent = (BASE+clicks).toLocaleString('vi-VN');
+$('#light-btn').addEventListener('click', function(){
+  clicks++; localStorage.setItem('mh-lights', clicks);
+  lc.textContent = (BASE+clicks).toLocaleString('vi-VN');
+  toast('Đèn ngọc trai đã được thắp 💎 Cảm ơn Shawol!');
+  if(reduced) return;
+  for(let i=0;i<10;i++){
+    const s = document.createElement('span'); s.className='spark';
+    const ang = Math.random()*Math.PI*2, dist = 46+Math.random()*60;
+    s.style.setProperty('--dx', Math.cos(ang)*dist+'px');
+    s.style.setProperty('--dy', Math.sin(ang)*dist+'px');
+    s.style.background = i%3 ? 'var(--aqua)' : 'var(--flame)';
+    this.appendChild(s);
+    s.addEventListener('animationend',()=>s.remove());
+  }
+});
+
+/* ---------- Letter form ---------- */
+$('#letter-form').addEventListener('submit', e=>{
+  e.preventDefault();
+  const msg = $('#lf-msg').value.trim();
+  if(!msg){ toast('Viết vài lời nhắn trước đã nhé ✍'); return; }
+  toast('Thư đã được gửi vào hòm thư Shawol ✉ Danke & Saranghae!');
+  e.target.reset();
+});
+})();
+</script>
+</body>
+</html>
