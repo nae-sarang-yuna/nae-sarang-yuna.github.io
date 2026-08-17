@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dự án 09.12: Shawol Việt phủ aquamarine phố đi bộ — MINHO ARCHIVE</title>
+<meta name="description" content="Toàn bộ kế hoạch dự án sinh nhật 09.12 của Shawol Việt: bức tường thư tay, cup sleeve và màn thắp đèn aquamarine tại phố đi bộ.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Song+Myung&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e131a; --ink2:#131a23; --ink3:#0a0e13;
+  --paper:#f1ece1;
+  --aqua:#8be9d3; --aqua-deep:#37c9ab;
+  --flame:#ff6a4c; --flame-deep:#d2482c;
+  --txt:#e9eef0; --mut:#9aa8ad;
+  --line-d:rgba(139,233,211,.16);
+  --disp:'Anton',Impact,sans-serif;
+  --body:'Be Vietnam Pro',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --kr:'Song Myung',serif;
+  --wrap:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt);font-family:var(--body);line-height:1.65;overflow-x:hidden}
+::selection{background:var(--aqua);color:var(--ink)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--ink3)}
+::-webkit-scrollbar-thumb{background:#2a3a42;border:2px solid var(--ink3)}
+::-webkit-scrollbar-thumb:hover{background:var(--aqua-deep)}
+:focus-visible{outline:2px solid var(--aqua);outline-offset:3px}
+.mono{font-family:var(--mono)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* reading progress */
+#readbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--flame);z-index:80;box-shadow:0 0 10px rgba(255,106,76,.7)}
+
+/* ticker */
+.ticker{background:var(--ink3);border-bottom:1px solid var(--line-d);overflow:hidden;font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.mq-track{display:flex;width:max-content;animation:mq 34s linear infinite}
+.mq-track>span{display:flex;align-items:center;white-space:nowrap;padding:.55em 0}
+.mq-track b{color:var(--aqua);font-weight:500}
+.mq-track em{font-style:normal;color:var(--flame)}
+.mq-track i{font-style:normal;padding:0 1.4em;color:#3a4a52}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(14,19,26,.88);backdrop-filter:blur(9px);border-bottom:1px solid var(--line-d)}
+.site-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:62px}
+.brand{font-family:var(--disp);font-size:1.25rem;letter-spacing:.06em;display:flex;align-items:center;gap:.55rem}
+.brand .dot{width:10px;height:10px;background:var(--flame);border-radius:50%;box-shadow:0 0 12px var(--flame);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(.7);opacity:.6}}
+.brand small{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;color:var(--aqua);align-self:flex-end;margin-bottom:.15em}
+nav.main{display:flex;gap:1.6rem}
+nav.main a{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);padding:.4em 0;transition:.25s}
+nav.main a:hover,nav.main a.active{color:var(--aqua)}
+.nav-meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:var(--mut);border:1px solid var(--line-d);padding:.45em .9em}
+.burger{display:none;background:none;border:1px solid var(--line-d);color:var(--aqua);font-size:1.1rem;padding:.35em .7em}
+@media(max-width:920px){
+  nav.main{display:none;position:absolute;top:62px;left:0;right:0;background:var(--ink3);flex-direction:column;border-bottom:1px solid var(--line-d)}
+  nav.main a{padding:.9em clamp(18px,4vw,40px);border-bottom:1px solid rgba(139,233,211,.07)}
+  body.menu-open nav.main{display:flex}
+  .burger{display:block}.nav-meta{display:none}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.lm{overflow:hidden}
+.lm>span{display:block;transform:translateY(112%);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.in .lm>span,.lm.in>span{transform:none}
+
+/* duo */
+.duo{position:relative;overflow:hidden;background:var(--ink2)}
+.duo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1) brightness(.92)}
+.duo::after{content:'';position:absolute;inset:0;background:var(--aqua);mix-blend-mode:color;opacity:.85;pointer-events:none}
+.kb img{animation:kb 15s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.09) translate(-1.6%,-1.2%)}}
+
+/* ============ ARTICLE HEADER ============ */
+.post-hero{padding:clamp(2.6rem,6vw,5rem) 0 0}
+.crumb{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);display:flex;gap:1em;flex-wrap:wrap;align-items:center}
+.crumb a:hover{color:var(--aqua)}
+.crumb .tag{color:var(--flame)}
+.post-hero h1{font-family:var(--disp);text-transform:uppercase;font-size:clamp(2.3rem,5.8vw,4.6rem);line-height:1.03;margin:1.3rem 0 1.1rem;max-width:20ch}
+.dek{font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--mut);max-width:44rem}
+.dek b{color:var(--txt)}
+.post-meta{display:flex;flex-wrap:wrap;gap:1.6rem;align-items:center;margin-top:1.8rem;padding:1.1rem 0;border-block:1px solid var(--line-d);font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--mut);text-transform:uppercase}
+.author-chip{display:flex;align-items:center;gap:.7rem;color:var(--txt)}
+.author-chip img{width:34px;height:34px;border-radius:50%;border:1px solid var(--aqua)}
+.hero-fig{margin-top:2.2rem}
+.hero-fig .ph{aspect-ratio:21/10}
+.hero-fig figcaption{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--mut);padding:.8rem 0 0;text-transform:uppercase}
+.hero-fig figcaption::before{content:'✦ ';color:var(--aqua)}
+
+/* ============ LAYOUT ============ */
+.post-layout{display:grid;grid-template-columns:250px minmax(0,700px);gap:clamp(2rem,5vw,4rem);padding:clamp(2.6rem,5vw,4.5rem) 0 4rem;justify-content:center}
+.rail{position:sticky;top:86px;align-self:start;display:flex;flex-direction:column;gap:1.6rem}
+.rail h6{font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;color:var(--mut);text-transform:uppercase;margin-bottom:.8rem}
+.toc{list-style:none;border-left:1px solid var(--line-d)}
+.toc a{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--mut);padding:.55em 0 .55em 1.1em;margin-left:-1px;border-left:2px solid transparent;transition:.2s}
+.toc a:hover{color:var(--txt)}
+.toc a.active{color:var(--aqua);border-left-color:var(--aqua)}
+.toc a b{color:var(--flame);font-weight:500;margin-right:.5em}
+.share-col{display:flex;flex-direction:column;gap:.6rem}
+.share-col button,.share-col a{display:flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;background:none;border:1px solid var(--line-d);color:var(--mut);padding:.65em .9em;transition:.2s;border-radius:2px}
+.share-col button:hover,.share-col a:hover{border-color:var(--aqua);color:var(--aqua)}
+.rail-fact{border:1px solid var(--line-d);padding:1.1rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--mut);line-height:2}
+.rail-fact b{color:var(--aqua);font-weight:500}
+.rail-fact .kr{font-family:var(--kr);color:var(--flame);font-size:.9rem}
+@media(max-width:920px){
+  .post-layout{grid-template-columns:1fr}
+  .rail{position:static;flex-direction:row;flex-wrap:wrap;gap:1.2rem}
+  .rail>div{flex:1 1 240px}
+  .toc{display:flex;overflow-x:auto;border-left:none;border-bottom:1px solid var(--line-d);gap:.4rem}
+  .toc a{white-space:nowrap;border-left:none;border-bottom:2px solid transparent;padding:.5em .8em;margin:0}
+  .toc a.active{border-bottom-color:var(--aqua)}
+  .share-col{flex-direction:row}
+}
+
+/* ============ PROSE ============ */
+.prose{font-size:1.05rem;line-height:1.95;color:#d3dce0}
+.prose p{margin-bottom:1.5rem}
+.prose p.dropcap::first-letter{font-family:var(--disp);float:left;font-size:4.4rem;line-height:.82;padding:.06em .12em 0 0;color:var(--flame)}
+.prose h2{font-family:var(--disp);text-transform:uppercase;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.03em;line-height:1.1;margin:3.2rem 0 1.2rem;scroll-margin-top:100px}
+.prose h2 .no{color:var(--aqua);margin-right:.5em;font-size:.8em}
+.prose h3{font-family:var(--disp);text-transform:uppercase;font-size:1.15rem;letter-spacing:.04em;margin:2rem 0 .8rem;color:var(--aqua)}
+.prose a{color:var(--aqua);border-bottom:1px solid rgba(139,233,211,.4);transition:.2s}
+.prose a:hover{color:var(--flame);border-color:var(--flame)}
+.prose strong{color:var(--txt)}
+.prose em{color:var(--aqua)}
+
+.factbox{border:1px solid var(--line-d);border-left:4px solid var(--aqua);background:var(--ink2);padding:1.5rem 1.7rem;margin:2.2rem 0}
+.factbox h4{font-family:var(--mono);font-size:.64rem;letter-spacing:.3em;color:var(--aqua);text-transform:uppercase;margin-bottom:1rem}
+.factbox dl{display:grid;grid-template-columns:auto 1fr;gap:.4em 1.6em;font-size:.9rem}
+.factbox dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--mut);text-transform:uppercase;padding-top:.25em}
+.factbox dd{color:var(--txt)}
+
+.update-box{border:1px dashed rgba(255,106,76,.5);background:rgba(255,106,76,.06);padding:1rem 1.3rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;line-height:1.9;color:#ffc7ba;margin:1.8rem 0}
+.update-box b{color:var(--flame);letter-spacing:.2em}
+
+.pull-quote{margin:3.2rem 0;padding:2.2rem 0;border-block:1px solid var(--line-d);text-align:center}
+.pull-quote .kr{font-family:var(--kr);font-size:clamp(1.4rem,3vw,2rem);color:var(--flame);display:block;margin-bottom:.9rem}
+.pull-quote p{font-family:var(--disp);text-transform:uppercase;font-size:clamp(1.3rem,2.8vw,1.9rem);line-height:1.25;max-width:34ch;margin:0 auto}
+.pull-quote cite{display:block;margin-top:1rem;font-family:var(--mono);font-style:normal;font-size:.64rem;letter-spacing:.28em;color:var(--mut);text-transform:uppercase}
+
+/* activities rows */
+.act{display:grid;grid-template-columns:84px 1fr;gap:1.4rem;padding:1.8rem 0;border-top:1px solid var(--line-d)}
+.act:last-of-type{border-bottom:1px solid var(--line-d)}
+.act .n{font-family:var(--disp);font-size:2.8rem;line-height:1;color:transparent;-webkit-text-stroke:1.3px var(--aqua)}
+.act h3{margin:0 0 .4rem;color:var(--txt)}
+.act p{margin:0;font-size:.98rem;color:#b9c4c9}
+.act .mono-sub{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:var(--flame);margin-top:.7rem;text-transform:uppercase}
+@media(max-width:560px){.act{grid-template-columns:1fr}.act .n{font-size:2rem}}
+
+/* mini timeline */
+.mini-tl{list-style:none;margin:1.4rem 0 2rem;border-left:1px solid var(--line-d);padding-left:0}
+.mini-tl li{position:relative;padding:.75rem 0 .75rem 108px;font-size:.95rem;color:#c6cfd4}
+.mini-tl li::before{content:'';position:absolute;left:-4px;top:1.25rem;width:7px;height:7px;background:var(--ink);border:2px solid var(--aqua);border-radius:50%}
+.mini-tl li.hot::before{border-color:var(--flame);box-shadow:0 0 8px rgba(255,106,76,.6)}
+.mini-tl time{position:absolute;left:0;top:.85rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--aqua);width:88px}
+.mini-tl li.hot{color:var(--txt)}
+
+/* table */
+.budget{width:100%;border-collapse:collapse;margin:1.4rem 0;font-size:.92rem}
+.budget th{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;color:var(--mut);text-transform:uppercase;text-align:left;padding:.6em .4em;border-bottom:1px solid var(--aqua-deep)}
+.budget td{padding:.8em .4em;border-bottom:1px solid var(--line-d);color:#c6cfd4}
+.budget td:last-child{text-align:right;font-family:var(--mono);font-size:.82rem;color:var(--txt)}
+.budget tr.total td{border-bottom:none;border-top:2px solid var(--txt);color:var(--aqua);font-weight:600}
+.budget tr:hover td{background:rgba(139,233,211,.04)}
+
+/* fund progress */
+.fund{border:1px solid var(--line-d);background:var(--ink2);padding:1.4rem 1.5rem;margin:1.8rem 0 2.4rem}
+.fund .row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--mut);margin-bottom:.8rem;text-transform:uppercase}
+.fund .row b{color:var(--aqua);font-weight:600}
+.fund .bar{height:8px;background:#232e37;position:relative;overflow:hidden}
+.fund .bar i{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--aqua-deep),var(--aqua));transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.fund .pct{margin-top:.7rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--flame)}
+
+/* steps */
+.steps{list-style:none;counter-reset:st;margin:1.4rem 0 2rem}
+.steps li{counter-increment:st;position:relative;padding:.9rem 0 .9rem 62px;border-top:1px dashed var(--line-d);font-size:.98rem;color:#c6cfd4}
+.steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:.95rem;font-family:var(--disp);font-size:1.5rem;color:var(--flame)}
+.steps b{color:var(--txt)}
+
+/* poll */
+.poll{border:1px solid var(--line-d);background:var(--ink2);padding:1.6rem 1.7rem;margin:2.2rem 0}
+.poll h4{font-family:var(--disp);text-transform:uppercase;font-size:1.2rem;letter-spacing:.04em;margin-bottom:1.2rem}
+.poll h4 span{color:var(--flame)}
+.poll-opt{display:block;width:100%;text-align:left;background:var(--ink3);border:1px solid var(--line-d);color:var(--txt);font-family:var(--body);font-size:.92rem;padding:0;margin-bottom:.7rem;position:relative;overflow:hidden;transition:.2s;border-radius:2px}
+.poll-opt:hover:not(:disabled){border-color:var(--aqua)}
+.poll-opt:disabled{cursor:default}
+.poll-opt .fill{position:absolute;inset:0;width:0;background:rgba(139,233,211,.14);transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.poll-opt.mine .fill{background:rgba(255,106,76,.18)}
+.poll-opt .lab{position:relative;display:flex;justify-content:space-between;padding:.8em 1.1em;font-family:var(--mono);font-size:.76rem;letter-spacing:.06em}
+.poll-opt .lab b{color:var(--aqua);font-weight:500}
+.poll-opt.mine .lab b{color:var(--flame)}
+.poll .foot{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;margin-top:.6rem}
+
+/* inline fig */
+.in-fig{margin:2.4rem 0}
+.in-fig .ph{aspect-ratio:16/9}
+.in-fig figcaption{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--mut);padding-top:.7rem;text-transform:uppercase}
+.in-fig figcaption::before{content:'✦ ';color:var(--aqua)}
+
+/* tags + author */
+.tag-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:2.4rem 0}
+.tag-row a{font-family:var(--mono);font-size:.68rem;border:1px solid var(--line-d);padding:.5em 1em;color:var(--mut);transition:.2s}
+.tag-row a:hover{border-color:var(--aqua);color:var(--aqua);transform:translateY(-2px)}
+.author-box{display:flex;gap:1.3rem;border:1px solid var(--line-d);background:var(--ink2);padding:1.6rem;margin:2.4rem 0;align-items:flex-start}
+.author-box img{width:74px;height:74px;flex:none;border:1px solid var(--flame)}
+.author-box h5{font-family:var(--disp);text-transform:uppercase;font-size:1.1rem;letter-spacing:.05em}
+.author-box .role{font-family:var(--mono);font-size:.6rem;letter-spacing:.26em;color:var(--flame);text-transform:uppercase;margin:.2rem 0 .6rem}
+.author-box p{font-size:.9rem;color:var(--mut)}
+
+/* post nav */
+.post-nav{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line-d);margin:2.6rem 0}
+.post-nav a{padding:1.5rem 1.6rem;transition:.25s}
+.post-nav a:hover{background:rgba(139,233,211,.05)}
+.post-nav a+a{border-left:1px solid var(--line-d);text-align:right}
+.post-nav .dir{font-family:var(--mono);font-size:.6rem;letter-spacing:.28em;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:.5rem}
+.post-nav .tt{font-family:var(--disp);text-transform:uppercase;font-size:1.05rem;letter-spacing:.03em;line-height:1.2}
+.post-nav a:hover .tt{color:var(--aqua)}
+@media(max-width:560px){.post-nav{grid-template-columns:1fr}.post-nav a+a{border-left:none;border-top:1px solid var(--line-d);text-align:left}}
+
+/* related */
+.related{margin-top:3.4rem}
+.related h4{font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;color:var(--mut);text-transform:uppercase;margin-bottom:1.2rem}
+.rel-row{display:grid;grid-template-columns:150px 1fr;gap:1.3rem;align-items:center;padding:1.1rem 0;border-top:1px solid var(--line-d);transition:.25s}
+.rel-row:hover{padding-left:.7rem;background:rgba(139,233,211,.04)}
+.rel-row .thumb{height:96px}
+.rel-row .pm{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--mut);text-transform:uppercase}
+.rel-row .pm b{color:var(--flame);font-weight:500}
+.rel-row h5{font-family:var(--disp);text-transform:uppercase;font-size:1.05rem;letter-spacing:.03em;line-height:1.2;margin-top:.3rem}
+.rel-row:hover h5{color:var(--aqua)}
+
+/* comments */
+.comments{margin-top:3.6rem;border-top:2px solid var(--txt);padding-top:2rem}
+.comments>h4{font-family:var(--disp);text-transform:uppercase;font-size:1.6rem;letter-spacing:.03em}
+.comments>h4 b{color:var(--aqua);font-weight:400}
+.c-form{display:grid;gap:.8rem;margin:1.6rem 0 2.2rem}
+.c-form input,.c-form textarea{width:100%;background:var(--ink3);border:1px solid var(--line-d);color:var(--txt);font-family:var(--body);font-size:.92rem;padding:.8em 1em;resize:vertical;border-radius:2px}
+.c-form input:focus,.c-form textarea:focus{border-color:var(--aqua);outline:none}
+.c-form .btn{justify-self:start}
+.btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:.95em 1.7em;border:1px solid var(--aqua);color:var(--ink);background:var(--aqua);transition:.25s;border-radius:2px}
+.btn:hover{background:transparent;color:var(--aqua);transform:translateY(-2px)}
+.c-list{list-style:none}
+.c-item{display:flex;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--line-d);animation:cin .5s ease}
+@keyframes cin{from{opacity:0;transform:translateY(14px)}}
+.c-ava{width:40px;height:40px;flex:none;display:grid;place-items:center;font-family:var(--disp);font-size:1.1rem;background:var(--aqua);color:var(--ink)}
+.c-item:nth-child(even) .c-ava{background:var(--flame)}
+.c-head{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--mut);margin-bottom:.35rem;text-transform:uppercase}
+.c-head b{color:var(--txt);font-weight:600;margin-right:1em}
+.c-item p{font-size:.94rem;color:#c6cfd4}
+
+/* footer */
+footer{background:var(--ink3);border-top:1px solid var(--line-d);padding:3rem 0 2rem}
+.foot-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--mut)}
+.foot-grid a:hover{color:var(--aqua)}
+.foot-note{margin-top:1.4rem;font-size:.82rem;color:#54636a;max-width:46rem}
+
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--aqua);color:var(--ink);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;padding:.9em 1.6em;opacity:0;pointer-events:none;transition:.35s;z-index:90;border-radius:2px}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}.lm>span{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div id="readbar" aria-hidden="true"></div>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="mq-track">
+    <span><i>💎</i> DIAMOND! XIN CHÀO, CHÚNG TÔI LÀ SHINee <i>✦</i> OFFICIAL COLOR — <b>PEARL AQUAMARINE</b> <i>✦</i> 최민호 <b>1991.12.09</b> <i>✦</i> SEOUL <b class="kst">--:--:--</b> KST <i>✦</i> CÒN <b class="bday">--</b> NGÀY → 09.12 <i>✦</i> #0912WITHMINHO <i>✦</i></span>
+    <span><i>💎</i> DIAMOND! XIN CHÀO, CHÚNG TÔI LÀ SHINee <i>✦</i> OFFICIAL COLOR — <b>PEARL AQUAMARINE</b> <i>✦</i> 최민호 <b>1991.12.09</b> <i>✦</i> SEOUL <b class="kst">--:--:--</b> KST <i>✦</i> CÒN <b class="bday">--</b> NGÀY → 09.12 <i>✦</i> #0912WITHMINHO <i>✦</i></span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap site-in">
+    <a class="brand" href="index.html"><span class="dot"></span>MINHO<small>ARCHIVE</small></a>
+    <nav class="main" id="nav">
+      <a href="index.html#hoso">Hồ sơ</a>
+      <a href="index.html#timeline">Dòng thời gian</a>
+      <a href="index.html#music">Âm nhạc</a>
+      <a href="index.html#film">Phim ảnh</a>
+      <a href="index.html#gallery">Khoảnh khắc</a>
+      <a href="index.html#blog" class="active">Blog</a>
+      <a href="index.html#shawol">Shawol</a>
+    </nav>
+    <span class="nav-meta">SHAWOL · SINCE 2008</span>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<!-- ============ POST HEADER ============ -->
+<div class="wrap post-hero">
+  <p class="crumb rv"><a href="index.html">Trang chủ</a> / <a href="index.html#blog">Blog</a> / <span class="tag">#DựÁn</span> / 15.08.2026</p>
+  <h1 class="lm rv"><span>Dự án 09.12: Shawol Việt lên kế hoạch phủ aquamarine phố đi bộ</span></h1>
+  <p class="dek rv">Chỉ còn chưa đầy bốn tháng nữa là sinh nhật lần thứ 35 của Choi Minho. Năm nay, cộng đồng Shawol Việt không muốn chỉ chúc mừng qua màn hình — <b>chúng mình muốn biến phố đi bộ thành một biển ngọc trai</b>. Đây là toàn bộ kế hoạch, ngân sách và cách để bạn trở thành một phần của nó.</p>
+  <div class="post-meta rv">
+    <span class="author-chip"><img src="https://picsum.photos/seed/shawol-admin-avatar/100/100" alt="Đại diện Shawol Việt">Bởi SHAWOL VIỆT · TEAM BLOG</span>
+    <span>15.08.2026</span>
+    <span>⏱ 8 phút đọc</span>
+    <span>💎 1.204 lượt xem</span>
+  </div>
+  <figure class="hero-fig rv">
+    <div class="ph duo kb"><img src="https://picsum.photos/seed/project-0912-aquamarine/1400/700" alt="Phối cảnh biển aquamarine tại phố đi bộ trong dự án 09.12"></div>
+    <figcaption>Ảnh minh hoạ: không khí sự kiện cup sleeve sinh nhật do Shawol Việt tổ chức năm 2024</figcaption>
+  </figure>
+</div>
+
+<!-- ============ POST LAYOUT ============ -->
+<div class="wrap post-layout">
+  <aside class="rail">
+    <div>
+      <h6>Trong bài này</h6>
+      <ol class="toc" id="toc">
+        <li><a href="#y-tuong"><b>01</b>Ý tưởng</a></li>
+        <li><a href="#hoat-dong"><b>02</b>Ba hoạt động chính</a></li>
+        <li><a href="#lich-trinh"><b>03</b>Lịch trình 09.12</a></li>
+        <li><a href="#ngan-sach"><b>04</b>Ngân sách</a></li>
+        <li><a href="#tham-gia"><b>05</b>Cách tham gia</a></li>
+        <li><a href="#loi-ket"><b>06</b>Lời kết</a></li>
+      </ol>
+    </div>
+    <div>
+      <h6>Chia sẻ</h6>
+      <div class="share-col">
+        <button id="copy-link">⧉ Copy link bài viết</button>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener">f Chia sẻ Facebook</a>
+        <a href="https://twitter.com/intent/tweet?text=D%E1%BB%B1%20%C3%A1n%2009.12%20c%E1%BB%A7a%20Shawol%20Vi%E1%BB%87t%20%F0%9F%92%8E%20%230912withMinho" target="_blank" rel="noopener">𝕏 Đăng lên X</a>
+      </div>
+    </div>
+    <div>
+      <h6>Minho facts</h6>
+      <div class="rail-fact">
+        Sinh nhật: <b>09.12.1991</b><br>
+        Biệt danh: <b>Người Lửa 🔥</b><br>
+        Màu fandom: <b>Pearl Aquamarine</b><br>
+        Fanchant mới nhất: <b>“CALL BACK”</b><br>
+        <span class="kr">“빛나는 사람” — người tỏa sáng</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ ARTICLE BODY ============ -->
+  <article class="prose">
+    <p class="dropcap rv">Tháng 12 năm ngoái, giữa biển người ở phố đi bộ Nguyễn Huệ, một Shawol giơ cao tấm biển nhỏ tự viết: <strong>“Minho à, sinh nhật vui vẻ.”</strong> Bức ảnh chụp vội ấy được chuyền tay khắp các group fandom suốt một tuần. Và năm nay, ban điều hành blog quyết định: không chỉ một tấm biển nữa — mà là cả một biển aquamarine.</p>
+
+    <p class="rv">Bài viết này là <strong>bản kế hoạch chính thức</strong> của dự án <em>09.12 with Minho</em> — được công khai toàn bộ để mọi Shawol, dù ở bất cứ đâu, đều có thể theo dõi, góp ý và tham gia.</p>
+
+    <h2 id="y-tuong" class="rv"><span class="no">01</span>Ý tưởng bắt đầu từ một tấm ảnh</h2>
+    <p class="rv">Đầu tháng 7, blog mở một cuộc khảo sát với câu hỏi duy nhất: <em>“Sinh nhật năm nay của Minho, bạn muốn chúng ta làm gì?”</em>. Hơn <strong>1.200 câu trả lời</strong> gửi về trong 10 ngày. 78% chọn một sự kiện offline quy mô lớn — và địa điểm được nhắc đến nhiều nhất là phố đi bộ Nguyễn Huệ (TP.HCM), kèm mong muốn có một điểm cầu tại Hồ Gươm (Hà Nội).</p>
+    <p class="rv">Từ kết quả đó, team điều phối 9 người được thành lập, chia thành ba nhóm: <strong>nội dung – hậu cần – tài chính</strong>. Hashtag chính thức của dự án là <a href="#">#0912withMinho</a>. Mọi cập nhật đều được đăng tại đây và ghim trên group cộng đồng.</p>
+
+    <div class="factbox rv">
+      <h4>✦ Thông tin nhanh</h4>
+      <dl>
+        <dt>Thời gian</dt><dd>Thứ Tư, 09.12.2026 · 08:00 – 21:00</dd>
+        <dt>Địa điểm</dt><dd>Phố đi bộ Nguyễn Huệ (TP.HCM) · điểm cầu Hồ Gươm (Hà Nội)</dd>
+        <dt>Quy mô dự kiến</dt><dd>500+ Shawol tham gia trực tiếp</dd>
+        <dt>Mục tiêu</dt><dd>1.000 lá thư tay · 600 cup sleeve · 1 biển đèn aquamarine</dd>
+      </dl>
+    </div>
+
+    <h2 id="hoat-dong" class="rv"><span class="no">02</span>Ba hoạt động chính</h2>
+    <div class="act rv">
+      <span class="n">01</span>
+      <div>
+        <h3>Bức tường thư tay</h3>
+        <p>Một khung tường 2m × 3m để Shawol dán những lá thư viết cho Minho. Mục tiêu: 1.000 lá thư. Toàn bộ sẽ được chụp lại, dịch tóm tắt sang tiếng Hàn và gửi tới fan account Hàn Quốc — nơi thư của fandom quốc tế được tổng hợp mỗi năm.</p>
+        <span class="mono-sub">08:00 – 20:00 · Miễn phí giấy &amp; bút màu tại booth</span>
+      </div>
+    </div>
+    <div class="act rv">
+      <span class="n">02</span>
+      <div>
+        <h3>Cup sleeve &amp; đổi photocard</h3>
+        <p>Hợp tác với quán cà phê đối tác cách địa điểm 50m: tặng 600 cup sleeve in hình minh hoạ độc quyền do chính team blog vẽ, kèm mini postcard <em>CHASE / CALL BACK</em>. Bàn đổi photocard miễn phí hoạt động cả ngày — mang card trùng của bạn đến, biết đâu lại ra card “bias”.</p>
+        <span class="mono-sub">Từ 13:00 · 600 sleeve · số lượng có hạn</span>
+      </div>
+    </div>
+    <div class="act rv">
+      <span class="n">03</span>
+      <div>
+        <h3>Khoảnh khắc thắp đèn aquamarine</h3>
+        <p>Lúc 18:00, 100 lightstick LED cùng flash điện thoại dán film aquamarine sẽ đồng loạt sáng lên, và cả phố đi bộ sẽ cùng hát fanchant <em>“CHASE”</em>. Đây là khoảnh khắc trung tâm — khoảnh khắc để Minho, dù đang ở Seoul, vẫn có thể thấy ngọn lửa của Shawol Việt.</p>
+        <span class="mono-sub">18:00 · 30 phút · Ai cũng có thể đứng vào vòng tròn</span>
+      </div>
+    </div>
+
+    <figure class="in-fig rv">
+      <div class="ph duo"><img src="https://picsum.photos/seed/cup-sleeve-event-minho/900/500" alt="Bàn cup sleeve và photocard tại sự kiện năm trước"></div>
+      <figcaption>Góc đổi photocard mùa sinh nhật 2024 — năm nay sẽ mở rộng gấp đôi</figcaption>
+    </figure>
+
+    <h2 id="lich-trinh" class="rv"><span class="no">03</span>Lịch trình dự kiến ngày 09.12</h2>
+    <ul class="mini-tl rv">
+      <li><time>07:00</time>Team hậu cần tập kết, dựng booth và tường thư.</li>
+      <li><time>09:00</time>Mở cửa: tường thư, photo booth, bàn thông tin.</li>
+      <li><time>13:00</time>Bắt đầu phát cup sleeve tại quán đối tác.</li>
+      <li class="hot"><time>18:00</time>Thắp đèn aquamarine + fanchant “CHASE” tập thể.</li>
+      <li><time>20:00</time>Bánh sinh nhật, hát chúc mừng 3 thứ tiếng: Việt – Hàn – Anh.</li>
+      <li><time>21:00</time>Bế mạc, đóng gói tường thư và dọn sạch khu vực — Shawol xanh!</li>
+    </ul>
+
+    <h2 id="ngan-sach" class="rv"><span class="no">04</span>Ngân sách &amp; minh bạch</h2>
+    <p class="rv">Toàn bộ chi phí dự kiến của dự án được liệt kê dưới đây. <strong>Mọi khoản thu – chi đều có hoá đơn và được cập nhật vào thứ Hai hằng tuần</strong> ngay tại bài viết này.</p>
+    <table class="budget rv">
+      <thead><tr><th>Hạng mục</th><th>Ghi chú</th><th style="text-align:right">Chi phí</th></tr></thead>
+      <tbody>
+        <tr><td>In &amp; trang trí photo booth, tường thư</td><td>Khung 2×3m, backdrop</td><td>3.500.000đ</td></tr>
+        <tr><td>Cup sleeve (600 cái)</td><td>Giấy kraft, in 2 mặt</td><td>2.800.000đ</td></tr>
+        <tr><td>Lightstick LED (thuê 100 cây)</td><td>Kèm film aquamarine</td><td>2.000.000đ</td></tr>
+        <tr><td>Giấy phép &amp; an ninh</td><td>Xin phép sử dụng khu vực</td><td>1.500.000đ</td></tr>
+        <tr><td>Dự phòng (15%)</td><td>Phát sinh</td><td>1.470.000đ</td></tr>
+        <tr class="total"><td colspan="2"><strong>Tổng cộng</strong></td><td>11.270.000đ</td></tr>
+      </tbody>
+    </table>
+    <div class="fund rv">
+      <div class="row"><span>Quỹ hiện có</span><b>6.300.000đ / 11.270.000đ</b></div>
+      <div class="bar"><i id="fund-bar" data-pct="56"></i></div>
+      <p class="pct">ĐẠT 56% — CẬP NHẬT LẦN CUỐI: 15.08.2026</p>
+    </div>
+    <div class="update-box rv"><b>CẬP NHẬT 16.08.2026 ✦</b> Đã nhận xác nhận giấy phép sử dụng khu vực tại Nguyễn Huệ. Quán cà phê đối tác chốt số lượng 600 sleeve. Team Hà Nội đang khảo sát điểm cầu Hồ Gươm — kết quả sẽ có trước 25.08.</div>
+
+    <figure class="in-fig rv">
+      <div class="ph duo"><img src="https://picsum.photos/seed/letter-wall-shawol/900/500" alt="Bức tường thư tay của Shawol"></div>
+      <figcaption>Bản phác thảo tường thư 2m × 3m do team nội dung dựng</figcaption>
+    </figure>
+
+    <h2 id="tham-gia" class="rv"><span class="no">05</span>Cách tham gia</h2>
+    <p class="rv">Dù bạn là Shawol lâu năm hay vừa “nhập môn” tuần trước, dự án này đều có chỗ cho bạn:</p>
+    <ol class="steps rv">
+      <li><b>Đăng ký</b> qua form của ban tổ chức (link ghim trên group cộng đồng) — để team nắm được số lượng và chia khu vực.</li>
+      <li><b>Gia nhập nhóm theo miền</b>: TP.HCM, Hà Nội, miền Trung &amp; online. Nhóm online có nhiệm vụ riêng: dịch thư, thiết kế, trực hashtag.</li>
+      <li><b>Chọn cách đóng góp</b>: một buổi ca trực setup (2 giờ), một phần fund, hoặc đơn giản là có mặt đúng ngày 09.12 — tất cả đều quý như nhau.</li>
+      <li><b>Theo dõi &amp; lan toả</b> qua hashtag <a href="#">#0912withMinho</a>. Mỗi lượt chia sẻ là thêm một người biết đến ngày hôm đó.</li>
+    </ol>
+
+    <div class="poll rv">
+      <h4>Thăm dò nhanh <span>✦</span> Bạn muốn bổ sung hoạt động nào?</h4>
+      <button class="poll-opt" data-k="video"><span class="fill"></span><span class="lab"><span>Chiếu video fanchant tập thể</span><b>21%</b></span></button>
+      <button class="poll-opt" data-k="card"><span class="fill"></span><span class="lab"><span>Gian photocard đổi miễn phí mở rộng</span><b>19%</b></span></button>
+      <button class="poll-opt" data-k="letter"><span class="fill"></span><span class="lab"><span>Cùng viết lá thư khổng lồ 10m</span><b>34%</b></span></button>
+      <button class="poll-opt" data-k="flashmob"><span class="fill"></span><span class="lab"><span>Flashmob vũ đạo “CHASE”</span><b>26%</b></span></button>
+      <p class="foot"><span id="poll-total">1.010</span> LƯỢT BÌNH CHỌN · MỖI SHAWOL 1 LƯỢT</p>
+    </div>
+
+    <h2 id="loi-ket" class="rv"><span class="no">06</span>Lời kết: ngọn lửa hai chiều</h2>
+    <p class="rv">Suốt 18 năm, Minho chưa bao giờ xuất hiện với phong độ nửa vời — từ sân khấu debut năm 16 tuổi, sân futsal ISAC, doanh trại thủy quân lục chiến, cho đến chiếc lightstick giơ cao trong concert kỷ niệm 15 năm. Anh luôn cho đi 100%, kể cả khi không ai yêu cầu.</p>
+    <p class="rv">Ngày 09.12 này là dịp để Shawol Việt đáp lại đúng theo cách ấy: <strong>cháy hết mình, không cần lý do</strong>. Nếu bạn từng được tiếp thêm sức mạnh bởi một bài hát, một nụ cười, hay một câu “수고했어” của anh — hãy đến và đứng vào biển aquamarine cùng chúng mình.</p>
+
+    <div class="pull-quote rv">
+      <span class="kr">“수고했어, 오늘도.”</span>
+      <p>Vì Minho đã luôn cháy hết mình — năm nay, đến lượt Shawol cháy lại.</p>
+      <cite>— Tuyên ngôn dự án #0912withMinho</cite>
+    </div>
+
+    <div class="tag-row rv">
+      <a href="index.html#blog">#DựÁn</a><a href="index.html#blog">#SinhNhật</a><a href="index.html#blog">#0912withMinho</a><a href="index.html#blog">#ShawolViệt</a><a href="index.html#blog">#CupSleeve</a>
+    </div>
+
+    <div class="author-box rv">
+      <img src="https://picsum.photos/seed/shawol-admin-avatar/200/200" alt="Đại diện Shawol Việt">
+      <div>
+        <h5>Shawol Việt</h5>
+        <p class="role">Ban điều hành Minho Archive</p>
+        <p>Vận hành fanblog từ 2023. Tin rằng fandom là nơi để cùng nhau làm những điều tử tế — và rằng mọi dự án đều nên bắt đầu bằng một tấm ảnh chụp vội.</p>
+      </div>
+    </div>
+
+    <nav class="post-nav rv" aria-label="Điều hướng bài viết">
+      <a href="index.html#blog"><span class="dir">← Bài trước</span><span class="tt">Đập hộp “CALL BACK”: 6 photocard và cú twist phiên bản ẩn</span></a>
+      <a href="index.html#blog"><span class="dir">Về trang blog →</span><span class="tt">Xem tất cả bài viết của Minho Archive</span></a>
+    </nav>
+
+    <section class="related rv">
+      <h4>✦ Bài viết liên quan</h4>
+      <a class="rel-row" href="index.html#blog">
+        <div class="thumb duo"><img src="https://picsum.photos/seed/blog-isac-top10/300/200" alt="Khoảnh khắc ISAC"></div>
+        <div><p class="pm">26.07.2026 · <b>#ISAC</b></p><h5>10 khoảnh khắc ISAC đi vào lịch sử của “vua futsal”</h5></div>
+      </a>
+      <a class="rel-row" href="index.html#blog">
+        <div class="thumb duo"><img src="https://picsum.photos/seed/blog-acting-map/300/200" alt="Hành trình diễn xuất"></div>
+        <div><p class="pm">14.07.2026 · <b>#DiễnXuất</b></p><h5>Từ Tae-joon đến Woo-gi: bản đồ hành trình diễn viên Choi Minho</h5></div>
+      </a>
+      <a class="rel-row" href="index.html#blog">
+        <div class="thumb duo"><img src="https://picsum.photos/seed/blog-fanchant-guide/300/200" alt="Hướng dẫn fanchant"></div>
+        <div><p class="pm">02.07.2026 · <b>#HướngDẫn</b></p><h5>Cẩm nang Shawol mới: fanchant, lightstick và quy tắc concert</h5></div>
+      </a>
+    </section>
+
+    <!-- COMMENTS -->
+    <section class="comments rv">
+      <h4>Bình luận của Shawol <b id="c-count">(3)</b></h4>
+      <form class="c-form" id="c-form">
+        <input id="c-name" type="text" placeholder="Tên của bạn" autocomplete="name" maxlength="30">
+        <textarea id="c-msg" placeholder="Để lại một lời nhắn cho dự án… 💎" required maxlength="500"></textarea>
+        <button class="btn" type="submit">Gửi bình luận</button>
+      </form>
+      <ul class="c-list" id="c-list"></ul>
+    </section>
+  </article>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <span>© 2026 MINHO ARCHIVE — MADE WITH 💎 BY SHAWOL VIỆT NAM</span>
+      <span><a href="index.html">TRANG CHỦ</a> · <a href="index.html#blog">BLOG</a> · <a href="#top">VỀ ĐẦU TRANG ↑</a></span>
+    </div>
+    <p class="foot-note">Fanblog không chính thức do người hâm mộ vận hành, không thuộc hay đại diện cho SM Entertainment. Hình ảnh chỉ là ảnh giữ chỗ (placeholder). SHINee — Onew · Jonghyun · Key · Minho · Taemin — năm mảnh ghép mãi mãi. 💎</p>
+  </div>
+</footer>
+
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+"use strict";
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+/* ---------- Reveal ---------- */
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* ---------- Reading progress ---------- */
+const bar = $('#readbar');
+let ticking = false;
+function paintBar(){
+  const h = document.documentElement;
+  const max = h.scrollHeight - innerHeight;
+  bar.style.width = (max>0 ? (h.scrollTop/max*100) : 0) + '%';
+  ticking = false;
+}
+addEventListener('scroll', ()=>{ if(!ticking){ requestAnimationFrame(paintBar); ticking = true; } }, {passive:true});
+paintBar();
+
+/* ---------- TOC scrollspy ---------- */
+const tocLinks = $$('#toc a');
+const spy = new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      tocLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id));
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px'});
+['y-tuong','hoat-dong','lich-trinh','ngan-sach','tham-gia','loi-ket'].forEach(id=>spy.observe(document.getElementById(id)));
+
+/* ---------- Menu ---------- */
+$('#burger').addEventListener('click',()=>{
+  const open = document.body.classList.toggle('menu-open');
+  $('#burger').setAttribute('aria-expanded', open);
+});
+
+/* ---------- Toast ---------- */
+let toastT;
+function toast(msg){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(()=>t.classList.remove('show'), 3200);
+}
+
+/* ---------- Copy link ---------- */
+$('#copy-link').addEventListener('click', async ()=>{
+  try{ await navigator.clipboard.writeText(location.href); toast('Đã copy link bài viết ⧉ Gửi cho hội Shawol ngay!'); }
+  catch{ toast('Copy không thành công — hãy copy URL trên thanh địa chỉ nhé.'); }
+});
+
+/* ---------- Ticker clock & countdown ---------- */
+const fmtKST = new Intl.DateTimeFormat('vi-VN',{timeZone:'Asia/Seoul',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+function tickClock(){ const t = fmtKST.format(new Date()); $$('.kst').forEach(el=>el.textContent=t); }
+tickClock(); setInterval(tickClock,1000);
+(function(){
+  const now = new Date(); let y = now.getFullYear();
+  let target = new Date(y,11,9,23,59,59);
+  if(now > target) target = new Date(y+1,11,9,23,59,59);
+  const d = Math.max(0, Math.ceil((target-now)/864e5));
+  $$('.bday').forEach(el=>el.textContent=d);
+})();
+
+/* ---------- Fund bar ---------- */
+const fundBar = $('#fund-bar');
+new IntersectionObserver((es,obs)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ fundBar.style.width = fundBar.dataset.pct+'%'; obs.disconnect(); } });
+},{threshold:.4}).observe(fundBar);
+
+/* ---------- Poll ---------- */
+const votes = { video:214, card:189, letter:342, flashmob:265 };
+let voted = localStorage.getItem('mh-vote') || null;
+const opts = $$('.poll-opt');
+function renderPoll(){
+  const total = Object.values(votes).reduce((a,b)=>a+b,0);
+  $('#poll-total').textContent = total.toLocaleString('vi-VN');
+  opts.forEach(b=>{
+    const k = b.dataset.k, pct = Math.round(votes[k]/total*100);
+    b.querySelector('.fill').style.width = pct+'%';
+    b.querySelector('.lab b').textContent = pct+'%';
+    b.classList.toggle('mine', voted===k);
+    b.disabled = !!voted;
+    b.setAttribute('aria-label', b.querySelector('.lab span').textContent + ' — ' + pct + '%');
+  });
+}
+opts.forEach(b=>b.addEventListener('click', ()=>{
+  if(voted) return;
+  voted = b.dataset.k; votes[voted]++;
+  localStorage.setItem('mh-vote', voted);
+  renderPoll();
+  toast('Đã ghi nhận bình chọn của bạn ✦ Cảm ơn Shawol!');
+}));
+renderPoll();
+
+/* ---------- Comments ---------- */
+const seedComments = [
+  {n:'Ngọc Trâm', t:'2 giờ trước', m:'Năm ngoái mình lỡ hẹn, năm nay nhất định có mặt từ 8h sáng để phụ setup! Cho mình xin ca tường thư nhé 💎'},
+  {n:'hanguyen_91', t:'5 giờ trước', m:'Team Hà Nội cho mình hỏi điểm cầu Hồ Gươm có chiếu fancam tập thể không ạ? Muốn xem lại mùa ISAC quá trời 😭'},
+  {n:'Shawol Đà Nẵng', t:'1 ngày trước', m:'Ước gì có điểm cầu miền Trung 🥹 Nhưng nếu chốt lịch sớm mình sẽ bay vào TP.HCM, vụ biển đèn này không bỏ được!'}
+];
+const list = $('#c-list'), count = $('#c-count');
+let saved = [];
+try{ saved = JSON.parse(localStorage.getItem('mh-comments')||'[]'); }catch(e){}
+function ava(name){ const s = document.createElement('span'); s.className='c-ava'; s.textContent = (name||'S')[0].toUpperCase(); return s; }
+function addComment(c, prepend){
+  const li = document.createElement('li'); li.className='c-item';
+  const head = document.createElement('p'); head.className='c-head';
+  const b = document.createElement('b'); b.textContent = c.n || 'Shawol ẩn danh';
+  head.appendChild(b); head.appendChild(document.createTextNode(c.t));
+  const p = document.createElement('p'); p.textContent = c.m;
+  li.appendChild(ava(c.n)); const body = document.createElement('div'); body.appendChild(head); body.appendChild(p); li.appendChild(body);
+  if(prepend) list.prepend(li); else list.appendChild(li);
+}
+seedComments.forEach(c=>addComment(c,false));
+saved.forEach(c=>addComment(c,false));
+function updateCount(){ count.textContent = '(' + list.children.length + ')'; }
+updateCount();
+$('#c-form').addEventListener('submit', e=>{
+  e.preventDefault();
+  const msg = $('#c-msg').value.trim();
+  if(!msg){ toast('Viết vài lời trước đã nhé ✍'); return; }
+  const c = { n: $('#c-name').value.trim(), t: 'Vừa xong', m: msg };
+  saved.push(c);
+  try{ localStorage.setItem('mh-comments', JSON.stringify(saved)); }catch(e){}
+  addComment(c, true);
+  updateCount();
+  e.target.reset();
+  toast('Bình luận đã được gửi 💎 Danke, Shawol!');
+});
+})();
+</script>
+</body>
+</html>
