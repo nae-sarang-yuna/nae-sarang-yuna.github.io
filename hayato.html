@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SANO! SANO! — Fanblog về Sano Hayato (M!LK)</title>
+<meta name="description" content="Nhật ký oshi của một fan Việt: recap live M!LK, đập hộp goods, lịch trình và mọi thứ về Sano Hayato.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E7;
+  --paper2:#FFFDF7;
+  --ink:#1C1712;
+  --red:#F0619F;
+  --red-dark:#C63E7E;
+  --pink:#F6D8CE;
+  --tape:rgba(233,214,150,.85);
+  --shadow:6px 6px 0 var(--ink);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Be Vietnam Pro',sans-serif;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+::selection{background:var(--red);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+.display{font-family:'Anton',sans-serif;font-weight:400}
+.jp{font-family:'DotGothic16',monospace}
+
+/* ---------- noise overlay ---------- */
+.noise{position:fixed;inset:0;z-index:120;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)' opacity='0.7'/></svg>");
+}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--ink);color:var(--paper);overflow:hidden;border-bottom:2px solid var(--ink)}
+.ticker-track{display:flex;width:max-content;animation:tick 30s linear infinite}
+.ticker-track > div{display:flex;align-items:center}
+.ticker span{padding:.55em 1.4em;font-family:'DotGothic16';font-size:13px;letter-spacing:.14em;white-space:nowrap}
+.ticker em{color:var(--red);font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- masthead ---------- */
+.masthead{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--ink)}
+.masthead-in{max-width:1360px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:14px 5vw}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-block{background:var(--red);color:#fff;font-family:'Anton';font-size:22px;letter-spacing:.04em;
+  border:2px solid var(--ink);padding:4px 12px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-2deg);transition:transform .3s}
+.logo:hover .logo-block{transform:rotate(2deg) scale(1.04)}
+.logo small{font-family:'DotGothic16';font-size:11px;letter-spacing:.2em;display:block;line-height:1.3}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.03em;position:relative;padding:4px 0}
+.nav a::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--red);transition:width .3s}
+.nav a:hover::after{width:100%}
+.btn{display:inline-block;background:var(--red);color:#fff;border:2px solid var(--ink);
+  font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;
+  padding:12px 22px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
+.btn.ghost{background:var(--paper2);color:var(--ink)}
+.btn.sm{padding:9px 16px;font-size:12px}
+
+/* ---------- cover ---------- */
+.cover{position:relative;padding:70px 5vw 110px;border-bottom:2px solid var(--ink);overflow:hidden}
+.cover-vert{position:absolute;top:6%;right:.5%;writing-mode:vertical-rl;font-family:'DotGothic16';
+  font-size:clamp(64px,9vw,128px);pointer-events:none;user-select:none;z-index:0;
+  color:transparent;-webkit-text-stroke:1.5px rgba(28,23,18,.22)}
+.cover-grid{position:relative;z-index:1;max-width:1360px;margin:0 auto;display:grid;
+  grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.topline{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:26px}
+.rec{display:inline-flex;align-items:center;gap:8px;font-family:'DotGothic16';font-size:12px;letter-spacing:.2em}
+.rec::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--red);animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.1}}
+.vol{font-family:'DotGothic16';font-size:12px;letter-spacing:.18em;border:2px solid var(--ink);padding:4px 10px;background:var(--paper2)}
+.giant{font-family:'Anton';font-size:clamp(62px,10.5vw,152px);line-height:.92;letter-spacing:.01em;text-transform:uppercase}
+.giant .l2{color:var(--red);text-shadow:5px 5px 0 var(--ink)}
+.jp-sub{font-family:'DotGothic16';font-size:clamp(14px,1.6vw,19px);letter-spacing:.22em;margin:20px 0 18px;color:var(--ink)}
+.jp-sub b{color:var(--red);font-weight:400}
+.cover-intro{max-width:56ch;font-size:16px;margin-bottom:28px}
+.stat-chips{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.stat{border:2px solid var(--ink);background:var(--paper2);padding:10px 14px;box-shadow:4px 4px 0 var(--ink)}
+.stat b{font-family:'Anton';font-size:26px;display:block;line-height:1}
+.stat span{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.stat.red{background:var(--red);color:#fff}
+.stat.red .swatch{display:inline-block;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--ink);margin-right:6px;vertical-align:-2px}
+.cover-cta{display:flex;flex-wrap:wrap;gap:16px}
+
+/* portrait */
+.portrait-zone{position:relative}
+.portrait{position:relative;border:3px solid var(--ink);background:#fff;box-shadow:14px 14px 0 var(--red);max-width:440px;margin-left:auto}
+.portrait .ph{overflow:hidden;aspect-ratio:3/4}
+.portrait img{width:100%;height:100%;object-fit:cover;animation:breathe 15s ease-in-out infinite alternate}
+@keyframes breathe{from{transform:scale(1)}to{transform:scale(1.09) translate(-2%,2%)}}
+.portrait::before,.portrait::after{content:'';position:absolute;width:110px;height:30px;background:var(--tape);
+  border:1px solid rgba(28,23,18,.25);z-index:3}
+.portrait::before{top:-14px;left:-32px;transform:rotate(-38deg)}
+.portrait::after{bottom:22px;right:-38px;transform:rotate(42deg)}
+.caption-plate{position:absolute;left:-18px;bottom:-24px;background:var(--ink);color:var(--paper);
+  font-family:'DotGothic16';font-size:12px;letter-spacing:.12em;padding:8px 14px;z-index:4;max-width:90%}
+.stamp{position:absolute;top:-46px;right:-30px;width:128px;height:128px;z-index:5;animation:spin 14s linear infinite;filter:drop-shadow(3px 4px 0 rgba(28,23,18,.5))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mini-pola{position:absolute;background:#fff;border:2px solid var(--ink);padding:8px 8px 26px;z-index:4;
+  box-shadow:6px 6px 0 rgba(28,23,18,.85);transition:transform .35s}
+.mini-pola img{width:130px;height:110px;object-fit:cover}
+.mini-pola.p1{left:-40px;top:8%;transform:rotate(-7deg)}
+.mini-pola.p2{right:-24px;bottom:-52px;transform:rotate(5deg)}
+.mini-pola:hover{transform:rotate(0) scale(1.06);z-index:9}
+
+/* ---------- countdown band ---------- */
+.countdown{background:var(--red);color:#fff;border-bottom:2px solid var(--ink);padding:56px 5vw;position:relative;overflow:hidden}
+.countdown::before{content:'';position:absolute;inset:0;opacity:.14;
+  background-image:radial-gradient(#fff 1.2px,transparent 1.8px);background-size:18px 18px}
+.cd-in{position:relative;max-width:1360px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px}
+.cd-in .kicker{color:#fff;opacity:.85}
+.cd-in h2{font-family:'Anton';font-size:clamp(26px,3.6vw,46px);text-transform:uppercase;max-width:16ch;line-height:1.05}
+.cd-sub{font-family:'DotGothic16';letter-spacing:.18em;font-size:13px;margin-top:10px}
+.cd-boxes{display:flex;gap:14px}
+.cd-box{border:2px solid #fff;background:rgba(28,23,18,.28);padding:14px 18px;text-align:center;min-width:88px}
+.cd-box b{font-family:'Anton';font-size:clamp(32px,4vw,50px);display:block;line-height:1}
+.cd-box span{font-family:'DotGothic16';font-size:11px;letter-spacing:.24em}
+
+/* ---------- sections ---------- */
+.section{padding:96px 5vw;border-bottom:2px solid var(--ink);position:relative}
+.wrap{max-width:1360px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:52px;flex-wrap:wrap}
+.kicker{font-family:'DotGothic16';color:var(--red);letter-spacing:.24em;font-size:13px;display:block;margin-bottom:12px}
+h2.sec-title{font-family:'Anton';font-size:clamp(34px,5vw,62px);text-transform:uppercase;line-height:1}
+.sec-note{max-width:38ch;font-size:14px;color:rgba(28,23,18,.75)}
+.reveal-line{display:block;overflow:hidden}
+.reveal-line > span{display:inline-block;transform:translateY(115%);transition:transform .85s cubic-bezier(.2,.7,.2,1)}
+.reveal-line.in > span{transform:none}
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.fade-up.in{opacity:1;transform:none}
+
+/* ---------- posts ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{border:2px solid var(--ink);background:var(--paper2);padding:.5em 1.1em;font-family:'DotGothic16';
+  font-size:13px;letter-spacing:.14em;transition:all .2s;box-shadow:3px 3px 0 var(--ink)}
+.chip:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.chip.active{background:var(--ink);color:var(--paper)}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.post{border:2px solid var(--ink);background:var(--paper2);box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .25s,box-shadow .25s}
+.post:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--red)}
+.post.hide{display:none}
+.post.pop{animation:cardIn .45s cubic-bezier(.2,1.1,.3,1)}
+@keyframes cardIn{from{opacity:0;transform:translateY(22px) scale(.97)}}
+.post .imgwrap{overflow:hidden;border-bottom:2px solid var(--ink)}
+.post .imgwrap img{width:100%;height:220px;object-fit:cover;transition:transform .7s ease;filter:saturate(1.05)}
+.post:hover .imgwrap img{transform:scale(1.07) rotate(.5deg)}
+.post .body{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.meta{display:flex;align-items:center;gap:12px;font-family:'DotGothic16';font-size:12px;letter-spacing:.1em}
+.tag{background:var(--red);color:#fff;padding:3px 9px;font-size:11px;border:1.5px solid var(--ink)}
+.date,.rt{opacity:.75}
+.post h3{font-family:'Anton';font-size:22px;line-height:1.15;text-transform:uppercase;letter-spacing:.01em}
+.post p{font-size:14px;color:rgba(28,23,18,.8);flex:1}
+.more{text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--red);align-self:flex-start;position:relative}
+.more::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:100%;background:var(--red);transform:scaleX(.3);transform-origin:left;transition:transform .3s}
+.more:hover::after{transform:scaleX(1)}
+.post.featured{grid-column:span 2;display:grid;grid-template-columns:1.05fr 1fr}
+.post.featured .imgwrap{border-bottom:0;border-right:2px solid var(--ink);min-height:320px}
+.post.featured .imgwrap img{height:100%}
+.post.featured h3{font-size:clamp(24px,2.6vw,34px)}
+
+/* ---------- journey (sticky 2 col) ---------- */
+.journey{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
+.journey-left{position:sticky;top:110px;align-self:start}
+.journey-left .big-jp{font-family:'DotGothic16';font-size:clamp(40px,5vw,72px);line-height:1.1;margin-top:26px}
+.journey-left .big-jp b{color:var(--red);font-weight:400}
+.tl{border-left:3px solid var(--ink);padding-left:38px;display:grid;gap:52px}
+.tl-item{position:relative}
+.tl-item::before{content:'';position:absolute;left:-47px;top:12px;width:15px;height:15px;border-radius:50%;
+  background:var(--red);border:3px solid var(--ink);transition:transform .3s}
+.tl-item:hover::before{transform:scale(1.5)}
+.tl-item .year{font-family:'Anton';font-size:clamp(26px,3vw,40px);color:var(--red);text-shadow:2.5px 2.5px 0 var(--ink);display:block;line-height:1}
+.tl-item h3{font-size:19px;font-weight:800;margin:8px 0 6px;text-transform:uppercase;letter-spacing:.02em}
+.tl-item p{font-size:14.5px;color:rgba(28,23,18,.8);max-width:56ch}
+
+/* ---------- profile ---------- */
+.profile-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.photocard{border:3px solid var(--ink);background:#fff;box-shadow:12px 12px 0 var(--ink);max-width:400px;
+  transform:rotate(-2deg);transition:transform .4s}
+.photocard:hover{transform:rotate(1.5deg) translateY(-6px)}
+.photocard img{width:100%;aspect-ratio:7/9;object-fit:cover}
+.photocard .strip{background:var(--red);color:#fff;border-top:3px solid var(--ink);
+  font-family:'DotGothic16';letter-spacing:.16em;font-size:13px;padding:10px 14px;display:flex;justify-content:space-between}
+.dl{display:grid;gap:0;border:2px solid var(--ink);background:var(--paper2);box-shadow:var(--shadow)}
+.dl-row{display:flex;justify-content:space-between;gap:20px;padding:14px 20px;border-bottom:2px dashed rgba(28,23,18,.35);font-size:15px}
+.dl-row:last-child{border-bottom:0}
+.dl-row dt{font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.1em;padding-top:3px;white-space:nowrap}
+.dl-row dd{text-align:right}
+.dl-row dd b{color:var(--red)}
+.reasons{margin-top:56px}
+.reasons h3{font-family:'Anton';font-size:clamp(24px,3vw,36px);text-transform:uppercase;margin-bottom:28px}
+.reason-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.reason{border:2px solid var(--ink);background:var(--paper2);padding:20px;display:flex;gap:16px;transition:transform .25s,box-shadow .25s;box-shadow:4px 4px 0 var(--ink)}
+.reason:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--red)}
+.reason b{font-family:'Anton';font-size:30px;color:var(--red);text-shadow:2px 2px 0 var(--ink);line-height:1}
+.reason p{font-size:14px}
+
+/* ---------- photo wall ---------- */
+.photo-section{background:var(--pink)}
+.photo-section::before{content:'';position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:radial-gradient(var(--ink) 1.3px,transparent 1.8px);background-size:16px 16px}
+.polaroids{position:relative;display:flex;flex-wrap:wrap;gap:40px;justify-content:center;padding:20px 0}
+.pola{background:#fff;border:2px solid var(--ink);padding:12px 12px 46px;transform:rotate(var(--r,0deg));
+  box-shadow:8px 8px 0 rgba(28,23,18,.85);position:relative;transition:transform .4s cubic-bezier(.2,1.2,.3,1);z-index:1}
+.pola::before{content:'';position:absolute;top:-13px;left:50%;transform:translateX(-50%) rotate(var(--tr,-2deg));
+  width:92px;height:26px;background:var(--tape);border:1px solid rgba(28,23,18,.25)}
+.pola:hover{transform:rotate(0deg) scale(1.05);z-index:5}
+.pola img{width:240px;height:220px;object-fit:cover;filter:saturate(1.08)}
+.pola figcaption{font-family:'DotGothic16';font-size:12px;letter-spacing:.1em;text-align:center;margin-top:12px}
+
+/* ---------- oshi corner ---------- */
+.oshi-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px}
+.widget{border:2px solid var(--ink);background:var(--paper2);box-shadow:var(--shadow);padding:28px}
+.widget h3{font-family:'Anton';font-size:24px;text-transform:uppercase;margin-bottom:6px}
+.widget .sub{font-size:13.5px;color:rgba(28,23,18,.72);margin-bottom:20px}
+.stage{position:relative;border:2px solid var(--ink);height:300px;overflow:hidden;background:#14100e;--glow:#F58BB5}
+.stage img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.stage .glow{position:absolute;inset:0;mix-blend-mode:screen;transition:background .5s ease;
+  background:radial-gradient(circle at 50% 125%,var(--glow) 0%,transparent 62%),
+             radial-gradient(circle at 20% -10%,var(--glow) 0%,transparent 40%),
+             radial-gradient(circle at 82% -10%,var(--glow) 0%,transparent 40%)}
+.stage .stage-label{position:absolute;left:14px;top:12px;font-family:'DotGothic16';font-size:11px;letter-spacing:.24em;color:#fff;background:rgba(28,23,18,.6);padding:5px 10px}
+.glow-name{font-family:'DotGothic16';letter-spacing:.14em;font-size:13px;margin:18px 0 12px}
+.glow-name b{color:var(--red);font-weight:400}
+.light-btns{display:flex;flex-wrap:wrap;gap:12px}
+.light-btn{width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);background:var(--c);
+  box-shadow:3px 3px 0 var(--ink);transition:transform .2s,box-shadow .2s}
+.light-btn:hover{transform:translateY(-3px)}
+.light-btn.active{box-shadow:0 0 0 4px var(--paper2),0 0 0 6px var(--ink);transform:scale(1.08)}
+.tasks{display:grid;gap:4px;margin-bottom:22px}
+.task{display:flex;align-items:center;gap:12px;padding:11px 4px;border-bottom:2px dashed rgba(28,23,18,.3);cursor:pointer;font-size:15px;font-weight:600;transition:background .2s}
+.task:hover{background:rgba(224,58,47,.06)}
+.task input{accent-color:var(--red);width:18px;height:18px;cursor:pointer}
+.task input:checked + span{text-decoration:line-through;opacity:.5}
+.progress-wrap{border:2px solid var(--ink);background:var(--paper);height:26px;position:relative}
+.progress-bar{height:100%;background:var(--red);width:0%;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.progress-txt{font-family:'DotGothic16';font-size:12px;letter-spacing:.14em;margin-top:10px}
+
+/* ---------- schedule ---------- */
+.sched{border:2px solid var(--ink);background:var(--paper2);box-shadow:var(--shadow)}
+.sched-row{display:grid;grid-template-columns:110px 1fr auto;gap:24px;align-items:center;
+  padding:20px 26px;border-bottom:2px solid rgba(28,23,18,.2);transition:background .25s,transform .25s}
+.sched-row:last-child{border-bottom:0}
+.sched-row:hover{background:rgba(224,58,47,.07);transform:translateX(6px)}
+.sched-date{font-family:'Anton';font-size:26px;color:var(--red);text-shadow:2px 2px 0 var(--ink)}
+.sched-info h4{font-size:16px;font-weight:800}
+.sched-info p{font-size:13.5px;color:rgba(28,23,18,.72)}
+.disclaimer{font-family:'DotGothic16';font-size:12px;letter-spacing:.1em;margin-top:18px;color:var(--red-dark)}
+
+/* ---------- notes wall ---------- */
+.notes-section{background:var(--ink);color:var(--paper)}
+.notes-section .kicker{color:#FF7A70}
+.note-form{display:grid;grid-template-columns:220px 1fr auto;gap:14px;margin-bottom:44px}
+.note-form input,.note-form textarea{font-family:'Be Vietnam Pro';font-size:14px;padding:13px 16px;
+  border:2px solid var(--paper);background:transparent;color:var(--paper);resize:vertical}
+.note-form input:focus,.note-form textarea:focus{outline:none;border-color:var(--red);background:rgba(224,58,47,.12)}
+.note-form ::placeholder{color:rgba(246,241,231,.5)}
+.notes{display:flex;flex-wrap:wrap;gap:24px}
+.note{width:212px;min-height:158px;padding:16px;border:2px solid var(--ink);color:var(--ink);
+  box-shadow:7px 7px 0 rgba(0,0,0,.45);transform:rotate(var(--r,0deg));font-size:14px;display:flex;flex-direction:column;gap:10px;
+  transition:transform .3s}
+.note:hover{transform:rotate(0deg) scale(1.04);z-index:3}
+.note .msg{flex:1;font-weight:600;line-height:1.5}
+.note .sig{font-family:'DotGothic16';font-size:12px;letter-spacing:.08em;text-align:right;opacity:.8}
+.note.pop{animation:notePop .55s cubic-bezier(.2,1.5,.35,1)}
+@keyframes notePop{from{transform:scale(.3) rotate(calc(var(--r,0deg) * 3));opacity:0}}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:var(--paper);padding:80px 5vw 40px;overflow:hidden}
+.foot-big{font-family:'Anton';font-size:clamp(56px,10vw,150px);line-height:.95;text-transform:uppercase;
+  text-align:center;margin-bottom:64px;color:rgba(246,241,231,.12);user-select:none}
+@supports((-webkit-text-stroke:2px #fff)){
+  .foot-big{color:transparent;-webkit-text-stroke:2px rgba(246,241,231,.4)}
+}
+.foot-grid{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(246,241,231,.25)}
+.foot-grid h4{font-family:'DotGothic16';letter-spacing:.22em;font-size:13px;color:#FF7A70;margin-bottom:16px}
+.foot-grid p,.foot-grid li{font-size:14px;color:rgba(246,241,231,.8)}
+.foot-grid ul{list-style:none;display:grid;gap:8px}
+.foot-grid a{color:rgba(246,241,231,.8);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
+.foot-grid a:hover{color:#FF7A70;border-color:#FF7A70}
+.member-oshi{color:#fff !important;font-weight:700}
+.member-oshi .oshi-badge{background:var(--red);color:#fff;font-size:10px;font-weight:800;letter-spacing:.1em;padding:2px 8px;margin-left:8px;border:1px solid rgba(246,241,231,.5)}
+.foot-bottom{max-width:1360px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;padding-top:28px;
+  font-family:'DotGothic16';font-size:12px;letter-spacing:.12em;color:rgba(246,241,231,.55)}
+
+/* ---------- responsive ---------- */
+@media(max-width:1080px){
+  .cover-grid{grid-template-columns:1fr;gap:80px}
+  .portrait{margin:0 auto}
+  .cover-vert{display:none}
+  .posts{grid-template-columns:1fr 1fr}
+  .post.featured{grid-column:span 2}
+  .journey{grid-template-columns:1fr;gap:40px}
+  .journey-left{position:static}
+  .profile-grid{grid-template-columns:1fr;gap:56px}
+  .photocard{margin:0 auto}
+  .oshi-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){.nav{display:none}}
+@media(max-width:680px){
+  .posts{grid-template-columns:1fr}
+  .post.featured{grid-column:span 1;grid-template-columns:1fr}
+  .post.featured .imgwrap{border-right:0;border-bottom:2px solid var(--ink);min-height:0}
+  .cd-boxes{flex-wrap:wrap}
+  .sched-row{grid-template-columns:1fr;gap:8px}
+  .note-form{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .mini-pola.p1{left:0}
+  .mini-pola.p2{right:0}
+  .section{padding:70px 6vw}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .ticker-track{animation:none}
+  .portrait img{animation:none}
+  .stamp{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <div>
+      <span>★ SANO HAYATO</span><span><em>佐野勇斗</em></span><span>★ M!LK</span><span>★ MEMBER COLOR : <em>PINK</em></span>
+      <span>★ EST. 2014</span><span>★ MAJOR DEBUT 2021.11.24</span><span>★ HAYATO LA OSHI CUA TOI</span><span><em>★ OSHI-KATSU EVERY DAY ★</em></span>
+    </div>
+    <div>
+      <span>★ SANO HAYATO</span><span><em>佐野勇斗</em></span><span>★ M!LK</span><span>★ MEMBER COLOR : <em>PINK</em></span>
+      <span>★ EST. 2014</span><span>★ MAJOR DEBUT 2021.11.24</span><span>★ HAYATO LA OSHI CUA TOI</span><span><em>★ OSHI-KATSU EVERY DAY ★</em></span>
+    </div>
+  </div>
+</div>
+
+<!-- masthead -->
+<header class="masthead">
+  <div class="masthead-in">
+    <a class="logo" href="#top">
+      <span class="logo-block">SANO! SANO!</span>
+      <small>FANBLOG • VOL.07<br>17.08.2026</small>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#nhatky">Nhật ký</a>
+      <a href="#hanhtrinh">Hành trình</a>
+      <a href="#hoso">Hồ sơ</a>
+      <a href="#anh">Album ảnh</a>
+      <a href="#oshi">Góc oshi</a>
+      <a href="#lich">Lịch</a>
+    </nav>
+    <a class="btn sm" href="#loinhan" style="margin-left:auto">Gửi lời nhắn ♥</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <span class="cover-vert" aria-hidden="true">佐野勇斗</span>
+  <div class="cover-grid">
+    <div>
+      <div class="topline">
+        <span class="rec">REC</span>
+        <span class="vol">FANBLOG KHÔNG CHÍNH THỨC • VOL.07</span>
+      </div>
+      <h1 class="giant">
+        <span class="l1 scramble" data-text="SANO">SANO</span><br>
+        <span class="l2 scramble" data-text="HAYATO">HAYATO</span>
+      </h1>
+      <p class="jp-sub">佐野勇斗 — M!LK — MEMBER COLOR : <b>PINK</b> — EBiDAN</p>
+      <p class="cover-intro">Trang blog nhỏ của một fan Việt mê màu đỏ. Ở đây mình ghi lại mọi thứ về Hayato-kun: recap đêm live, đập hộp goods, lịch trình tổng hợp — và cả những ngày tự hỏi sao mình có thể mê anh ấy nhiều đến vậy.</p>
+      <div class="stat-chips">
+        <div class="stat"><b id="days-debut">…</b><span>ngày từ major debut</span></div>
+        <div class="stat"><b id="days-formed">…</b><span>ngày từ ngày kết thành</span></div>
+        <div class="stat"><b id="age">…</b><span>tuổi</span></div>
+        <div class="stat red"><span class="swatch"></span><b style="display:inline;font-size:18px">HỒNG</b> <span style="display:block">member color</span></div>
+      </div>
+      <div class="cover-cta">
+        <a class="btn" href="#nhatky">Đọc nhật ký mới nhất ↓</a>
+        <a class="btn ghost" href="#hanhtrinh">Hành trình M!LK</a>
+      </div>
+    </div>
+
+    <div class="portrait-zone">
+      <svg class="stamp" viewBox="0 0 128 128" aria-hidden="true">
+        <defs><path id="circPath" d="M64,64 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+        <circle cx="64" cy="64" r="60" fill="#F0619F" stroke="#1C1712" stroke-width="2.5"/>
+        <circle cx="64" cy="64" r="31" fill="#F6F1E7" stroke="#1C1712" stroke-width="2.5"/>
+        <text font-family="DotGothic16" font-size="12.5" fill="#F6F1E7" letter-spacing="2.5">
+          <textPath href="#circPath">★ OSHI SO 1 ★ 推しメン ★ M!LK ★ 佐野勇斗</textPath>
+        </text>
+        <text x="64" y="71" text-anchor="middle" font-family="DotGothic16" font-size="19" fill="#1C1712">勇斗</text>
+      </svg>
+      <figure class="portrait">
+        <div class="ph"><img src="https://picsum.photos/seed/sano-hayato-stage-red/720/960" alt="Ảnh sân khấu của Sano Hayato (ảnh minh họa)"></div>
+      </figure>
+      <div class="caption-plate">HAYATO @ SUMMER LIVE 2026 — ảnh: mạng (fan blog xin lỗi chủ ảnh)</div>
+      <figure class="mini-pola p1"><img src="https://picsum.photos/seed/hayato-candid-smile/260/220" alt="Ảnh candid Hayato"></figure>
+      <figure class="mini-pola p2"><img src="https://picsum.photos/seed/hayato-candid-mc/260/220" alt="Ảnh Hayato đang nói chuyện MC"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTDOWN ============ -->
+<section class="countdown" aria-label="Đếm ngược sinh nhật">
+  <div class="cd-in">
+    <div>
+      <span class="kicker">DEADLINE QUAN TRỌNG NHẤT NĂM</span>
+      <h2 class="display">Sinh nhật Hayato-kun đang đến gần</h2>
+      <p class="cd-sub" id="bd-label">23.03 — NGÀY CẢ FANDOM MẶC ĐỒ HỒNG</p>
+    </div>
+    <div class="cd-boxes" role="timer" aria-live="off">
+      <div class="cd-box"><b id="cd-d">--</b><span>NGÀY</span></div>
+      <div class="cd-box"><b id="cd-h">--</b><span>GIỜ</span></div>
+      <div class="cd-box"><b id="cd-m">--</b><span>PHÚT</span></div>
+      <div class="cd-box"><b id="cd-s">--</b><span>GIÂY</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG POSTS ============ -->
+<section class="section" id="nhatky">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">// 01 : JOURNAL</span>
+        <h2 class="sec-title reveal-line" data-io><span>Nhật ký oshi</span></h2>
+      </div>
+      <p class="sec-note">Mọi cảm xúc sau mỗi đêm live, mỗi lần đập hộp, mỗi tập phim — ghi lại trước khi quên.</p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Lọc bài viết">
+      <button class="chip active" data-filter="all">TẤT CẢ</button>
+      <button class="chip" data-filter="live">LIVE</button>
+      <button class="chip" data-filter="photo">PHOTO</button>
+      <button class="chip" data-filter="actor">ACTOR</button>
+      <button class="chip" data-filter="music">MUSIC</button>
+      <button class="chip" data-filter="oshi">OSHI-KATSU</button>
+    </div>
+
+    <div class="posts">
+      <article class="post featured" data-cat="live">
+        <div class="imgwrap"><img src="https://picsum.photos/seed/milk-live-encore-red/920/720" alt="Khán phòng ngập ánh đỏ trong đêm encore"></div>
+        <div class="body">
+          <div class="meta"><span class="tag">LIVE</span><span class="date">10.08.2026</span><span class="rt">7 PHÚT ĐỌC</span></div>
+          <h3>Đêm chung kết tour mùa hè: mình đã khóc ngay bài encore</h3>
+          <p>Khi ánh đỏ phủ kín khán phòng và Hayato-kun nói “Cảm ơn vì đã tìm thấy tụi mình”, não mình tự động lưu khoảnh khắc đó vào thư mục vĩnh viễn. Recap chi tiết: setlist, outfit, và khoảnh khắc oshi nhìn thẳng về phía khu vé của mình (không, nhưng mình chọn tin là có).</p>
+          <a class="more" href="#">Đọc tiếp →</a>
+        </div>
+      </article>
+
+      <article class="post" data-cat="photo">
+        <div class="imgwrap"><img src="https://picsum.photos/seed/photocard-haul-summer/600/440" alt="Hộp photocard mùa hè"></div>
+        <div class="body">
+          <div class="meta"><span class="tag">PHOTO</span><span class="date">03.08.2026</span><span class="rt">5 PHÚT</span></div>
+          <h3>Đập hộp set card mùa hè: 6 hộp và 1 giọt nước mắt</h3>
+          <p>Tỉ lệ ra card Hayato là 1/10 và mình đã tự tin một cách hoàn toàn sai lầm. Full quá trình đập hộp, tỉ lệ, và cách mình hàn gắn trái tim.</p>
+          <a class="more" href="#">Đọc tiếp →</a>
+        </div>
+      </article>
+
+      <article class="post" data-cat="actor">
+        <div class="imgwrap"><img src="https://picsum.photos/seed/hayato-actor-cinema/600/440" alt="Rạp chiếu phim"></div>
+        <div class="body">
+          <div class="meta"><span class="tag">ACTOR</span><span class="date">27.07.2026</span><span class="rt">6 PHÚT</span></div>
+          <h3>Từ sân khấu đến màn ảnh: những vai mình cày lại 3 lần</h3>
+          <p>Mình biết Hayato-kun qua một bộ phim điện ảnh, rồi mới “ngược” về M!LK. Đây là danh sách những vai diễn mình xem đi xem lại không chán.</p>
+          <a class="more" href="#">Đọc tiếp →</a>
+        </div>
+      </article>
+
+      <article class="post" data-cat="oshi">
+        <div class="imgwrap"><img src="https://picsum.photos/seed/japan-live-trip-plan/600/440" alt="Kế hoạch du lịch Nhật Bản"></div>
+        <div class="body">
+          <div class="meta"><span class="tag">OSHI-KATSU</span><span class="date">19.07.2026</span><span class="rt">9 PHÚT</span></div>
+          <h3>Cẩm nang đu live từ Việt Nam: vé, visa và một trái tim đủ lớn</h3>
+          <p>Tất cả những gì mình ước có ai đó nói với mình trước chuyến đu live đầu tiên: cách săn vé, chỗ ở, và những lỗi ngớ ngẩn đã mắc.</p>
+          <a class="more" href="#">Đọc tiếp →</a>
+        </div>
+      </article>
+
+      <article class="post" data-cat="music">
+        <div class="imgwrap"><img src="https://picsum.photos/seed/milk-playlist-cassette/600/440" alt="Băng cassette và playlist"></div>
+        <div class="body">
+          <div class="meta"><span class="tag">MUSIC</span><span class="date">11.07.2026</span><span class="rt">4 PHÚT</span></div>
+          <h3>Playlist 12 bài M!LK để chạy deadline, hype tăng dần</h3>
+          <p>Từ ballad nhẹ nhàng lúc khởi động đến bài cuối cùng khiến bạn muốn chạy luôn ra sân bay. Kèm ghi chú “bài nào có line Hayato đỉnh nhất”.</p>
+          <a class="more" href="#">Đọc tiếp →</a>
+        </div>
+      </article>
+
+      <article class="post" data-cat="photo">
+        <div class="imgwrap"><img src="https://picsum.photos/seed/fancam-seat-c-view/600/440" alt="Góc nhìn từ hàng ghế C"></div>
+        <div class="body">
+          <div class="meta"><span class="tag">PHOTO</span><span class="date">30.06.2026</span><span class="rt">3 PHÚT</span></div>
+          <h3>Album fancam tháng 6: góc quay từ hàng ghế C huyền thoại</h3>
+          <p>Xa sân khấu nhưng gần cảm xúc. Bộ ảnh rung nhẹ vì tay run vì quá hạnh phúc — chất lượng thấp, tình cảm cao.</p>
+          <a class="more" href="#">Đọc tiếp →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="section" id="hanhtrinh">
+  <div class="wrap journey">
+    <div class="journey-left">
+      <span class="kicker">// 02 : HISTORY</span>
+      <h2 class="sec-title reveal-line" data-io><span>Hành trình<br>M!LK</span></h2>
+      <div class="big-jp">2014<br>↓<br><b>2026</b></div>
+      <p style="margin-top:24px;max-width:34ch;font-size:14.5px;color:rgba(28,23,18,.75)">Góc nhìn của fan — những cột mốc mình nhớ và trân quý nhất. Không phải wiki, là nhật ký.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item fade-up" data-io>
+        <span class="year">11.2014</span>
+        <h3>M!LK kết thành</h3>
+        <p>Nhóm nhạc “sữa” ra đời trong đại gia đình EBiDAN. Cái tên M!LK nghe thôi đã thấy muốn ủng hộ cả đời.</p>
+      </div>
+      <div class="tl-item fade-up" data-io>
+        <span class="year">2015–2020</span>
+        <h3>Những năm indies</h3>
+        <p>Sân khấu nhỏ dần lớn lên: live house, sự kiện bắt tay, và những fancam rung lắc mà tụi mình vẫn lưu giữ đến giờ.</p>
+      </div>
+      <div class="tl-item fade-up" data-io>
+        <span class="year">24.11.2021</span>
+        <h3>Major debut — “Ribbon”</h3>
+        <p>Đúng 7 năm sau ngày kết thành, cùng một ngày trong lịch. Mình vẫn nhớ cảm giác bấm đặt single lúc nửa đêm, tim đập như fanchant.</p>
+      </div>
+      <div class="tl-item fade-up" data-io>
+        <span class="year">2022–2023</span>
+        <h3>Fanclub M!LK BOX & những tour dài</h3>
+        <p>Cánh cửa hộp sữa mở ra: fanmeeting, goods mới mỗi mùa, và một lịch trình mà fan phải dán lên tường để không sót.</p>
+      </div>
+      <div class="tl-item fade-up" data-io>
+        <span class="year">2024–2025</span>
+        <h3>Sân khấu ngày một lớn</h3>
+        <p>Khán phòng rộng hơn, biển lightstick đỏ dày hơn. Idol và fan cùng nhau lớn lên — điều đẹp nhất của việc stan một nhóm.</p>
+      </div>
+      <div class="tl-item fade-up" data-io>
+        <span class="year">2026</span>
+        <h3>Và tui vẫn ở đây</h3>
+        <p>Blog này chính là bằng chứng. Còn Hayato-kun thì vẫn đang chạy hết tốc lực về phía trước — nên mình cũng chạy theo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROFILE ============ -->
+<section class="section" id="hoso">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">// 03 : PROFILE</span>
+        <h2 class="sec-title reveal-line" data-io><span>Hồ sơ oshi</span></h2>
+      </div>
+      <p class="sec-note">Thông tin cơ bản để “nhập môn”. Chi tiết hơn thì… chịu, phải stan rồi tự cảm nhận.</p>
+    </div>
+    <div class="profile-grid">
+      <figure class="photocard">
+        <img src="https://picsum.photos/seed/sano-hayato-photocard/560/720" alt="Photocard Sano Hayato (ảnh minh họa)">
+        <div class="strip"><span>佐野勇斗</span><span>SANO HAYATO</span><span>PINK</span></div>
+      </figure>
+      <div>
+        <dl class="dl fade-up" data-io>
+          <div class="dl-row"><dt>Tên</dt><dd><b>佐野勇斗</b> — Sano Hayato</dd></div>
+          <div class="dl-row"><dt>Ngày sinh</dt><dd>23.03.1998 <span class="jp">♈</span></dd></div>
+          <div class="dl-row"><dt>Nơi sinh</dt><dd>Tỉnh Aichi, Nhật Bản</dd></div>
+          <div class="dl-row"><dt>Chiều cao</dt><dd>~177 cm (theo lời đồn nhà fan)</dd></div>
+          <div class="dl-row"><dt>Nhóm</dt><dd>M!LK — EBiDAN / Stardust Promotion</dd></div>
+          <div class="dl-row"><dt>Màu thành viên</dt><dd><b>HỒNG</b></dd></div>
+          <div class="dl-row"><dt>Ra mắt</dt><dd>2014 cùng M!LK • Major debut 24.11.2021</dd></div>
+          <div class="dl-row"><dt>Biệt danh</dt><dd>Hayato, Sano-kun</dd></div>
+          <div class="dl-row"><dt>Nghề tay phải</dt><dd>Idol. Tay trái: diễn viên. Cả hai tay: <b>oshi của tui</b>.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="reasons">
+      <h3>7 lý do mình stan (phiên bản không khách quan)</h3>
+      <div class="reason-list">
+        <div class="reason fade-up" data-io><b>01</b><p>Hát live ổn định như nuốt đĩa — nghe qua fancam còn thấy đã.</p></div>
+        <div class="reason fade-up" data-io><b>02</b><p>Vũ đạo dứt khoát, nhìn một lần là muốn đứng dậy học theo.</p></div>
+        <div class="reason fade-up" data-io><b>03</b><p>Nụ cười cong mắt khiến cả khán phòng mềm ra trong một giây.</p></div>
+        <div class="reason fade-up" data-io><b>04</b><p>Vừa là idol vừa là diễn viên — bận rộn nhưng chưa bao giờ qua loa.</p></div>
+        <div class="reason fade-up" data-io><b>05</b><p>Luôn cảm ơn fan bằng cả hai tay và một cái cúi đầu thật sâu.</p></div>
+        <div class="reason fade-up" data-io><b>06</b><p>Màu hồng của anh ấy là màu hồng ấm nhất mình từng thấy trên sân khấu.</p></div>
+        <div class="reason fade-up" data-io><b>07</b><p>Không có lý do số 7. Stan là chuyện của trái tim, không cần lý do.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTO WALL ============ -->
+<section class="section photo-section" id="anh">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">// 04 : PHOTO ALBUM</span>
+        <h2 class="sec-title reveal-line" data-io><span>Bảng dán ảnh</span></h2>
+      </div>
+      <p class="sec-note">Bộ sưu tập ảnh in dán tường phòng — bản online. Di chuột để “gỡ” từng tấm.</p>
+    </div>
+    <div class="polaroids">
+      <figure class="pola" style="--r:-5deg;--tr:-3deg"><img src="https://picsum.photos/seed/milk-stage-red-lights/480/440" alt="Sân khấu ngập đèn đỏ"><figcaption>BIỂN ĐỎ ĐÊM FINALE</figcaption></figure>
+      <figure class="pola" style="--r:3deg;--tr:2deg"><img src="https://picsum.photos/seed/hayato-smile-closeup/480/440" alt="Nụ cười của Hayato"><figcaption>NU CUOI HUYEN THOAI</figcaption></figure>
+      <figure class="pola" style="--r:-2deg;--tr:-1deg"><img src="https://picsum.photos/seed/photocard-collection-red/480/440" alt="Bộ sưu tập photocard"><figcaption>BO SUU TAP CARD</figcaption></figure>
+      <figure class="pola" style="--r:6deg;--tr:4deg"><img src="https://picsum.photos/seed/concert-penlight-glow/480/440" alt="Lightstick trong đêm concert"><figcaption>LIGHTSTICK DO RUC</figcaption></figure>
+      <figure class="pola" style="--r:-4deg;--tr:-2deg"><img src="https://picsum.photos/seed/tokyo-live-trip-street/480/440" alt="Đường phố Tokyo trong chuyến đu live"><figcaption>CHUYEN DU LIVE DAU TIEN</figcaption></figure>
+      <figure class="pola" style="--r:2deg;--tr:3deg"><img src="https://picsum.photos/seed/fan-gift-wrapping-red/480/440" alt="Quà fan gói giấy đỏ"><figcaption>QUA TANG FAN GÓI VOI YEU THUONG</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OSHI CORNER ============ -->
+<section class="section" id="oshi">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">// 05 : OSHI-KATSU CORNER</span>
+        <h2 class="sec-title reveal-line" data-io><span>Góc oshi-katsu</span></h2>
+      </div>
+      <p class="sec-note">Sân chơi nho nhỏ: bật lightstick theo tâm trạng và chấm điểm độ chăm chỉ đu oshi tháng này.</p>
+    </div>
+    <div class="oshi-grid">
+      <div class="widget">
+        <h3>Bật lightstick nào hôm nay?</h3>
+        <p class="sub">Chọn một màu — sân khấu bên dưới sẽ rực sáng theo. Tất nhiên mặc định vẫn là đỏ.</p>
+        <div class="stage" id="stage">
+          <img src="https://picsum.photos/seed/dark-concert-stage/900/600" alt="Sân khấu concert trong bóng tối">
+          <div class="glow" id="stageGlow"></div>
+          <span class="stage-label">LIVE VIEW • SIMULATION</span>
+        </div>
+        <p class="glow-name">HÔM NAY MÌNH QUẨY MÀU: <b id="glowName">HỒNG — màu của Hayato-kun</b></p>
+        <div class="light-btns" role="group" aria-label="Chọn màu lightstick">
+          <button class="light-btn active" style="--c:#F0619F" data-color="#F0619F" data-name="HỒNG — màu của Hayato-kun" aria-label="Màu hồng"></button>
+          <button class="light-btn" style="--c:#F49AC1" data-color="#F49AC1" data-name="HỒNG PHẤN — vì dễ thương" aria-label="Màu hồng"></button>
+          <button class="light-btn" style="--c:#7FD8F0" data-color="#7FD8F0" data-name="XANH BĂNG GIÁ" aria-label="Màu xanh"></button>
+          <button class="light-btn" style="--c:#FFE14D" data-color="#FFE14D" data-name="VÀNG CHANH NĂNG LƯỢNG" aria-label="Màu vàng"></button>
+          <button class="light-btn" style="--c:#B693EB" data-color="#B693EB" data-name="TÍM MỘNG MƠ" aria-label="Màu tím"></button>
+          <button class="light-btn" style="--c:#FFFDF7" data-color="#FFFDF7" data-name="TRẮNG SỮA — màu của M!LK" aria-label="Màu trắng"></button>
+        </div>
+      </div>
+      <div class="widget">
+        <h3>Checklist đu oshi tháng 8</h3>
+        <p class="sub">Tích từng mục. Độ hoàn thành tăng là động lực sống tiếp tới sinh nhật oshi.</p>
+        <div class="tasks" id="tasks">
+          <label class="task"><input type="checkbox"><span>Mua lightstick màu đỏ (hoặc sạc đầy pin)</span></label>
+          <label class="task"><input type="checkbox"><span>Học thuộc fanchant bài mới</span></label>
+          <label class="task"><input type="checkbox"><span>Đặt báo thức 23.03 từ… bây giờ</span></label>
+          <label class="task"><input type="checkbox"><span>Viết thư tay cho Hayato-kun (ít nhất là trong đầu)</span></label>
+          <label class="task"><input type="checkbox"><span>Cập nhật ảnh oshi mới nhất vào ví</span></label>
+          <label class="task"><input type="checkbox"><span>Nuôi quỹ đu live — mỗi ngày một chút</span></label>
+        </div>
+        <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+        <p class="progress-txt" id="progressTxt">0/6 NHIỆM VỤ HOÀN THÀNH — CỐ LÊN FAN!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section class="section" id="lich">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">// 06 : SCHEDULE</span>
+        <h2 class="sec-title reveal-line" data-io><span>Lịch mình theo dõi</span></h2>
+      </div>
+      <p class="sec-note">Tổng hợp để nhắc nhau đặt báo thức. Nguồn: hóng từ các nhóm fan.</p>
+    </div>
+    <div class="sched fade-up" data-io>
+      <div class="sched-row">
+        <div class="sched-date">17.08</div>
+        <div class="sched-info"><h4>Blog Vol.07 lên sóng</h4><p>Bạn đang đọc nó đó. Cảm ơn vì đã ghé qua ♥</p></div>
+        <span class="tag">BLOG</span>
+      </div>
+      <div class="sched-row">
+        <div class="sched-date">22.08</div>
+        <div class="sched-info"><h4>Chương trình âm nhạc cuối tuần</h4><p>Tin từ nhóm fan, cần xác nhận lại lịch phát sóng chính thức.</p></div>
+        <span class="tag">TV</span>
+      </div>
+      <div class="sched-row">
+        <div class="sched-date">30.08</div>
+        <div class="sched-info"><h4>Tạp chí số tháng 9 phát hành</h4><p>Nghe đồn có kèm ảnh hậu trường. Ví của mình đang run.</p></div>
+        <span class="tag">TẠP CHÍ</span>
+      </div>
+      <div class="sched-row">
+        <div class="sched-date">06.09</div>
+        <div class="sched-info"><h4>Sự kiện fanmeeting</h4><p>Thành viên tham gia theo lịch công bố — cầu may cho ai săn vé.</p></div>
+        <span class="tag">FAN MEETING</span>
+      </div>
+      <div class="sched-row">
+        <div class="sched-date">21.09</div>
+        <div class="sched-info"><h4>Đêm diễn tour mùa thu</h4><p>Vé đã sold out với mình (đau). Ai đi được, quẩy hộ phần mình nhé.</p></div>
+        <span class="tag">LIVE</span>
+      </div>
+    </div>
+    <p class="disclaimer">* LỊCH DO FAN TỰ TỔNG HỢP ĐỂ NHẮC NHAU — LUÔN KIỂM TRA NGUỒN CHÍNH THỨC TRƯỚC KHI ĐU.</p>
+  </div>
+</section>
+
+<!-- ============ NOTES WALL ============ -->
+<section class="section notes-section" id="loinhan">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">// 07 : FAN WALL</span>
+        <h2 class="sec-title reveal-line" data-io><span>Gửi Hayato-kun</span></h2>
+      </div>
+      <p class="sec-note" style="color:rgba(246,241,231,.7)">Bảng giấy nhắn của fandom Việt. Dán một tấm — biết đâu một ngày anh ấy đọc được (trong giấc mơ của mình).</p>
+    </div>
+    <form class="note-form" id="noteForm">
+      <input type="text" id="noteNick" placeholder="Tên của bạn" maxlength="24" aria-label="Tên của bạn">
+      <textarea id="noteMsg" rows="2" placeholder="Viết gì đó cho Hayato-kun…" maxlength="160" aria-label="Lời nhắn" required></textarea>
+      <button class="btn" type="submit">Dán giấy ♥</button>
+    </form>
+    <div class="notes" id="notesWall">
+      <div class="note" style="--r:-3deg;background:#FFF9C4"><p class="msg">Ngày nào cũng nghe Ribbon một lần, không thiếu ngày nào.</p><span class="sig">— MIN</span></div>
+      <div class="note" style="--r:2deg;background:#FFD9D0"><p class="msg">Đã tiết kiệm được 40% quỹ đu live Osaka. Cố lên tôi ơi!</p><span class="sig">— BAP</span></div>
+      <div class="note" style="--r:-5deg;background:#DCEBFF"><p class="msg">Hayato-kun ơi, fan Việt ở đây nha!! 🇻🇳</p><span class="sig">— MUOI</span></div>
+      <div class="note" style="--r:4deg;background:#E7F6D8"><p class="msg">Màu đỏ mãi đỉnh. Không chấp nhận tranh luận.</p><span class="sig">— TAO DO</span></div>
+      <div class="note" style="--r:-2deg;background:#FFF9C4"><p class="msg">Đang học tiếng Nhật để hiểu hết MC của anh ấy. Hẹn 3 năm nữa.</p><span class="sig">— CHI</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-big" aria-hidden="true">SANO! SANO!</div>
+  <div class="foot-grid">
+    <div>
+      <h4>VE BLOG NAY</h4>
+      <p>Một góc nhỏ trên mạng của fan Việt yêu M!LK. Viết bằng tình yêu màu đỏ, caffeine và một chút thiếu ngủ sau đêm live. Vol.07 sẽ có Vol.08 — miễn là Hayato-kun còn hoạt động.</p>
+    </div>
+    <div>
+      <h4>THANH VIEN M!LK</h4>
+      <ul>
+        <li class="member-oshi">Sano Hayato <span class="oshi-badge">OSHI CUA TUI</span></li>
+        <li>Shiozaki Jin</li>
+        <li>Miyase Hayato</li>
+        <li>Yoshida Jin</li>
+        <li>Yamanaka Jūta</li>
+      </ul>
+    </div>
+    <div>
+      <h4>THEO DOI</h4>
+      <ul>
+        <li><a href="#">→ Blog RSS</a></li>
+        <li><a href="#">→ Tài khoản X của blog</a></li>
+        <li><a href="#">→ Kênh fancam YouTube</a></li>
+        <li><a href="#">→ Nhóm fan Discord</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 SANO! SANO! FANBLOG — SAN PHAM FAN-MADE, KHONG THUOC STARDUST PROMOTION.</span>
+    <span>MADE WITH ♥ & SUA DAU 🥛</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $  = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+
+  /* ---- IntersectionObserver reveals ---- */
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.18});
+  $$('[data-io]').forEach(el=>io.observe(el));
+
+  /* ---- scramble-decode title ---- */
+  const GLYPHS='アイウエオカキクケコサシスセソタチツテト★0123456789';
+  function scramble(el){
+    const finalText = el.dataset.text || el.textContent;
+    if(RM){ el.textContent = finalText; return; }
+    let frame=0;
+    const iv=setInterval(()=>{
+      frame++;
+      let out='';
+      for(let i=0;i<finalText.length;i++){
+        out += (i < frame/2.4) ? finalText[i] : GLYPHS[Math.floor(Math.random()*GLYPHS.length)];
+      }
+      el.textContent=out;
+      if(frame/2.4>=finalText.length){clearInterval(iv);el.textContent=finalText;}
+    },34);
+  }
+  $$('.scramble').forEach((el,i)=>setTimeout(()=>scramble(el), 200+i*350));
+
+  /* ---- birthday countdown + fan counters ---- */
+  function nextBirthday(){
+    const now=new Date();
+    let t=new Date(now.getFullYear(),2,23,0,0,0);
+    if(now.getTime()>t.getTime()) t=new Date(now.getFullYear()+1,2,23,0,0,0);
+    return t;
+  }
+  const target=nextBirthday();
+  $('#bd-label').textContent =
+    'SINH NHAT LAN THU '+(target.getFullYear()-1998)+' — 23.03.'+target.getFullYear();
+  function pad(n){return String(n).padStart(2,'0');}
+  function tick(){
+    let diff=Math.max(0,target.getTime()-Date.now());
+    const d=Math.floor(diff/864e5); diff-=d*864e5;
+    const h=Math.floor(diff/36e5);  diff-=h*36e5;
+    const m=Math.floor(diff/6e4);   diff-=m*6e4;
+    const s=Math.floor(diff/1e3);
+    $('#cd-d').textContent=pad(d); $('#cd-h').textContent=pad(h);
+    $('#cd-m').textContent=pad(m); $('#cd-s').textContent=pad(s);
+  }
+  tick(); setInterval(tick,1000);
+
+  const dayMs=864e5, now=new Date();
+  $('#days-debut').textContent  = Math.floor((now-new Date(2021,10,24))/dayMs).toLocaleString('vi-VN');
+  $('#days-formed').textContent = Math.floor((now-new Date(2014,10,24))/dayMs).toLocaleString('vi-VN');
+  let age=now.getFullYear()-1998;
+  if(now.getMonth()<2||(now.getMonth()===2&&now.getDate()<23)) age--;
+  $('#age').textContent=age;
+
+  /* ---- post filters ---- */
+  const posts=$$('.post');
+  $$('.chip').forEach(chip=>chip.addEventListener('click',()=>{
+    $$('.chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    const f=chip.dataset.filter;
+    posts.forEach(p=>{
+      const show = f==='all' || p.dataset.cat===f;
+      if(show){
+        p.classList.remove('hide','pop'); void p.offsetWidth; p.classList.add('pop');
+      }else p.classList.add('hide');
+    });
+  }));
+
+  /* ---- penlight picker ---- */
+  const stage=$('#stage'), glowName=$('#glowName');
+  $$('.light-btn').forEach(btn=>btn.addEventListener('click',()=>{
+    $$('.light-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    stage.style.setProperty('--glow',btn.dataset.color);
+    glowName.textContent=btn.dataset.name;
+  }));
+
+  /* ---- oshi checklist progress ---- */
+  const boxes=$$('#tasks input'), bar=$('#progressBar'), ptxt=$('#progressTxt');
+  function updateProgress(){
+    const done=boxes.filter(b=>b.checked).length;
+    const pct=Math.round(done/boxes.length*100);
+    bar.style.width=pct+'%';
+    ptxt.textContent = done===boxes.length
+      ? 'HOAN THANH 100% — FAN CHAN CHINH LA DAY!'
+      : done+'/'+boxes.length+' NHIEM VU HOAN THANH — CO LEN FAN!';
+  }
+  boxes.forEach(b=>b.addEventListener('change',updateProgress));
+  updateProgress();
+
+  /* ---- fan note wall ---- */
+  const wall=$('#notesWall'), form=$('#noteForm');
+  const COLORS=['#FFF9C4','#FFD9D0','#DCEBFF','#E7F6D8','#FFE8C9'];
+  const TILTS=[-5,4,-3,6,-2,3];
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const msg=$('#noteMsg').value.trim();
+    if(!msg) return;
+    const nick=$('#noteNick').value.trim()||'FAN AN DANH';
+    const note=document.createElement('div');
+    note.className='note pop';
+    note.style.setProperty('--r',TILTS[Math.floor(Math.random()*TILTS.length)]+'deg');
+    note.style.background=COLORS[Math.floor(Math.random()*COLORS.length)];
+    const p=document.createElement('p'); p.className='msg'; p.textContent=msg;
+    const sig=document.createElement('span'); sig.className='sig'; sig.textContent='— '+nick.toUpperCase();
+    note.append(p,sig);
+    wall.prepend(note);
+    if(wall.children.length>14) wall.lastElementChild.remove();
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
