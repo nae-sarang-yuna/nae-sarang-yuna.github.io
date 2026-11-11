@@ -23,7 +23,7 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Render Quarto blog
-        run: quarto render blog
+        run: quarto render abroad
 
       - name: Assemble site
         run: |
